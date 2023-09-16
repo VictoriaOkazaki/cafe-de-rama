@@ -8,7 +8,7 @@
     <div class="menu__items">
         <div class="menu__item" v-for="drink in drinks.filter(drink => drink.category === activeCategory.id)">
             <div class="menu__item-left">
-                <img src="images/drink1.png" class="menu__item-img">
+                <img :src="'images/drink1.png'" class="menu__item-img">
             </div>
             <div class="menu__item-right">
                 <span class="menu__item-name text">{{ drink.name }}</span>
@@ -32,7 +32,7 @@
         <div class="menu__item"
             v-for="alcoDrink in alcoDrinks.filter(alcoDrink => alcoDrink.category === activeAlcoCategory.id)">
             <div class="menu__item-left">
-                <img src="images/alco1.png" class="menu__item-img">
+                <img :src="'images/alco1.png'" class="menu__item-img">
             </div>
             <div class="menu__item-right">
                 <span class="menu__item-name text">{{ alcoDrink.name }}</span>

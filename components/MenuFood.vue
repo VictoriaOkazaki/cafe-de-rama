@@ -8,7 +8,7 @@
     <div class="menu__items">
         <div class="menu__item" v-for="food in foods.filter(food => food.category === activeCategory.id)">
             <div class="menu__item-left">
-                <img src="images/meal1.png" class="menu__item-img">
+                <img :src="'images/meal1.png'" class="menu__item-img">
                 <span class="menu__item-price text">{{ food.price }} AZN</span>
             </div>
             <div class="menu__item-right">
