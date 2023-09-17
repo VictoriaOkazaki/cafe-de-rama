@@ -74,56 +74,56 @@ const DRINK_LIST_RU = [
         "name": "Капучино",
         "ingredient": "",
         "price": "5",
-        "src": "",
+        "src": "images/menu/cofe/1.webp",
         "category": "cofe"
     },
     {
         "name": "Американо",
         "ingredient": "",
         "price": "3",
-        "src": "",
+        "src": "images/menu/cofe/2.webp",
         "category": "cofe"
     },
     {
         "name": "Одинарный или двойной эспрессо ",
         "ingredient": "",
         "price": "3",
-        "src": "",
+        "src": "images/menu/cofe/3.webp",
         "category": "cofe"
     },
     {
         "name": "Кофе латте",
         "ingredient": "",
         "price": "5",
-        "src": "",
+        "src": "images/menu/cofe/4.webp",
         "category": "cofe"
     },
     {
         "name": "Кофе по-турецки с мороженым",
         "ingredient": "",
         "price": "8",
-        "src": "",
+        "src": "images/menu/cofe/5.webp",
         "category": "cofe"
     },
     {
         "name": "Цикорий",
         "ingredient": "",
         "price": "4",
-        "src": "",
+        "src": "images/menu/cofe/6.webp",
         "category": "cofe"
     },
     {
         "name": "Кофе со льдом",
         "ingredient": "",
         "price": "5",
-        "src": "",
+        "src": "images/menu/cofe/7.webp",
         "category": "cofe"
     },
     {
         "name": "Холодный Шейк Латте ",
         "ingredient": "",
         "price": "8",
-        "src": "",
+        "src": "images/menu/cofe/8.webp",
         "category": "cofe"
     },
     {

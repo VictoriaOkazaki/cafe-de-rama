@@ -1,12 +1,12 @@
 <template>
     <div class="social">
-        <a href="https://www.facebook.com/DeRamaCafe" class="social__link">
+        <a href="https://www.facebook.com/DeRamaCafe" target="_blank" class="social__link">
             <img src="../assets/images/fb.svg" alt="facebook" class="social-logo">
         </a>
-        <a href="https://www.instagram.com/de.rama.cafe.baku/" class="social__link">
+        <a href="https://www.instagram.com/de.rama.cafe.baku/" target="_blank" class="social__link">
             <img src="../assets/images/insta.svg" alt="instagram" class="social-logo">
         </a>
-        <a href="https://www.linkedin.com/in/de-rama-cafe-baku-760605270/" class="social__link">
+        <a href="https://www.linkedin.com/in/de-rama-cafe-baku-760605270/" target="_blank" class="social__link">
             <img src="../assets/images/linkedin.svg" alt="linkedin" class="social-logo">
         </a>
     </div>

@@ -23,7 +23,7 @@
     </a>
     <!-- alco-drinks -->
     <h2 class="menu__title title">{{ $t('menu-f.title3') }}</h2>
-    <ul class="menu__category" id="drink-nonalco">
+    <ul class="menu__category" id="drink-alco">
         <li class="menu__category-item text" v-for="c in alcoCategory" :class="{ 'active': c.id === activeAlcoCategory.id }"
             @click="activeAlcoCategory = c">{{ c.name }}</li>
     </ul>
@@ -53,6 +53,10 @@ const activeAlcoCategory = ref(alcoCategory.value[0])
 <style lang="scss" scoped>
 .active {
     background-color: $acsent-1 !important;
+}
+
+#drink-alco {
+    width: fit-content;
 }
 
 .menu {
@@ -194,6 +198,10 @@ const activeAlcoCategory = ref(alcoCategory.value[0])
 }
 
 @media (max-width: 800px) {
+    #drink-alco {
+        width: 100%;
+    }
+
     .menu {
         &__category {
             width: 100%;

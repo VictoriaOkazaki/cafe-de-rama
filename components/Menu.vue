@@ -8,13 +8,17 @@
                     <div class="menu__bottom">
                         <div class="menu__bottom-item">
                             <p class="menu__bottom-text text">{{ $t('menu-f.text-1') }}</p>
-                            <a href="" class="menu__bottom-btn btn-1 subtitle" id="btn1">{{ $t('menu-f.btn-1') }}</a>
+                            <a :href="`https://wa.me/+994555108108?text=${$t('reserve-message')}`"
+                                class="menu__bottom-btn btn-1 subtitle" id="btn1">{{
+                                    $t('menu-f.btn-1') }}</a>
                         </div>
                         <div class="menu__bottom-item">
                             <p class="menu__bottom-text text">{{ $t('menu-f.text-2') }}</p>
                             <div class="menu__bottom-btns">
-                                <a href="" class="menu__bottom-btn btn-2 subtitle" id="btn2">{{ $t('menu-f.btn-2') }}</a>
-                                <a href="" class="menu__bottom-btn btn-2 subtitle" id="btn3">{{ $t('menu-f.btn-3') }}</a>
+                                <a href="https://wolt.com/ru/aze/baku/restaurant/de-rama-cafe"
+                                    class="menu__bottom-btn btn-2 subtitle" id="btn2">{{ $t('menu-f.btn-2') }}</a>
+                                <a href="https://food.bolt.eu/en-US/335-baku/p/72793-de-rama-cafe-baku"
+                                    class="menu__bottom-btn btn-2 subtitle" id="btn3">{{ $t('menu-f.btn-3') }}</a>
                             </div>
                         </div>
                     </div>

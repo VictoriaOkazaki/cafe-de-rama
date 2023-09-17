@@ -1,13 +1,4 @@
 <template>
-    <!-- <h1>{{ $t('hello') }}</h1>
-        <form>
-            <label for="locale-select">{{ $t('language') }}: </label>
-            <select id="locale-select" v-model="$i18n.locale">
-                <option value="ru">ru</option>
-                <option value="en">en</option>
-                <option value="az">az</option>
-            </select>
-        </form> -->
     <div class="hero">
         <Header class="header" />
         <Home class="home" />
@@ -16,6 +7,10 @@
     <About />
     <Menu />
     <Action />
+    <Review />
+    <Shop />
+    <Gallery />
+    <Blog />
 </template>
 
 <script setup lang="ts">
@@ -24,7 +19,7 @@
 
 <style scoped lang="scss">
 .hero {
-    height: 100vh;
+    height: calc(100vh + 60px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -46,12 +41,14 @@
 @media (max-width: 800px) {
     .hero {
         padding-bottom: 40px;
+        height: calc(100vh + 40px);
     }
 }
 
 @media (max-width: 500px) {
     .hero {
         padding-bottom: 30px;
+        height: calc(100vh + 30px);
     }
 }
 </style>

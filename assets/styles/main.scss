@@ -39,6 +39,13 @@ button {
     line-height: normal;
 }
 
+.latin .h1,
+.latin .title {
+    font-family: Kalam, cursive;
+    font-weight: 500;
+    line-height: normal;
+}
+
 .subtitle,
 .text,
 .helper-text {
@@ -138,6 +145,8 @@ button {
 .btn-2 {
     padding: 24px 42px;
     border-radius: 60px;
+    display: flex;
+    width: fit-content;
 }
 
 .menu__title {

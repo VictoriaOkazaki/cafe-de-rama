@@ -1,16 +1,17 @@
 <template>
     <BurgerWindow />
     <section class="home" id="home">
-        <div class="container section">
+        <div class="container">
             <div class="home__inner">
                 <div class="home__content">
                     <h1 class="home__title h1">{{ $t('home.title-1') }} <br> {{ $t('home.title-2') }}</h1>
                     <blockquote class="home__subtitle subtitle">{{ $t('home.subtitle') }}</blockquote>
                     <p class="home__text subtitle">{{ $t('home.text') }}</p>
                     <div class="home__btns">
-                        <a href="https://wa.me/+994777108108" class="home__btn home__btn-1 btn-1 subtitle">{{
-                            $t('home.btn-1')
-                        }}</a>
+                        <a :href="`https://wa.me/+994777108108?text=${$t('reserve-message')}`" target="_blank"
+                            class="home__btn home__btn-1 btn-1 subtitle">{{
+                                $t('home.btn-1')
+                            }}</a>
                         <a href="#menu" class="home__btn btn-2 subtitle">{{ $t('home.btn-2') }}</a>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper" :class="{ 'unvisible': loading }">
+    <div class="wrapper" :class="{ 'unvisible': loading, 'latin': ['az', 'en'].includes(locale) }">
         <slot />
         <Footer />
     </div>
@@ -7,6 +7,9 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+const { locale } = useI18n()
+
 useHead({
     link: [
         {
@@ -19,7 +22,7 @@ useHead({
             crossorigin: ''
         },
         {
-            href: 'https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fira+Sans+Condensed:wght@400;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet',
+            href: 'https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fira+Sans+Condensed:wght@400;700&family=Kalam:wght@400;500&display=swap" rel="stylesheet',
             rel: 'stylesheet'
         },
     ]
