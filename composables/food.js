@@ -47,38 +47,40 @@ const CATEGORY_FOOD_RU = [
 ]
 const CATEGORY_FOOD_AZ = [
     {
-        "name": "",
+        "name": "Şorbalar",
         "id": "soup"
     },
     {
-        "name": "",
+        "name": "Salatlar",
         "id": "salad"
     },
     {
-        "name": "",
+        "name": "Əsas yeməklər",
         "id": "main"
     },
     {
-        "name": "",
-        "id": "desert"
+        "name": "Şirniyyatlar",
+        "id": "desert",
+        "title": "Yumurtasız – (Vegetarian)"
     },
 ]
 const CATEGORY_FOOD_EN = [
     {
-        "name": "",
+        "name": "Soups",
         "id": "soup"
     },
     {
-        "name": "",
+        "name": "Salads",
         "id": "salad"
     },
     {
-        "name": "",
+        "name": "Main dishes",
         "id": "main"
     },
     {
-        "name": "",
-        "id": "desert"
+        "name": "Desserts",
+        "id": "desert",
+        "title": "Egg Free – (VEGETARIAN)"
     },
 ]
 const FOOD_LIST_RU = [
@@ -156,8 +158,8 @@ const FOOD_LIST_RU = [
     },
     {
         "country": "Иран",
-        "name": "Крем Суп из Шпината",
-        "ingredient": "Хумус (ВЕГАН или ВЕГЕТАРИАН) пюре из нута, оливковое масло, кунжутная паста, помидоры и специи",
+        "name": "Хумус",
+        "ingredient": "(ВЕГАН или ВЕГЕТАРИАН) пюре из нута, оливковое масло, кунжутная паста, помидоры и специи",
         "price": "7",
         "src": "images/menu/salad/5.webp",
         "category": "salad"
@@ -324,7 +326,7 @@ const FOOD_LIST_RU = [
     },
     {
         "country": "",
-        "name": "Ферреро Рошан",
+        "name": "Ферреро Рошe",
         "ingredient": "",
         "price": "8",
         "src": "images/menu/dessert/5.webp",
@@ -374,16 +376,582 @@ const FOOD_LIST_RU = [
 
 const FOOD_LIST_AZ = [
     {
-        "name": "",
+        "country": "India",
+        "name": "Cold Raita Soup (Raw Food)",
+        "ingredient": "(VEGETARIAN) yoghurt, cucumber, assorted herbs, mint and spices ",
+        "price": "6",
+        "src": "images/menu/soup/1.webp",
+        "category": "soup"
+    },
+    {
+        "country": "Greece",
+        "name": "Mushroom Cream Soup",
+        "ingredient": "(VEGAN or VEGETARIAN) served with crouton bread, mushroom, cream, potato & spices",
+        "price": "7",
+        "src": "images/menu/soup/2.webp",
+        "category": "soup"
+    },
+    {
+        "country": "Spain",
+        "name": "Red Cabbage Cream Soup",
+        "ingredient": "(VEGAN or VEGETARIAN) served with crouton bread, red cabbage, cream, potato & spices",
+        "price": "6",
+        "src": "images/menu/soup/3.webp",
+        "category": "soup"
+    },
+    {
+        "country": "Japan",
+        "name": "Miso Soup – (low calorie dish)",
+        "ingredient": "(VEGAN or VEGETARIAN) miso – soya paste, paneer cheese, seaweed, bell pepper & spices, served with rice on the side",
+        "price": "7",
+        "src": "images/menu/soup/4.webp",
+        "category": "soup"
+    },
+    {
+        "country": "Morocco",
+        "name": "Cream Spinach Soup",
+        "ingredient": "(VEGAN or VEGETARIAN) served with crouton bread, spinach, cream, potato & spices",
+        "price": "6",
+        "src": "images/menu/soup/5.webp",
+        "category": "soup"
+    },
+    {
+        "country": "Lebanon",
+        "name": "Fresh Salad suitable for RAW FOOD eaters, low calorie dish",
+        "ingredient": "(VEGAN or VEGETARIAN) green salad, tomato, cucumber, bell pepper, walnuts, orange mustard dressing",
+        "price": "8",
+        "src": "images/menu/salad/1.webp",
+        "category": "salad"
+    },
+    {
+        "country": "Russia",
+        "name": "Shuba Salad",
+        "ingredient": "(VEGAN or VEGETARIAN) beetroot, potato, carrot, eggplant, sea weed & homemade vegan mayonnaise and special black salt",
+        "price": "7",
+        "src": "images/menu/salad/2.webp",
+        "category": "salad"
+    },
+    {
+        "country": "South Africa",
+        "name": "Broccoli & Avocado Salad suitable for RAW FOOD eaters, low calorie dish",
+        "ingredient": "(VEGAN or VEGETARIAN) broccoli, avocado, spinach, iceberg lettuce, tomato, zucchini, lemon juice, olive oil, cashew nuts and herbs",
+        "price": "9",
+        "src": "images/menu/salad/3.webp",
+        "category": "salad"
+    },
+    {
+        "country": "Italy",
+        "name": "Caesar Salad",
+        "ingredient": "(VEGAN or VEGETARIAN) with special homemade VEGAN sauce or VEGAN GARLIC sauce (iceberg lettuce, tomato, soya meat, parmesan cheese, spinach, lemon juice with crouton bread)",
+        "price": "8",
+        "src": "images/menu/salad/4.webp",
+        "category": "salad"
+    },
+    {
+        "country": "Iran",
+        "name": "Khumus",
+        "ingredient": "(VEGAN or VEGETARIAN) chickpea puree, olive oil, sesame paste, tomatoes & spices",
+        "price": "7",
+        "src": "images/menu/salad/5.webp",
+        "category": "salad"
+    },
+    {
+        "country": "Israel",
+        "name": "Grilled Falafel Roll",
+        "ingredient": "(choice of Special VEGAN Sauce or GARLIC Sauce) local homemade lavash bread, cheek pea cutlet, iceberg lettuce, spinach, tomato, cucumber pickle",
+        "price": "9",
+        "src": "images/menu/main/1.webp",
+        "category": "main"
+    },
+    {
+        "country": "Mexico",
+        "name": "Grilled Spicy Burrito",
+        "ingredient": "(VEGAN or VEGETARIAN) ocal homemade lavash bread, soya meat slices, tomato, sweet corn, red beans, mozzarella cheese, bell pepper, spinach, iceberg lettuce with homemade spicy Salsa sauce",
+        "price": "9",
+        "src": "images/menu/main/2.webp",
+        "category": "main"
+    },
+    {
+        "country": "Thailand",
+        "name": "Wok Fried Noodles – (regular wheat noodles or buckwheat noodles)",
+        "ingredient": "(VEGAN with Soya Meat or VEGETARIAN with Paneer Cheese) - please ask for spice level (bell pepper, carrot, zucchini, sesame seed oil, soya sauce)",
+        "price": "10",
+        "src": "images/menu/main/3.webp",
+        "category": "main"
+    },
+    {
+        "country": "Malaysia",
+        "name": "Vegetable Fried Rice (GLUTEN FREE)",
+        "ingredient": "(VEGAN with Soya Meat or VEGETARIAN with Paneer Cheese) - please ask for spice level (basmati rice, bell pepper, carrot, zucchini, sesame seed oil, soya sauce)",
+        "price": "10",
+        "src": "images/menu/main/4.webp",
+        "category": "main"
+    },
+    {
+        "country": "USA",
+        "name": "Special Vegan Burger (Beyond Meat)",
+        "ingredient": "(choice of Special GARLIC Sauce or Special VEGAN Sauce) served with homemade potato wedges & tomato sauce (beetroot bread bun, Very Special Vegan Burger, cucumber pickle, tomato, iceberg lettuce)",
+        "price": "18",
+        "src": "images/menu/main/5.webp",
+        "category": "main"
+    },
+    {
+        "country": "USA",
+        "name": "Special Vegetarian Cheeseburger (Beyond Meat)",
+        "ingredient": "(choice of Special GARGLIC or Special VEGAN Sauce) served with homemade potato wedges & tomato sauce (beetroot bread bun, Gouda Cheese, Very Special Vegan Burger, cucumber pickle, tomato, iceberg lettuce)",
+        "price": "19",
+        "src": "images/menu/main/6.webp",
+        "category": "main"
+    },
+    {
+        "country": "Azerbaijan",
+        "name": "Grape Leaf Dolma",
+        "ingredient": "(VEGETARIAN) served with sour cream & crouton bread (basmati rice, selection of herbs, cottage cheese and spices)",
+        "price": "10",
+        "src": "images/menu/main/7.webp",
+        "category": "main"
+    },
+    {
+        "country": "Georgia",
+        "name": "Fried Khinkali",
+        "ingredient": "(VEGETARIAN or VEGAN) – served with your choice of regular Sour Cream or special Vegan Sauce or Tomato Sauce - (wheat flour, soya meat, bell pepper, mixed herbs, tomato and spices)",
+        "price": "9",
+        "src": "images/menu/main/8.webp",
+        "category": "main"
+    },
+    {
+        "country": "France",
+        "name": "Farfalle Pasta (GLUTEN FREE pasta additional 5 azn)",
+        "ingredient": "(VEGETARIAN) Mozzarella cheese, spinach, cashew nuts, cherry tomato, mustard and olive oil",
+        "price": "12",
+        "src": "images/menu/main/9.webp",
+        "category": "main"
+    },
+    {
+        "country": "Oman",
+        "name": "Arabic Style Penne (GLUTEN FREE pasta additional 5 azn)",
+        "ingredient": "(VEGAN) Avocado, bell pepper, carrot, eggplant, cashew nuts, tomato sauce and olive oil",
+        "price": "10",
+        "src": "images/menu/main/10.webp",
+        "category": "main"
+    },
+    {
         "country": "",
-
+        "name": "“De Rama” Bowl",
+        "ingredient": "(VEGAN) Rice, falafel, cucumber, cherry tomato, red cabbage, humus, assorted herbs",
+        "price": "15",
+        "src": "images/menu/main/11.webp",
+        "category": "main"
+    },
+    {
+        "country": "",
+        "name": "“De Rama” Bowl",
+        "ingredient": "(VEGETARIAN) Rice, humus, cucumber, cherry tomato, paneer cheese, red cabbage, assorted herbs",
+        "price": "15",
+        "src": "images/menu/main/12.webp",
+        "category": "main"
+    },
+    {
+        "country": "Turkiye",
+        "name": "Special Shaurma (Beyond Meat) – (choice of Special GARLIC Sauce or Special VEGAN Sauce)",
+        "ingredient": "(VEGETARIAN) served with homemade potato wedges & tomato sauce (local lavash bread, Very Special Vegan Meat, Mozzarella cheese, cucumber pickle, tomato, iceberg lettuce)",
+        "price": "19",
+        "src": "images/menu/main/13.webp",
+        "category": "main"
+    },
+    {
+        "country": "Turkiye",
+        "name": "Special Shaurma (Beyond Meat) – (choice of Special GARLIC Sauce or Special VEGAN Sauce)",
+        "ingredient": "(VEGAN) served with homemade potato wedges & tomato sauce (local lavash bread, Very Special Vegan Meat, cucumber pickle, tomato, iceberg lettuce)",
+        "price": "18",
+        "src": "images/menu/main/14.webp",
+        "category": "main"
+    },
+    {
+        "country": "Russia",
+        "name": "Mushroom Julienne",
+        "ingredient": "VEGETARIAN (Mushrooms, cream, Mozzarella cheese) or VEGAN (Mushrooms, coconut cream & potato)",
+        "price": "9",
+        "src": "images/menu/main/15.webp",
+        "category": "main"
+    },
+    {
+        "country": "India",
+        "name": "Chana Dal (with chickpea) - Spicy",
+        "ingredient": "Saffron rice, chickpea dal with Garam Masala, asafetida, tomato, ginger, cilantro, butter, cumin, chili pepper, clove, curcuma, turmeric, mustard seeds, cinnamon, sweet paprika, coriander",
+        "price": "15",
+        "src": "images/menu/main/16.webp",
+        "category": "main"
+    },
+    {
+        "country": "",
+        "name": "Honey Cake",
+        "ingredient": "",
+        "price": "8",
+        "src": "images/menu/dessert/1.webp",
+        "category": "desert"
+    },
+    {
+        "country": "",
+        "name": "Tiramisu Oreo & Cacao",
+        "ingredient": "",
+        "price": "9",
+        "src": "images/menu/dessert/2.webp",
+        "category": "desert"
+    },
+    {
+        "country": "",
+        "name": "Snickers",
+        "ingredient": "",
+        "price": "8",
+        "src": "images/menu/dessert/3.webp",
+        "category": "desert"
+    },
+    {
+        "country": "",
+        "name": "Cheesecake",
+        "ingredient": "",
+        "price": "8",
+        "src": "images/menu/dessert/4.webp",
+        "category": "desert"
+    },
+    {
+        "country": "",
+        "name": "Ferrero Rocher",
+        "ingredient": "",
+        "price": "8",
+        "src": "images/menu/dessert/5.webp",
+        "category": "desert"
+    },
+    {
+        "country": "",
+        "name": "Carrot Cake (VEGAN)",
+        "ingredient": "",
+        "price": "5",
+        "src": "images/menu/dessert/6.webp",
+        "category": "desert"
+    },
+    {
+        "country": "",
+        "name": "Ice Cream (3 scoops)",
+        "ingredient": "",
+        "price": "6",
+        "src": "images/menu/dessert/7.webp",
+        "category": "desert"
+    },
+    {
+        "country": "",
+        "name": "Rafaello (5 scoops)",
+        "ingredient": "",
+        "price": "5",
+        "src": "images/menu/dessert/8.webp",
+        "category": "desert"
+    },
+    {
+        "country": "",
+        "name": "Syrniki",
+        "ingredient": "",
+        "price": "9",
+        "src": "images/menu/dessert/9.webp",
+        "category": "desert"
+    },
+    {
+        "country": "",
+        "name": "Assorted seasonal fruit plate",
+        "ingredient": "",
+        "price": "8",
+        "src": "images/menu/dessert/10.webp",
+        "category": "desert"
     }
 ]
 
 const FOOD_LIST_EN = [
     {
-        "name": "",
+        "country": "India",
+        "name": "Cold Raita Soup (Raw Food)",
+        "ingredient": "(VEGETARIAN) yoghurt, cucumber, assorted herbs, mint and spices ",
+        "price": "6",
+        "src": "images/menu/soup/1.webp",
+        "category": "soup"
+    },
+    {
+        "country": "Greece",
+        "name": "Mushroom Cream Soup",
+        "ingredient": "(VEGAN or VEGETARIAN) served with crouton bread, mushroom, cream, potato & spices",
+        "price": "7",
+        "src": "images/menu/soup/2.webp",
+        "category": "soup"
+    },
+    {
+        "country": "Spain",
+        "name": "Red Cabbage Cream Soup",
+        "ingredient": "(VEGAN or VEGETARIAN) served with crouton bread, red cabbage, cream, potato & spices",
+        "price": "6",
+        "src": "images/menu/soup/3.webp",
+        "category": "soup"
+    },
+    {
+        "country": "Japan",
+        "name": "Miso Soup – (low calorie dish)",
+        "ingredient": "(VEGAN or VEGETARIAN) miso – soya paste, paneer cheese, seaweed, bell pepper & spices, served with rice on the side",
+        "price": "7",
+        "src": "images/menu/soup/4.webp",
+        "category": "soup"
+    },
+    {
+        "country": "Morocco",
+        "name": "Cream Spinach Soup",
+        "ingredient": "(VEGAN or VEGETARIAN) served with crouton bread, spinach, cream, potato & spices",
+        "price": "6",
+        "src": "images/menu/soup/5.webp",
+        "category": "soup"
+    },
+    {
+        "country": "Lebanon",
+        "name": "Fresh Salad suitable for RAW FOOD eaters, low calorie dish",
+        "ingredient": "(VEGAN or VEGETARIAN) green salad, tomato, cucumber, bell pepper, walnuts, orange mustard dressing",
+        "price": "8",
+        "src": "images/menu/salad/1.webp",
+        "category": "salad"
+    },
+    {
+        "country": "Russia",
+        "name": "Shuba Salad",
+        "ingredient": "(VEGAN or VEGETARIAN) beetroot, potato, carrot, eggplant, sea weed & homemade vegan mayonnaise and special black salt",
+        "price": "7",
+        "src": "images/menu/salad/2.webp",
+        "category": "salad"
+    },
+    {
+        "country": "South Africa",
+        "name": "Broccoli & Avocado Salad suitable for RAW FOOD eaters, low calorie dish",
+        "ingredient": "(VEGAN or VEGETARIAN) broccoli, avocado, spinach, iceberg lettuce, tomato, zucchini, lemon juice, olive oil, cashew nuts and herbs",
+        "price": "9",
+        "src": "images/menu/salad/3.webp",
+        "category": "salad"
+    },
+    {
+        "country": "Italy",
+        "name": "Caesar Salad",
+        "ingredient": "(VEGAN or VEGETARIAN) with special homemade VEGAN sauce or VEGAN GARLIC sauce (iceberg lettuce, tomato, soya meat, parmesan cheese, spinach, lemon juice with crouton bread)",
+        "price": "8",
+        "src": "images/menu/salad/4.webp",
+        "category": "salad"
+    },
+    {
+        "country": "Iran",
+        "name": "Khumus",
+        "ingredient": "(VEGAN or VEGETARIAN) chickpea puree, olive oil, sesame paste, tomatoes & spices",
+        "price": "7",
+        "src": "images/menu/salad/5.webp",
+        "category": "salad"
+    },
+    {
+        "country": "Israel",
+        "name": "Grilled Falafel Roll",
+        "ingredient": "(choice of Special VEGAN Sauce or GARLIC Sauce) local homemade lavash bread, cheek pea cutlet, iceberg lettuce, spinach, tomato, cucumber pickle",
+        "price": "9",
+        "src": "images/menu/main/1.webp",
+        "category": "main"
+    },
+    {
+        "country": "Mexico",
+        "name": "Grilled Spicy Burrito",
+        "ingredient": "(VEGAN or VEGETARIAN) ocal homemade lavash bread, soya meat slices, tomato, sweet corn, red beans, mozzarella cheese, bell pepper, spinach, iceberg lettuce with homemade spicy Salsa sauce",
+        "price": "9",
+        "src": "images/menu/main/2.webp",
+        "category": "main"
+    },
+    {
+        "country": "Thailand",
+        "name": "Wok Fried Noodles – (regular wheat noodles or buckwheat noodles)",
+        "ingredient": "(VEGAN with Soya Meat or VEGETARIAN with Paneer Cheese) - please ask for spice level (bell pepper, carrot, zucchini, sesame seed oil, soya sauce)",
+        "price": "10",
+        "src": "images/menu/main/3.webp",
+        "category": "main"
+    },
+    {
+        "country": "Malaysia",
+        "name": "Vegetable Fried Rice (GLUTEN FREE)",
+        "ingredient": "(VEGAN with Soya Meat or VEGETARIAN with Paneer Cheese) - please ask for spice level (basmati rice, bell pepper, carrot, zucchini, sesame seed oil, soya sauce)",
+        "price": "10",
+        "src": "images/menu/main/4.webp",
+        "category": "main"
+    },
+    {
+        "country": "USA",
+        "name": "Special Vegan Burger (Beyond Meat)",
+        "ingredient": "(choice of Special GARLIC Sauce or Special VEGAN Sauce) served with homemade potato wedges & tomato sauce (beetroot bread bun, Very Special Vegan Burger, cucumber pickle, tomato, iceberg lettuce)",
+        "price": "18",
+        "src": "images/menu/main/5.webp",
+        "category": "main"
+    },
+    {
+        "country": "USA",
+        "name": "Special Vegetarian Cheeseburger (Beyond Meat)",
+        "ingredient": "(choice of Special GARGLIC or Special VEGAN Sauce) served with homemade potato wedges & tomato sauce (beetroot bread bun, Gouda Cheese, Very Special Vegan Burger, cucumber pickle, tomato, iceberg lettuce)",
+        "price": "19",
+        "src": "images/menu/main/6.webp",
+        "category": "main"
+    },
+    {
+        "country": "Azerbaijan",
+        "name": "Grape Leaf Dolma",
+        "ingredient": "(VEGETARIAN) served with sour cream & crouton bread (basmati rice, selection of herbs, cottage cheese and spices)",
+        "price": "10",
+        "src": "images/menu/main/7.webp",
+        "category": "main"
+    },
+    {
+        "country": "Georgia",
+        "name": "Fried Khinkali",
+        "ingredient": "(VEGETARIAN or VEGAN) – served with your choice of regular Sour Cream or special Vegan Sauce or Tomato Sauce - (wheat flour, soya meat, bell pepper, mixed herbs, tomato and spices)",
+        "price": "9",
+        "src": "images/menu/main/8.webp",
+        "category": "main"
+    },
+    {
+        "country": "France",
+        "name": "Farfalle Pasta (GLUTEN FREE pasta additional 5 azn)",
+        "ingredient": "(VEGETARIAN) Mozzarella cheese, spinach, cashew nuts, cherry tomato, mustard and olive oil",
+        "price": "12",
+        "src": "images/menu/main/9.webp",
+        "category": "main"
+    },
+    {
+        "country": "Oman",
+        "name": "Arabic Style Penne (GLUTEN FREE pasta additional 5 azn)",
+        "ingredient": "(VEGAN) Avocado, bell pepper, carrot, eggplant, cashew nuts, tomato sauce and olive oil",
+        "price": "10",
+        "src": "images/menu/main/10.webp",
+        "category": "main"
+    },
+    {
         "country": "",
-
+        "name": "“De Rama” Bowl",
+        "ingredient": "(VEGAN) Rice, falafel, cucumber, cherry tomato, red cabbage, humus, assorted herbs",
+        "price": "15",
+        "src": "images/menu/main/11.webp",
+        "category": "main"
+    },
+    {
+        "country": "",
+        "name": "“De Rama” Bowl",
+        "ingredient": "(VEGETARIAN) Rice, humus, cucumber, cherry tomato, paneer cheese, red cabbage, assorted herbs",
+        "price": "15",
+        "src": "images/menu/main/12.webp",
+        "category": "main"
+    },
+    {
+        "country": "Turkiye",
+        "name": "Special Shaurma (Beyond Meat) – (choice of Special GARLIC Sauce or Special VEGAN Sauce)",
+        "ingredient": "(VEGETARIAN) served with homemade potato wedges & tomato sauce (local lavash bread, Very Special Vegan Meat, Mozzarella cheese, cucumber pickle, tomato, iceberg lettuce)",
+        "price": "19",
+        "src": "images/menu/main/13.webp",
+        "category": "main"
+    },
+    {
+        "country": "Turkiye",
+        "name": "Special Shaurma (Beyond Meat) – (choice of Special GARLIC Sauce or Special VEGAN Sauce)",
+        "ingredient": "(VEGAN) served with homemade potato wedges & tomato sauce (local lavash bread, Very Special Vegan Meat, cucumber pickle, tomato, iceberg lettuce)",
+        "price": "18",
+        "src": "images/menu/main/14.webp",
+        "category": "main"
+    },
+    {
+        "country": "Russia",
+        "name": "Mushroom Julienne",
+        "ingredient": "VEGETARIAN (Mushrooms, cream, Mozzarella cheese) or VEGAN (Mushrooms, coconut cream & potato)",
+        "price": "9",
+        "src": "images/menu/main/15.webp",
+        "category": "main"
+    },
+    {
+        "country": "India",
+        "name": "Chana Dal (with chickpea) - Spicy",
+        "ingredient": "Saffron rice, chickpea dal with Garam Masala, asafetida, tomato, ginger, cilantro, butter, cumin, chili pepper, clove, curcuma, turmeric, mustard seeds, cinnamon, sweet paprika, coriander",
+        "price": "15",
+        "src": "images/menu/main/16.webp",
+        "category": "main"
+    },
+    {
+        "country": "",
+        "name": "Honey Cake",
+        "ingredient": "",
+        "price": "8",
+        "src": "images/menu/dessert/1.webp",
+        "category": "desert"
+    },
+    {
+        "country": "",
+        "name": "Tiramisu Oreo & Cacao",
+        "ingredient": "",
+        "price": "9",
+        "src": "images/menu/dessert/2.webp",
+        "category": "desert"
+    },
+    {
+        "country": "",
+        "name": "Snickers",
+        "ingredient": "",
+        "price": "8",
+        "src": "images/menu/dessert/3.webp",
+        "category": "desert"
+    },
+    {
+        "country": "",
+        "name": "Cheesecake",
+        "ingredient": "",
+        "price": "8",
+        "src": "images/menu/dessert/4.webp",
+        "category": "desert"
+    },
+    {
+        "country": "",
+        "name": "Ferrero Rocher",
+        "ingredient": "",
+        "price": "8",
+        "src": "images/menu/dessert/5.webp",
+        "category": "desert"
+    },
+    {
+        "country": "",
+        "name": "Carrot Cake (VEGAN)",
+        "ingredient": "",
+        "price": "5",
+        "src": "images/menu/dessert/6.webp",
+        "category": "desert"
+    },
+    {
+        "country": "",
+        "name": "Ice Cream (3 scoops)",
+        "ingredient": "",
+        "price": "6",
+        "src": "images/menu/dessert/7.webp",
+        "category": "desert"
+    },
+    {
+        "country": "",
+        "name": "Rafaello (5 scoops)",
+        "ingredient": "",
+        "price": "5",
+        "src": "images/menu/dessert/8.webp",
+        "category": "desert"
+    },
+    {
+        "country": "",
+        "name": "Syrniki",
+        "ingredient": "",
+        "price": "9",
+        "src": "images/menu/dessert/9.webp",
+        "category": "desert"
+    },
+    {
+        "country": "",
+        "name": "Assorted seasonal fruit plate",
+        "ingredient": "",
+        "price": "8",
+        "src": "images/menu/dessert/10.webp",
+        "category": "desert"
     }
 ]

@@ -42,7 +42,20 @@ const ALCO_CATEGORY_RU = [
     }
 ]
 const ALCO_CATEGORY_AZ = []
-const ALCO_CATEGORY_EN = []
+const ALCO_CATEGORY_EN = [
+    {
+        "name": "Wine(alco)",
+        "id": "winealco"
+    },
+    {
+        "name": "Cocktail",
+        "id": "cocktail"
+    },
+    {
+        "name": "Aperitive & Digestive",
+        "id": "aperitiv"
+    }
+]
 
 const ALCO_LIST_RU = [
     {
@@ -89,4 +102,47 @@ const ALCO_LIST_RU = [
     }
 ]
 const ALCO_LIST_AZ = []
-const ALCO_LIST_EN = []
+const ALCO_LIST_EN = [
+    {
+        "name": "Homemade from Kakhetiya Region",
+        "ingredient": "Georgia 2020 0,75lt",
+        "price": "35",
+        "src": "images/menu/wine-alco/1.webp",
+        "category": "winealco"
+    },
+    {
+        "name": "Jagannath",
+        "ingredient": "orange juice & Jägermeister",
+        "price": "12",
+        "src": "images/menu/cocktail/1.webp",
+        "category": "cocktail"
+    },
+    {
+        "name": "Sunrise",
+        "ingredient": "orange juice & tequilla",
+        "price": "15",
+        "src": "images/menu/cocktail/2.webp",
+        "category": "cocktail"
+    },
+    {
+        "name": "Sangriya",
+        "ingredient": "homemade wine with fresh seasonal fruits 0,75lt",
+        "price": "45",
+        "src": "images/menu/cocktail/3.webp",
+        "category": "cocktail"
+    },
+    {
+        "name": "Jägermeister – (Germany) (0,5\u00A0cl)",
+        "ingredient": "mixture of 56 different types of herbs and spices",
+        "price": "5",
+        "src": "images/menu/aperitiv/1.webp",
+        "category": "aperitiv"
+    },
+    {
+        "name": "Sauza Gold Tequilla (Cuba) (0,5\u00A0cl)",
+        "ingredient": "pure agave",
+        "price": "9",
+        "src": "images/menu/aperitiv/2.webp",
+        "category": "aperitiv"
+    }
+]
