@@ -72,6 +72,7 @@ const activeCategory = ref(category.value[0])
         height: 180px;
         border-radius: 60px;
         margin-bottom: 30px;
+        object-fit: cover;
     }
 
     &__item-price {

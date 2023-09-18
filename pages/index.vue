@@ -11,6 +11,7 @@
     <Shop />
     <Gallery />
     <Blog />
+    <Contact />
 </template>
 
 <script setup lang="ts">
@@ -41,14 +42,14 @@
 @media (max-width: 800px) {
     .hero {
         padding-bottom: 40px;
-        height: calc(100vh + 40px);
+        // height: calc(100vh + 40px);
     }
 }
 
 @media (max-width: 500px) {
     .hero {
         padding-bottom: 30px;
-        height: calc(100vh + 30px);
+        // height: calc(100vh + 30px);
     }
 }
 </style>

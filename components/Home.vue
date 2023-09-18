@@ -159,12 +159,12 @@
 @media (max-width: 600px) {
     .home {
         &__title {
-            margin-top: 20px;
+            margin-top: 60px;
         }
 
         &__btns {
             flex-direction: column;
-            margin-top: 24px;
+            margin-top: 16px;
         }
 
         &__btn {
@@ -173,16 +173,16 @@
 
         &__btn-1 {
             margin-right: 0;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
         &__subtitle {
-            margin-top: 16px;
-            margin-bottom: 24px;
+            margin-top: 12px;
+            margin-bottom: 16px;
         }
 
         &__img-cont {
-            margin-top: 40px;
+            margin-top: 30px;
         }
     }
 }

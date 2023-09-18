@@ -144,28 +144,28 @@ const DRINK_LIST_RU = [
         "name": "Зеленый чай",
         "ingredient": "c жасмином или фруктами",
         "price": "8",
-        "src": "",
+        "src": "images/menu/teapot/1.webp",
         "category": "teapot"
     },
     {
         "name": "Африканский ройбуш",
         "ingredient": "",
         "price": "8",
-        "src": "",
+        "src": "images/menu/teapot/2.webp",
         "category": "teapot"
     },
     {
         "name": "Азиатский гибискус",
         "ingredient": "",
         "price": "8",
-        "src": "",
+        "src": "images/menu/teapot/3.webp",
         "category": "teapot"
     },
     {
         "name": "Гречишный Чай",
         "ingredient": "",
         "price": "8",
-        "src": "",
+        "src": "images/menu/teapot/4.webp",
         "category": "teapot"
     },
     {
@@ -179,7 +179,7 @@ const DRINK_LIST_RU = [
         "name": "Иван Чай",
         "ingredient": "",
         "price": "8",
-        "src": "",
+        "src": "images/menu/teapot/6.webp",
         "category": "teapot"
     },
     {
@@ -193,14 +193,14 @@ const DRINK_LIST_RU = [
         "name": "Pомашка",
         "ingredient": "",
         "price": "3",
-        "src": "",
+        "src": "images/menu/cup/2.webp",
         "category": "cup"
     },
     {
         "name": "Mята перечная",
         "ingredient": "",
         "price": "3",
-        "src": "",
+        "src": "images/menu/cup/3.webp",
         "category": "cup"
     },
     {
@@ -214,112 +214,112 @@ const DRINK_LIST_RU = [
         "name": "Голубая Бабочка – Clitoria Ternatea (средство для зрения)",
         "ingredient": "",
         "price": "5",
-        "src": "",
+        "src": "images/menu/cup/5.webp",
         "category": "cup"
     },
     {
         "name": "Сираб",
         "ingredient": "(с газом или без) 0,5lt",
         "price": "3.5",
-        "src": "",
+        "src": "images/menu/water/1.webp",
         "category": "water"
     },
     {
         "name": "Вода",
         "ingredient": "(настоянная в медном термусе) 0,18 cl",
         "price": "2",
-        "src": "",
+        "src": "images/menu/water/2.webp",
         "category": "water"
     },
     {
         "name": "Вода",
         "ingredient": "(настоянная в серебренном стакане) 0,18 cl",
         "price": "3",
-        "src": "",
+        "src": "images/menu/water/3.webp",
         "category": "water"
     },
     {
         "name": "Лимонад домашний",
         "ingredient": "(сироп на выбор)",
         "price": "6",
-        "src": "",
+        "src": "images/menu/cold/1.webp",
         "category": "cold"
     },
     {
         "name": "Холодный Чай",
         "ingredient": "(сироп на выбор)",
         "price": "6",
-        "src": "",
+        "src": "images/menu/cold/22.webp",
         "category": "cold"
     },
     {
         "name": "Лимонад баночный",
         "ingredient": "(манго или лайм)",
         "price": "4",
-        "src": "",
+        "src": "images/menu/cold/3.webp",
         "category": "cold"
     },
     {
         "name": "Комбуча",
         "ingredient": "",
         "price": "5",
-        "src": "",
+        "src": "images/menu/cold/4.webp",
         "category": "cold"
     },
     {
         "name": "Шиповник",
         "ingredient": "",
         "price": "3",
-        "src": "",
+        "src": "images/menu/cold/5.webp",
         "category": "cold"
     },
     {
         "name": "Pepsi Cola",
         "ingredient": "",
         "price": "4",
-        "src": "",
+        "src": "images/menu/cold/6.webp",
         "category": "cold"
     },
     {
         "name": "Coca Cola Zero",
         "ingredient": "",
         "price": "4",
-        "src": "",
+        "src": "images/menu/cold/7.webp",
         "category": "cold"
     },
     {
         "name": "Детокс",
         "ingredient": "(уксусный напиток)",
         "price": "3",
-        "src": "",
+        "src": "images/menu/cold/8.webp",
         "category": "cold"
     },
     {
         "name": "Яблоко",
         "ingredient": "",
         "price": "6",
-        "src": "",
+        "src": "images/menu/juice/1.webp",
         "category": "juice"
     },
     {
         "name": "Морковь",
         "ingredient": "",
         "price": "6",
-        "src": "",
+        "src": "images/menu/juice/2.webp",
         "category": "juice"
     },
     {
         "name": "Апельсин",
         "ingredient": "",
         "price": "7",
-        "src": "",
+        "src": "images/menu/juice/3.webp",
         "category": "juice"
     },
     {
         "name": "Грейпфрут",
         "ingredient": "",
         "price": "8",
-        "src": "",
+        "src": "images/menu/juice/4.webp",
         "category": "juice"
     },
     {
@@ -333,70 +333,70 @@ const DRINK_LIST_RU = [
         "name": "Розовое Рубаи",
         "ingredient": "Азербайджан 2018 (Полусладкое) - 0,75lt",
         "price": "18",
-        "src": "",
+        "src": "images/menu/wine-nonalco/1.webp",
         "category": "winenonalco"
     },
     {
         "name": "Красное Рубаи",
         "ingredient": "Азербайджан 2018 (Полусладкое) - 0,75lt",
         "price": "18",
-        "src": "",
+        "src": "images/menu/wine-nonalco/2.webp",
         "category": "winenonalco"
     },
     {
         "name": "Белое Кахраба",
         "ingredient": "Азербайджан 2018 (Полусладкое) - 0,75lt",
         "price": "18",
-        "src": "",
+        "src": "images/menu/wine-nonalco/3.webp",
         "category": "winenonalco"
     },
     {
         "name": "Красное “Just 0”",
         "ingredient": "Франция 2022 (Полусухое) - 0,75lt",
         "price": "25",
-        "src": "",
+        "src": "images/menu/wine-nonalco/4.webp",
         "category": "winenonalco"
     },
     {
         "name": "Белое “Just 0”",
         "ingredient": "Франция 2022 (Полусухое) - 0,75lt",
         "price": "25",
-        "src": "",
+        "src": "images/menu/wine-nonalco/5.webp",
         "category": "winenonalco"
     },
     {
         "name": "Балтика - Россия (0,5lt)",
         "ingredient": "",
         "price": "6",
-        "src": "",
+        "src": "images/menu/beer/1.webp",
         "category": "beernonalco"
     },
     {
         "name": "Heineken - Голандия (0,33 lt)",
         "ingredient": "",
         "price": "6",
-        "src": "",
+        "src": "images/menu/beer/2.webp",
         "category": "beernonalco"
     },
     {
         "name": "Mохито",
         "ingredient": "(на выбор сироп)",
         "price": "8",
-        "src": "",
+        "src": "images/menu/mocktail/1.webp",
         "category": "mocktail"
     },
     {
         "name": "Инь Ян",
         "ingredient": "апельсиновый сок, карамельный сироп и эспрессо кофе",
         "price": "10",
-        "src": "",
+        "src": "images/menu/mocktail/2.webp",
         "category": "mocktail"
     },
     {
         "name": "Сангрия",
         "ingredient": "(вино со свежими сезонными фруктами) 0.75lt",
         "price": "29",
-        "src": "",
+        "src": "images/menu/mocktail/3.webp",
         "category": "mocktail"
     }
 ]

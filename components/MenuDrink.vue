@@ -8,7 +8,7 @@
     <div class="menu__items">
         <div class="menu__item" v-for="drink in drinks.filter(drink => drink.category === activeCategory.id)">
             <div class="menu__item-left">
-                <img :src="'images/drink1.png'" class="menu__item-img">
+                <img :src="drink.src" class="menu__item-img">
             </div>
             <div class="menu__item-right">
                 <span class="menu__item-name text">{{ drink.name }}</span>
@@ -17,7 +17,7 @@
             </div>
         </div>
     </div>
-    <a href="#food" class="menu__to-category" @click.prevent="smoothScrollToSection('food')">
+    <a class="menu__to-category" @click.prevent="smoothScrollToSection('drink-nonalco')">
         <span class="helper-text">{{ $t('menu-f.to-category') }}</span>
         <img src="../assets/images/to-category.svg" class="menu__to-category-img">
     </a>
@@ -32,7 +32,7 @@
         <div class="menu__item"
             v-for="alcoDrink in alcoDrinks.filter(alcoDrink => alcoDrink.category === activeAlcoCategory.id)">
             <div class="menu__item-left">
-                <img :src="'images/alco1.png'" class="menu__item-img">
+                <img :src="alcoDrink.src" class="menu__item-img">
             </div>
             <div class="menu__item-right">
                 <span class="menu__item-name text">{{ alcoDrink.name }}</span>
@@ -97,6 +97,7 @@ const activeAlcoCategory = ref(alcoCategory.value[0])
         width: 222px;
         height: 240px;
         border-radius: 60px;
+        object-fit: cover;
     }
 
     &__item-price {

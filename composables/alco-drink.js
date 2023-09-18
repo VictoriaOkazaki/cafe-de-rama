@@ -49,42 +49,42 @@ const ALCO_LIST_RU = [
         "name": "Домашнее Регион Кахетия",
         "ingredient": "2020 (Грузия) - 0,75 lt",
         "price": "35",
-        "src": "",
+        "src": "images/menu/wine-alco/1.webp",
         "category": "winealco"
     },
     {
         "name": "Джаганат",
         "ingredient": "егермейстер, апельсиновый сок",
         "price": "12",
-        "src": "",
+        "src": "images/menu/cocktail/1.webp",
         "category": "cocktail"
     },
     {
         "name": "Санрайз",
         "ingredient": "текилла,  апельсиновый сок",
         "price": "15",
-        "src": "",
+        "src": "images/menu/cocktail/2.webp",
         "category": "cocktail"
     },
     {
         "name": "Сангрия",
         "ingredient": "домашнее вино со свежими сезонными фруктами 0.75 лт",
         "price": "45",
-        "src": "",
+        "src": "images/menu/cocktail/3.webp",
         "category": "cocktail"
     },
     {
         "name": "Jägermeister – (Германия) (0,5\u00A0cl)",
         "ingredient": "настойка из 56 различных видов трав и специй",
         "price": "5",
-        "src": "",
+        "src": "images/menu/aperitiv/1.webp",
         "category": "aperitiv"
     },
     {
         "name": "Текила Сауза Голд – (Куба) (0,5\u00A0cl)",
         "ingredient": "натуральная агава  ",
         "price": "9",
-        "src": "",
+        "src": "images/menu/aperitiv/2.webp",
         "category": "aperitiv"
     }
 ]
