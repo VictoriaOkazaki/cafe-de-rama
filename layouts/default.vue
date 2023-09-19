@@ -10,6 +10,15 @@
 import { useI18n } from 'vue-i18n'
 const { locale } = useI18n()
 
+onMounted(() => {
+    const lang = localStorage.getItem('locale') || 'ru'
+    locale.value = lang
+})
+
+watch(locale, () => {
+    localStorage.setItem('locale', locale.value)
+})
+
 useHead({
     link: [
         {

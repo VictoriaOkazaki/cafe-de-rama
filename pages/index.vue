@@ -2,7 +2,7 @@
     <div class="hero">
         <Header class="header" />
         <Home class="home" />
-        <HomeBottom />
+        <HomeBottom class="home-bottom" />
     </div>
     <About />
     <Menu />
@@ -19,6 +19,11 @@
 </script>
 
 <style scoped lang="scss">
+.home-bottom {
+    animation: appearFromBottom 1.5s ease-out 1s;
+    animation-fill-mode: both;
+}
+
 .hero {
     height: calc(100vh + 60px);
     display: flex;

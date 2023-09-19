@@ -23,6 +23,7 @@ button {
     flex-direction: column;
     min-height: 100%;
     position: relative;
+    background-color: $bg-2;
 }
 
 .main {
@@ -42,7 +43,7 @@ button {
 .latin .h1,
 .latin .title {
     font-family: Kalam, cursive;
-    font-weight: 500;
+    font-weight: 400;
     line-height: normal;
 }
 
@@ -280,5 +281,12 @@ button {
     .logo {
         width: 60px;
         height: 60px;
+    }
+}
+
+@media (max-width: 340px) {
+    .logo {
+        width: 40px;
+        height: 40px;
     }
 }

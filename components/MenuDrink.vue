@@ -5,7 +5,7 @@
             @click="activeCategory = c">{{ c.name }}</li>
     </ul>
     <h3 class="menu__category-desc subtitle">{{ activeCategory.title }}</h3>
-    <div class="menu__items">
+    <div class="menu__items" ref="menuItems1">
         <div class="menu__item" v-for="drink in drinks.filter(drink => drink.category === activeCategory.id)">
             <div class="menu__item-left">
                 <img :src="drink.src" class="menu__item-img">
@@ -19,7 +19,7 @@
     </div>
     <a class="menu__to-category" @click.prevent="smoothScrollToSection('drink-nonalco')">
         <span class="helper-text">{{ $t('menu-f.to-category') }}</span>
-        <img src="../assets/images/to-category.svg" class="menu__to-category-img">
+        <img src="../assets/images/arrow.svg" class="menu__to-category-img">
     </a>
     <!-- alco-drinks -->
     <h2 class="menu__title title">{{ $t('menu-f.title3') }}</h2>
@@ -28,7 +28,7 @@
             @click="activeAlcoCategory = c">{{ c.name }}</li>
     </ul>
     <!-- <h3 class="menu__category-desc subtitle">{{ activeAlcoCategory.title }}</h3> -->
-    <div class="menu__items">
+    <div class="menu__items" ref="menuItems2">
         <div class="menu__item"
             v-for="alcoDrink in alcoDrinks.filter(alcoDrink => alcoDrink.category === activeAlcoCategory.id)">
             <div class="menu__item-left">
@@ -44,10 +44,36 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n'
+
 const { drinks, category } = useDrinkList()
 const activeCategory = ref(category.value[0])
 const { alcoDrinks, alcoCategory } = useAlcoList()
 const activeAlcoCategory = ref(alcoCategory.value[0])
+
+const { locale } = useI18n()
+
+watch(locale, () => {
+    activeCategory.value = category.value.find(c => c.id === activeCategory.value.id)
+})
+
+const menuItems1 = ref()
+const menuItems2 = ref()
+useIntersection(menuItems1, (entry) => {
+    entry.target.style.animation = "appearFromTop 1.5s ease-in"
+    entry.target.style.animationFillMode = "both"
+}, {
+    workTrueOnce: true,
+    workTrueOnly: true
+})
+
+useIntersection(menuItems2, (entry) => {
+    entry.target.style.animation = "appearFromTop 1.5s ease-in"
+    entry.target.style.animationFillMode = "both"
+}, {
+    workTrueOnce: true,
+    workTrueOnly: true
+})
 </script>
 
 <style lang="scss" scoped>

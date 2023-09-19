@@ -5,7 +5,7 @@
             @click="activeCategory = c">{{ c.name }}</li>
     </ul>
     <h3 class="menu__category-desc subtitle">{{ activeCategory.title }}</h3>
-    <div class="menu__items">
+    <div class="menu__items" ref="menuItems">
         <div class="menu__item" v-for="food in  foods.filter(food => food.category === activeCategory.id) ">
             <div class="menu__item-left">
                 <img :src="food.src" class="menu__item-img">
@@ -20,13 +20,30 @@
     </div>
     <a href="#food" class="menu__to-category" @click.prevent="smoothScrollToSection('food')">
         <span class="helper-text">{{ $t('menu-f.to-category') }}</span>
-        <img src="../assets/images/to-category.svg" class="menu__to-category-img">
+        <img src="../assets/images/arrow.svg" class="menu__to-category-img">
     </a>
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n'
+
 const { foods, category } = useFoodList()
 const activeCategory = ref(category.value[0])
+
+const { locale } = useI18n()
+
+watch(locale, () => {
+    activeCategory.value = category.value.find(c => c.id === activeCategory.value.id)
+})
+
+const menuItems = ref()
+useIntersection(menuItems, (entry) => {
+    entry.target.style.animation = "appearFromTop 1.5s ease-in"
+    entry.target.style.animationFillMode = "both"
+}, {
+    workTrueOnce: true,
+    workTrueOnly: true
+})
 </script>
 
 <style lang="scss" scoped>

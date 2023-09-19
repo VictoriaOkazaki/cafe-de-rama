@@ -1,5 +1,5 @@
 <template>
-    <li class="section__item">
+    <li class="section__item" ref="card">
         <img class="section__item-img" :src="imgSrc" alt="">
         <h3 class="section__item-title text">{{ title }}</h3>
         <span class="section__item-text helper-text">{{ text }}</span>
@@ -13,6 +13,17 @@ defineProps<{
     title: string,
     text: string
 }>()
+
+const card = ref()
+useIntersection(card, (entry) => {
+    const target = entry.target as any
+    const delay = Number(target.dataset.index || '0')
+    target.style.animation = `appearFromLeft 1.5s ease-out ${delay}s`
+    target.style.animationFillMode = "both"
+}, {
+    workTrueOnce: true,
+    workTrueOnly: true
+})
 </script>
 
 <style scoped lang="scss">

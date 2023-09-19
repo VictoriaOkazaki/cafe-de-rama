@@ -86,4 +86,12 @@ onMounted(() => {
         }
     }
 }
+
+@media (max-width: 600px) {
+    .social {
+        .gravityButton>a {
+            width: 34px;
+        }
+    }
+}
 </style>

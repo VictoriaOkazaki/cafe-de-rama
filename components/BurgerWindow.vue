@@ -32,7 +32,7 @@ const { isBurgerOpen } = useBurger()
         display: flex !important;
         position: absolute;
         left: 0;
-        bottom: 40px;
+        bottom: 30px;
     }
 }
 </style>

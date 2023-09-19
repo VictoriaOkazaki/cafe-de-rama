@@ -61,4 +61,12 @@
         }
     }
 }
+
+@media (max-width: 340px) {
+    .home {
+        &__bottom-item {
+            margin-top: 10px;
+        }
+    }
+}
 </style>

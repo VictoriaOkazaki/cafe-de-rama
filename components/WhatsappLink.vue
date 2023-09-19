@@ -56,4 +56,10 @@
         margin-right: 8px;
     }
 }
+
+@media (max-width: 340px) {
+    .wp-logo {
+        margin-right: 3px;
+    }
+}
 </style>

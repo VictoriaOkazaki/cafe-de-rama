@@ -66,7 +66,45 @@ const CATEGORY_DRINK_RU = [
         "id": "mocktail"
     },
 ]
-const CATEGORY_DRINK_AZ = []
+const CATEGORY_DRINK_AZ = [
+    {
+        "name": "Qəhvə",
+        "id": "cofe",
+        "title": "(kafein yada kafeinsiz) - SÜD NÖVÜN SEÇİN"
+    },
+    {
+        "name": "Çay (çaynik)",
+        "id": "teapot"
+    },
+    {
+        "name": "Çay (fincanda)",
+        "id": "cup"
+    },
+    {
+        "name": "Su",
+        "id": "water"
+    },
+    {
+        "name": "Sərinləşdirici içki",
+        "id": "cold"
+    },
+    {
+        "name": "Yeni sıxılmış meyvə çirəsi",
+        "id": "juice"
+    },
+    {
+        "name": "Şərab(alkoqolsuz)",
+        "id": "winenonalco"
+    },
+    {
+        "name": "Pivə(alkoqolsuz)",
+        "id": "beernonalco"
+    },
+    {
+        "name": "Moktail",
+        "id": "mocktail"
+    },
+]
 const CATEGORY_DRINK_EN = [
     {
         "name": "Coffee",
@@ -218,6 +256,13 @@ const DRINK_LIST_EN = [
         "ingredient": "",
         "price": "8",
         "src": "images/menu/teapot/6.webp",
+        "category": "teapot"
+    },
+    {
+        "name": "Black Earl Gray",
+        "ingredient": "",
+        "price": "8",
+        "src": "images/menu/teapot/7.webp",
         "category": "teapot"
     },
     {
@@ -383,7 +428,7 @@ const DRINK_LIST_EN = [
     },
     {
         "name": "White Kahraba",
-        "ingredient": "Azerbaija 2018 (Semin Sweet) 0,75lt",
+        "ingredient": "Azerbaijan 2018 (Semin Sweet) 0,75lt",
         "price": "18",
         "src": "images/menu/wine-nonalco/3.webp",
         "category": "winenonalco"
@@ -397,7 +442,7 @@ const DRINK_LIST_EN = [
     },
     {
         "name": "White “Just 0”",
-        "ingredient": "France 2022 (Semi Dry) 0,75 t",
+        "ingredient": "France 2022 (Semi Dry) 0,75lt",
         "price": "25",
         "src": "images/menu/wine-nonalco/5.webp",
         "category": "winenonalco"
@@ -438,7 +483,344 @@ const DRINK_LIST_EN = [
         "category": "mocktail"
     }
 ]
-const DRINK_LIST_AZ = []
+const DRINK_LIST_AZ = [
+    {
+        "name": "Kapuçino",
+        "ingredient": "",
+        "price": "5",
+        "src": "images/menu/cofe/1.webp",
+        "category": "cofe"
+    },
+    {
+        "name": "Amerikano",
+        "ingredient": "",
+        "price": "3",
+        "src": "images/menu/cofe/2.webp",
+        "category": "cofe"
+    },
+    {
+        "name": "Tək və ya ikiqat Espresso",
+        "ingredient": "",
+        "price": "3",
+        "src": "images/menu/cofe/3.webp",
+        "category": "cofe"
+    },
+    {
+        "name": "Kofe Latte",
+        "ingredient": "",
+        "price": "5",
+        "src": "images/menu/cofe/4.webp",
+        "category": "cofe"
+    },
+    {
+        "name": "Türk Qəhvəsi Dondurma ilə",
+        "ingredient": "",
+        "price": "8",
+        "src": "images/menu/cofe/5.webp",
+        "category": "cofe"
+    },
+    {
+        "name": "Hindiba",
+        "ingredient": "",
+        "price": "4",
+        "src": "images/menu/cofe/6.webp",
+        "category": "cofe"
+    },
+    {
+        "name": "Buzlu Qəhvə",
+        "ingredient": "",
+        "price": "5",
+        "src": "images/menu/cofe/7.webp",
+        "category": "cofe"
+    },
+    {
+        "name": "Soyuq Latte ",
+        "ingredient": "",
+        "price": "8",
+        "src": "images/menu/cofe/8.webp",
+        "category": "cofe"
+    },
+    {
+        "name": "Sirop",
+        "ingredient": "",
+        "price": "1",
+        "src": "images/menu/cofe/9.webp",
+        "category": "cofe"
+    },
+    {
+        "name": "Kokos Südü (fincan)",
+        "ingredient": "",
+        "price": "4",
+        "src": "images/menu/cofe/10.webp",
+        "category": "cofe"
+    },
+    {
+        "name": "Yaşıl çay",
+        "ingredient": "jasmin ya da meyvəli",
+        "price": "8",
+        "src": "images/menu/teapot/1.webp",
+        "category": "teapot"
+    },
+    {
+        "name": "Afrikan Roiboş",
+        "ingredient": "",
+        "price": "8",
+        "src": "images/menu/teapot/2.webp",
+        "category": "teapot"
+    },
+    {
+        "name": "Asiya Hibiskus",
+        "ingredient": "",
+        "price": "8",
+        "src": "images/menu/teapot/3.webp",
+        "category": "teapot"
+    },
+    {
+        "name": "Qarabaşaq Çayı",
+        "ingredient": "",
+        "price": "8",
+        "src": "images/menu/teapot/4.webp",
+        "category": "teapot"
+    },
+    {
+        "name": "Kəklikotu Mixəylə",
+        "ingredient": "",
+        "price": "8",
+        "src": "images/menu/teapot/5.webp",
+        "category": "teapot"
+    },
+    {
+        "name": "Ivan Çay",
+        "ingredient": "",
+        "price": "8",
+        "src": "images/menu/teapot/6.webp",
+        "category": "teapot"
+    },
+    {
+        "name": "Qara Berqamont",
+        "ingredient": "",
+        "price": "8",
+        "src": "images/menu/teapot/7.webp",
+        "category": "teapot"
+    },
+    {
+        "name": "Tulasi Devi",
+        "ingredient": "Qüdsi Reyhan",
+        "price": "3",
+        "src": "images/menu/cup/1.webp",
+        "category": "cup"
+    },
+    {
+        "name": "Çobanyastığı",
+        "ingredient": "",
+        "price": "3",
+        "src": "images/menu/cup/2.webp",
+        "category": "cup"
+    },
+    {
+        "name": "Nanə",
+        "ingredient": "",
+        "price": "3",
+        "src": "images/menu/cup/3.webp",
+        "category": "cup"
+    },
+    {
+        "name": "Mistika",
+        "ingredient": "qara çay, darçın, böyürtkən yarpağı, zəncəfil, vanil, mixək",
+        "price": "3",
+        "src": "images/menu/cup/4.webp",
+        "category": "cup"
+    },
+    {
+        "name": "Mavi Kəpənək - Clitoria Ternatea (göz dərmanı)",
+        "ingredient": "",
+        "price": "5",
+        "src": "images/menu/cup/5.webp",
+        "category": "cup"
+    },
+    {
+        "name": "Sirab",
+        "ingredient": "Qazlı ya Qazsız 0,5lt",
+        "price": "3.5",
+        "src": "images/menu/water/1.webp",
+        "category": "water"
+    },
+    {
+        "name": "Mis Termosda Saxlanılan Su",
+        "ingredient": "",
+        "price": "2",
+        "src": "images/menu/water/2.webp",
+        "category": "water"
+    },
+    {
+        "name": "Gümüş Stəkanda Saxlanılan Su",
+        "ingredient": "",
+        "price": "3",
+        "src": "images/menu/water/3.webp",
+        "category": "water"
+    },
+    {
+        "name": "Ev sayağı limonad",
+        "ingredient": "(sirop çeşidiniz)",
+        "price": "6",
+        "src": "images/menu/cold/1.webp",
+        "category": "cold"
+    },
+    {
+        "name": "Ev sayağı soyuq Çay",
+        "ingredient": "(sirop çeşidiniz)",
+        "price": "6",
+        "src": "images/menu/cold/2.webp",
+        "category": "cold"
+    },
+    {
+        "name": "Limonad banka",
+        "ingredient": "(Mango ya Laym)",
+        "price": "4",
+        "src": "images/menu/cold/3.webp",
+        "category": "cold"
+    },
+    {
+        "name": "Kombuça",
+        "ingredient": "",
+        "price": "5",
+        "src": "images/menu/cold/4.webp",
+        "category": "cold"
+    },
+    {
+        "name": "İtburnu",
+        "ingredient": "",
+        "price": "3",
+        "src": "images/menu/cold/5.webp",
+        "category": "cold"
+    },
+    {
+        "name": "Pepsi",
+        "ingredient": "",
+        "price": "4",
+        "src": "images/menu/cold/6.webp",
+        "category": "cold"
+    },
+    {
+        "name": "Coca Cola Zero",
+        "ingredient": "",
+        "price": "4",
+        "src": "images/menu/cold/7.webp",
+        "category": "cold"
+    },
+    {
+        "name": "Detoks",
+        "ingredient": "(sirkəli içki)",
+        "price": "3",
+        "src": "images/menu/cold/8.webp",
+        "category": "cold"
+    },
+    {
+        "name": "Alma",
+        "ingredient": "",
+        "price": "6",
+        "src": "images/menu/juice/1.webp",
+        "category": "juice"
+    },
+    {
+        "name": "Yerkökü",
+        "ingredient": "",
+        "price": "6",
+        "src": "images/menu/juice/2.webp",
+        "category": "juice"
+    },
+    {
+        "name": "Portağal",
+        "ingredient": "",
+        "price": "7",
+        "src": "images/menu/juice/3.webp",
+        "category": "juice"
+    },
+    {
+        "name": "Greypfrut",
+        "ingredient": "",
+        "price": "8",
+        "src": "images/menu/juice/4.webp",
+        "category": "juice"
+    },
+    {
+        "name": "Mövsümə uyğun",
+        "ingredient": "",
+        "price": "5",
+        "src": "",
+        "category": "juice"
+    },
+    {
+        "name": "Çəhrayı Rübai",
+        "ingredient": "Azərbaycan 2018 (Kəm Şirin) şüşə 0,75lt",
+        "price": "18",
+        "src": "images/menu/wine-nonalco/1.webp",
+        "category": "winenonalco"
+    },
+    {
+        "name": "Qırmızı Rübai",
+        "ingredient": "Azərbaycan 2018 (Kəm Şirin) şüşə 0,75lt",
+        "price": "18",
+        "src": "images/menu/wine-nonalco/2.webp",
+        "category": "winenonalco"
+    },
+    {
+        "name": "Ağ Kəhraba",
+        "ingredient": "Azərbaycan 2018 (Kəm Şirin) şüşə 0,75lt",
+        "price": "18",
+        "src": "images/menu/wine-nonalco/3.webp",
+        "category": "winenonalco"
+    },
+    {
+        "name": "Qırmızı “Just 0”",
+        "ingredient": "Fransa 2022 (Kəm Turş) şüşə 0.75lt",
+        "price": "25",
+        "src": "images/menu/wine-nonalco/4.webp",
+        "category": "winenonalco"
+    },
+    {
+        "name": "Ağ “Just 0",
+        "ingredient": "Fransa 2022 (Kəm Turş) şüşə 0.75lt",
+        "price": "25",
+        "src": "images/menu/wine-nonalco/5.webp",
+        "category": "winenonalco"
+    },
+    {
+        "name": "Baltika Pivə (Rusiya) 0,5lt",
+        "ingredient": "",
+        "price": "6",
+        "src": "images/menu/beer/1.webp",
+        "category": "beernonalco"
+    },
+    {
+        "name": "Heineken Pivə (Hollanda) 0,33lt",
+        "ingredient": "",
+        "price": "6",
+        "src": "images/menu/beer/2.webp",
+        "category": "beernonalco"
+    },
+    {
+        "name": "Moxito",
+        "ingredient": "(sirop seçiminiz)",
+        "price": "8",
+        "src": "images/menu/mocktail/1.webp",
+        "category": "mocktail"
+    },
+    {
+        "name": "In & Yan",
+        "ingredient": "yeni sıxılmış portağal şirəsi, karamel siropu və espreso qəhvəsi",
+        "price": "10",
+        "src": "images/menu/mocktail/2.webp",
+        "category": "mocktail"
+    },
+    {
+        "name": "Sanqriya",
+        "ingredient": "(şərab təzə mövsümü meyvələr ilə) 0.75lt",
+        "price": "29",
+        "src": "images/menu/mocktail/3.webp",
+        "category": "mocktail"
+    }
+]
 const DRINK_LIST_RU = [
     {
         "name": "Капучино",
@@ -550,6 +932,13 @@ const DRINK_LIST_RU = [
         "ingredient": "",
         "price": "8",
         "src": "images/menu/teapot/6.webp",
+        "category": "teapot"
+    },
+    {
+        "name": "Черный Бергамот",
+        "ingredient": "",
+        "price": "8",
+        "src": "images/menu/teapot/7.webp",
         "category": "teapot"
     },
     {

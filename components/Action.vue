@@ -10,7 +10,8 @@
                         <p class="action__info-text text">13:00 — 15:00</p>
                         <p class="action__info-text text">20% {{ $t('action.off') }}</p>
                     </div>
-                    <img src="../assets/images/action-plate.png" alt="plate with de rama logo" class="action__img">
+                    <img src="../assets/images/action-plate.png" ref="actionImg" alt="plate with de rama logo"
+                        class="action__img">
                 </div>
             </div>
         </div>
@@ -18,7 +19,14 @@
 </template>
 
 <script setup>
-
+const actionImg = ref()
+useIntersection(actionImg, (entry) => {
+    entry.target.style.animation = "pulse 3.5s alternate infinite ease-out"
+    entry.target.style.animationFillMode = "both"
+}, {
+    workTrueOnce: true,
+    workTrueOnly: true
+})
 </script>
 
 <style lang="scss" scoped>

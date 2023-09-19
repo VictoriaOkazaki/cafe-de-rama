@@ -41,7 +41,20 @@ const ALCO_CATEGORY_RU = [
         "id": "aperitiv"
     }
 ]
-const ALCO_CATEGORY_AZ = []
+const ALCO_CATEGORY_AZ = [
+    {
+        "name": "Şərab(alkoqollu)",
+        "id": "winealco"
+    },
+    {
+        "name": "Koktail",
+        "id": "cocktail"
+    },
+    {
+        "name": "Həzm üçün",
+        "id": "aperitiv"
+    }
+]
 const ALCO_CATEGORY_EN = [
     {
         "name": "Wine(alco)",
@@ -101,7 +114,50 @@ const ALCO_LIST_RU = [
         "category": "aperitiv"
     }
 ]
-const ALCO_LIST_AZ = []
+const ALCO_LIST_AZ = [
+    {
+        "name": "Ev Sayağı Kaxetiya Bölgəsindən",
+        "ingredient": "Gürcüstan 2020 şüşə 0,75lt",
+        "price": "35",
+        "src": "images/menu/wine-alco/1.webp",
+        "category": "winealco"
+    },
+    {
+        "name": "Djaqanat",
+        "ingredient": "portağal şirəsi və Jagermeister",
+        "price": "12",
+        "src": "images/menu/cocktail/1.webp",
+        "category": "cocktail"
+    },
+    {
+        "name": "Sanrayz",
+        "ingredient": "portağal şirəsi və tekila",
+        "price": "15",
+        "src": "images/menu/cocktail/2.webp",
+        "category": "cocktail"
+    },
+    {
+        "name": "Sanqriya",
+        "ingredient": "ev üsulu şərab təzə mövsümü meyvələr ilə 0.75lt",
+        "price": "45",
+        "src": "images/menu/cocktail/3.webp",
+        "category": "cocktail"
+    },
+    {
+        "name": "Jägermeister – (Almaniya) (0,5\u00A0cl)",
+        "ingredient": "56 müxtəlif növ otlar və ədviyyatların qarışığı",
+        "price": "5",
+        "src": "images/menu/aperitiv/1.webp",
+        "category": "aperitiv"
+    },
+    {
+        "name": "Sauza Tekila (Kuba) (0,5\u00A0cl)",
+        "ingredient": "təmiz aqava",
+        "price": "9",
+        "src": "images/menu/aperitiv/2.webp",
+        "category": "aperitiv"
+    }
+]
 const ALCO_LIST_EN = [
     {
         "name": "Homemade from Kakhetiya Region",

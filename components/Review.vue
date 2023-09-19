@@ -4,7 +4,7 @@
             <div class="review__inner">
                 <h2 class="review__title title">{{ $t('review.title') }}</h2>
                 <div class="review__lists">
-                    <ul class="review__list">
+                    <ul class="review__list" ref="reviewList1">
                         <li class="review__item">
                             <div class="review__item-count helper-text">1</div>
                             <div class="review__item-content">
@@ -46,7 +46,7 @@
                             </div>
                         </li>
                     </ul>
-                    <ul class="review__list">
+                    <ul class="review__list" ref="reviewList2">
                         <li class="review__item">
                             <div class="review__item-count helper-text">6</div>
                             <div class="review__item-content">
@@ -90,13 +90,13 @@
                     </ul>
                 </div>
                 <div class="review__logos">
-                    <div class="review__logo">
+                    <div class="review__logo" ref="reviewLogo1">
                         <img src="../assets/images/happycow.svg" alt="happycow" class="review__logo-img">
                     </div>
-                    <div class="review__logo">
+                    <div class="review__logo" ref="reviewLogo2">
                         <img src="../assets/images/trip.svg" alt="tripadvisor" class="review__logo-img">
                     </div>
-                    <div class="review__logo">
+                    <div class="review__logo" ref="reviewLogo3">
                         <img src="../assets/images/google.svg" alt="google" class="review__logo-img">
                     </div>
                 </div>
@@ -106,7 +106,48 @@
 </template>
 
 <script setup>
+const reviewList1 = ref()
+const reviewList2 = ref()
+const reviewLogo1 = ref()
+const reviewLogo2 = ref()
+const reviewLogo3 = ref()
 
+useIntersection(reviewList1, (entry) => {
+    entry.target.style.animation = "appearFromLeft 1.5s ease-out"
+    entry.target.style.animationFillMode = "both"
+}, {
+    workTrueOnce: true,
+    workTrueOnly: true
+})
+
+useIntersection(reviewList2, (entry) => {
+    entry.target.style.animation = "appearFromLeft 1.5s ease-out 1s"
+    entry.target.style.animationFillMode = "both"
+}, {
+    workTrueOnce: true,
+    workTrueOnly: true
+})
+useIntersection(reviewLogo1, (entry) => {
+    entry.target.style.animation = "appearFromLeft 1.5s ease-out .5s"
+    entry.target.style.animationFillMode = "both"
+}, {
+    workTrueOnce: true,
+    workTrueOnly: true
+})
+useIntersection(reviewLogo2, (entry) => {
+    entry.target.style.animation = "appearFromLeft 1.5s ease-out 2s"
+    entry.target.style.animationFillMode = "both"
+}, {
+    workTrueOnce: true,
+    workTrueOnly: true
+})
+useIntersection(reviewLogo3, (entry) => {
+    entry.target.style.animation = "appearFromLeft 1.5s ease-out 3s"
+    entry.target.style.animationFillMode = "both"
+}, {
+    workTrueOnce: true,
+    workTrueOnly: true
+})
 </script>
 
 <style lang="scss" scoped>

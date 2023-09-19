@@ -3,7 +3,7 @@
         text: $t('shop.btn'),
         href: 'shop'
     }">
-        <Card v-for="card in cards" :imgSrc="card.src" :title="card.title" :text="card.text">
+        <Card v-for="(card, i) in cards" :imgSrc="card.src" :title="card.title" :text="card.text" :data-index="i">
             <span class="section__price text">{{ card.price }} AZN</span>
         </Card>
     </CardsSection>

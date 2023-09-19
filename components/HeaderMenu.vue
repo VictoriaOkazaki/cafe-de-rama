@@ -11,43 +11,51 @@ import { useI18n } from 'vue-i18n'
 
 const { isBurgerOpen } = useBurger()
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
+
+const links = ref(createLinks())
+watch(locale, () => {
+    links.value = createLinks()
+})
 
 const route = useRoute()
-let links = [
-    {
-        title: t('menu.1'),
-        href: '#about'
-    },
-    {
-        title: t('menu.2'),
-        href: '#menu'
-    },
-    {
-        title: t('menu.3'),
-        href: '#action'
-    },
-    {
-        title: t('menu.4'),
-        href: '#review'
-    },
-    {
-        title: t('menu.5'),
-        href: '#shop'
-    },
-    {
-        title: t('menu.6'),
-        href: '#gallery'
-    },
-    {
-        title: t('menu.7'),
-        href: '#blog'
-    },
-    {
-        title: t('menu.8'),
-        href: '#contact'
-    }
-];
+
+function createLinks() {
+    return [
+        {
+            title: t('menu.1'),
+            href: '#about'
+        },
+        {
+            title: t('menu.2'),
+            href: '#menu'
+        },
+        {
+            title: t('menu.3'),
+            href: '#action'
+        },
+        {
+            title: t('menu.4'),
+            href: '#review'
+        },
+        {
+            title: t('menu.5'),
+            href: '#shop'
+        },
+        {
+            title: t('menu.6'),
+            href: '#gallery'
+        },
+        {
+            title: t('menu.7'),
+            href: '#blog'
+        },
+        {
+            title: t('menu.8'),
+            href: '#contact'
+        }
+    ];
+}
 </script>
 
 <style lang="scss" scoped>
@@ -123,6 +131,12 @@ let links = [
 
     .menu-active {
         top: calc(60px + 20px + 40px + 30px + 20px);
+    }
+}
+
+@media (max-width: 340px) {
+    .menu-active {
+        top: calc(40px + 30px + 20px*2);
     }
 }
 </style>

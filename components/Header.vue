@@ -50,4 +50,16 @@
         top: calc(60px + 20px + 10px);
     }
 }
+
+@media (max-width: 340px) {
+    .header__lang-switch {
+        position: absolute;
+        left: 40px;
+        top: calc(60px + 20px);
+    }
+
+    .header__wp-link {
+        margin: 0 4px;
+    }
+}
 </style>

@@ -2,30 +2,30 @@
     <section class="about" id="about">
         <div class="container section">
             <div class="about__inner">
-                <div class="about__top">
+                <div class="about__top" ref="aboutTop">
                     <h2 class="about__top-title title ">{{ $t('about.title') }}</h2>
                     <p class="about__text text" id="text1">{{ $t('about.text-top-1') }}</p>
                     <p class="about__text text" id="text2">{{ $t('about.text-top-2') }}</p>
                 </div>
                 <div class="about__bottom">
-                    <div class="about__bottom-content">
+                    <div class="about__bottom-content" ref="aboutBottomContent">
                         <h3 class="about__bottom-subtitle subtitle">{{ $t('about.subtitle') }}</h3>
                         <p class="about__text text" id="text3">{{ $t('about.text-b-1') }}</p>
                         <p class="about__text text" id="text4">{{ $t('about.text-b-2') }}</p>
                         <div class="about__bottom-text text" id="text5">
-                            <p>{{ $t('about.text-b-3-1') }}</p>
-                            <p>{{ $t('about.text-b-3-2') }}</p>
-                            <a id="link1" href="https: //1plus1tv.ru/19537-sita-i-rama-siya-ke-ram-vse-serii-2015-smotret-onlayn-in
+                            <p class="about__bottom-text-2">{{ $t('about.text-b-3-1') }}</p><br>
+                            <p class="about__bottom-text-2">{{ $t('about.text-b-3-2') }}</p>
+                            <a id="link1" target="_blank" href="https://1plus1tv.ru/19537-sita-i-rama-siya-ke-ram-vse-serii-2015-smotret-onlayn-in
                                 diyskiy-serial-na-russkom-yazyke.html">https:
                                 //1plus1tv.ru/19537-sita-i-rama-siya-ke-ram-vse-serii-2015-smotret-onlayn-in
                                 diyskiy-serial-na-russkom-yazyke.html</a>
-                            <p>{{ $t('about.text-b-3-3') }}</p>
-                            <a id="link2"
-                                href="https: //1plus1tv.ru/17888-mahabharata-mahabharat-vse-serii-2013-smotret-onlayn-indiyskiy-serial-na-russkom-yazyke.html">https:
+                            <p class="about__bottom-text-2">{{ $t('about.text-b-3-3') }}</p>
+                            <a id="link2" target="_blank"
+                                href="https://1plus1tv.ru/17888-mahabharata-mahabharat-vse-serii-2013-smotret-onlayn-indiyskiy-serial-na-russkom-yazyke.html">https:
                                 //1plus1tv.ru/17888-mahabharata-mahabharat-vse-serii-2013-smotret-onlayn-indiyskiy-serial-na-russkom-yazyke.html</a>
                         </div>
                     </div>
-                    <div class="">
+                    <div class="" ref="aboutBottomImg">
                         <img src="../assets/images/about.jpg" alt="Rama king" class="about__img">
                     </div>
                 </div>
@@ -35,7 +35,33 @@
 </template>
 
 <script setup>
+const aboutTop = ref()
+const aboutBottomContent = ref()
+const aboutBottomImg = ref()
 
+useIntersection(aboutTop, (entry) => {
+    entry.target.style.animation = "appearFromLeft 2s ease-in"
+    entry.target.style.animationFillMode = "both"
+}, {
+    workTrueOnce: true,
+    workTrueOnly: true
+})
+
+useIntersection(aboutBottomContent, (entry) => {
+    entry.target.style.animation = "appearFromLeft 1.5s ease-in 1s"
+    entry.target.style.animationFillMode = "both"
+}, {
+    workTrueOnce: true,
+    workTrueOnly: true
+})
+
+useIntersection(aboutBottomImg, (entry) => {
+    entry.target.style.animation = "appearFromRight 1.5s ease-in 1s"
+    entry.target.style.animationFillMode = "both"
+}, {
+    workTrueOnce: true,
+    workTrueOnly: true
+})
 </script>
 
 <style lang="scss" scoped>
@@ -82,6 +108,10 @@
         color: $acsent-2;
         margin-top: 60px;
         margin-bottom: 40px;
+    }
+
+    &__bottom-text-2 {
+        color: $text-1;
     }
 
     &__img {

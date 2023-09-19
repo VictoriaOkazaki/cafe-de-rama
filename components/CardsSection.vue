@@ -7,7 +7,9 @@
                 <ul class="section__list">
                     <slot />
                 </ul>
-                <NuxtLink class="section__btn btn-2 subtitle" :to="btn.href">{{ btn.text }}</NuxtLink>
+                <button class="section__btn btn-2 subtitle" ref="cardsBtn">
+                    <NuxtLink :to="btn.href">{{ btn.text }}</NuxtLink>
+                </button>
             </div>
         </div>
     </section>
@@ -23,6 +25,17 @@ defineProps<{
         href: string
     }
 }>()
+
+const cardsBtn = ref()
+
+useIntersection(cardsBtn, (entry) => {
+    const target = entry.target as any
+    target.style.animation = "appearFromBottom 1.5s ease-out"
+    target.style.animationFillMode = "both"
+}, {
+    workTrueOnce: true,
+    workTrueOnly: true
+})
 </script>
 
 <style scoped lang="scss">
@@ -45,6 +58,9 @@ defineProps<{
         justify-content: space-between;
     }
 
+    &__btn>a {
+        color: $text-1;
+    }
 }
 
 @media (max-width: 1600px) {

@@ -42,6 +42,7 @@
         flex-direction: column;
         width: calc(100% - 703px - 60px);
         margin-right: 60px;
+        animation: appearFromLeft 1.5s ease-in;
     }
 
     &__title {
@@ -62,6 +63,8 @@
     &__btns {
         display: flex;
         margin-top: 40px;
+        animation: appearFromBottom 1.5s ease-in 2s;
+        animation-fill-mode: both;
     }
 
     &__btn-1 {
@@ -72,6 +75,7 @@
         width: 703px;
         height: 440px;
         border-radius: 60px;
+        animation: appearFromRightAndScale 1.5s ease-in;
     }
 
     &__img {

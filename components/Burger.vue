@@ -135,4 +135,24 @@ const burgerClick = () => {
         top: 24px;
     }
 }
+
+@media (max-width: 340px) {
+    #nav-icon3 {
+        width: 30px;
+        height: 20px;
+    }
+
+    #nav-icon3 span:nth-child(2),
+    #nav-icon3 span:nth-child(3) {
+        top: 10px;
+    }
+
+    #nav-icon3 span:nth-child(4) {
+        top: 20px;
+    }
+
+    #nav-icon3.open span:nth-child(1) {
+        top: 20px;
+    }
+}
 </style>

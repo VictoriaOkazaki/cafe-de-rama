@@ -3,7 +3,7 @@
         text: $t('blog.btn'),
         href: 'blog'
     }">
-        <Card v-for="card in cards" :imgSrc="card.src" :title="card.title" :text="card.text">
+        <Card v-for="(card, i) in cards" :imgSrc="card.src" :title="card.title" :text="card.text" :data-index="i">
             <NuxtLink class="blog__btn text" :to="`/blog/${card.id}`">{{ $t('blog.btn2') }}</NuxtLink>
         </Card>
     </CardsSection>
