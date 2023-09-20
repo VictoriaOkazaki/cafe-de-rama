@@ -34,8 +34,9 @@ button {
     flex: 0 0 auto;
 }
 
-video::webkit-media-controls-play-button {
-    background: red;
+video::webkit-media-controls {
+    background-color: $acsent-1;
+    color: $acsent-1;
 }
 
 .h1,
