@@ -26,7 +26,7 @@
                         </div>
                     </div>
                     <div class="" ref="aboutBottomImg">
-                        <img src="../assets/images/about.jpg" alt="Rama king" class="about__img">
+                        <img src="../assets/images/about.webp" alt="Rama king" class="about__img">
                     </div>
                 </div>
             </div>

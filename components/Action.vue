@@ -10,7 +10,7 @@
                         <p class="action__info-text text">13:00 — 15:00</p>
                         <p class="action__info-text text">20% {{ $t('action.off') }}</p>
                     </div>
-                    <img src="../assets/images/action-plate.png" ref="actionImg" alt="plate with de rama logo"
+                    <img src="../assets/images/action-plate.webp" ref="actionImg" alt="plate with de rama logo"
                         class="action__img">
                 </div>
             </div>

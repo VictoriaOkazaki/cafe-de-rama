@@ -17,7 +17,7 @@
                         <span class="contact__parking">{{ $t('contact.parking') }}</span>
                     </div>
                     <div class="contact__map">
-                        <iframe class="contact__map-frame"
+                        <iframe class="contact__map-frame" title="map"
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5074.8830744733!2d49.854534775949496!3d40.377607652019826!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307ddaa1562825%3A0xb49f05f8bbae77d9!2sDeRama%20Cafe%20Baku!5e0!3m2!1sru!2saz!4v1695036120843!5m2!1sru!2saz"
                             width="951" height="573" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
