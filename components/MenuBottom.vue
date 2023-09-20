@@ -4,16 +4,16 @@
             <div class="menu__bottom">
                 <div class="menu__bottom-item">
                     <p class="menu__bottom-text text">{{ $t('menu-f.text-1') }}</p>
-                    <a :href="`https://wa.me/+994555108108?text=${$t('reserve-message')}`"
+                    <a :href="`https://wa.me/+994555108108?text=${$t('reserve-message')}`" target="_blank"
                         class="menu__bottom-btn btn-1 subtitle" id="btn1">{{
                             $t('menu-f.btn-1') }}</a>
                 </div>
                 <div class="menu__bottom-item">
                     <p class="menu__bottom-text text">{{ $t('menu-f.text-2') }}</p>
                     <div class="menu__bottom-btns">
-                        <a href="https://wolt.com/ru/aze/baku/restaurant/de-rama-cafe"
+                        <a href="https://wolt.com/ru/aze/baku/restaurant/de-rama-cafe" target="_blank"
                             class="menu__bottom-btn btn-2 subtitle" id="btn2">{{ $t('menu-f.btn-2') }}</a>
-                        <a href="https://food.bolt.eu/en-US/335-baku/p/72793-de-rama-cafe-baku"
+                        <a href="https://food.bolt.eu/en-US/335-baku/p/72793-de-rama-cafe-baku" target="_blank"
                             class="menu__bottom-btn btn-2 subtitle" id="btn3">{{ $t('menu-f.btn-3') }}</a>
                     </div>
                 </div>
