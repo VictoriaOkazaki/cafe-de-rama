@@ -29,6 +29,10 @@ const onPause = () => {
 </script>
 
 <style lang="scss" scoped>
+video::-webkit-media-controls-play-button {
+    display: none;
+}
+
 .gallery__video[poster] {
     object-fit: cover;
 }
@@ -110,6 +114,7 @@ const onPause = () => {
         &__video-cont {
             border-radius: 20px;
             width: 100%;
+            aspect-ratio: 3 / 2;
             height: auto;
             margin-bottom: 30px;
         }

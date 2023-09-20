@@ -15,7 +15,7 @@
                             <a href="mailto:de.rama.cafe.baku@outlook.com"
                                 class="contact__mail-link">de.rama.cafe.baku@outlook.com</a>
                         </div>
-                        <span class="contact__parking">{{ $t('contact.parking') }}</span>
+                        <span class="contact__parking helper-text">{{ $t('contact.parking') }}</span>
                     </div>
                     <div class="contact__map">
                         <iframe class="contact__map-frame" title="map"
@@ -198,7 +198,7 @@
         }
 
         &__map-frame {
-            height: 272px;
+            height: 372px;
         }
     }
 }
