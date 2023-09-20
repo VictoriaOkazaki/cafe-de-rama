@@ -124,8 +124,8 @@ video::-webkit-media-controls-play-button {
         }
 
         &__video-btn {
-            width: 40px;
-            height: 40px;
+            // width: 40px;
+            // height: 40px;
             top: calc(100% / 2 - 40px / 2);
             left: calc(50% - 40px / 2);
         }
