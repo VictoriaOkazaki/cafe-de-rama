@@ -122,8 +122,8 @@ const onPause = () => {
         &__video-btn {
             // width: 40px;
             // height: 40px;
-            // top: calc(100% / 2 - 40px / 2);
-            // left: calc(50% - 40px / 2);
+            top: calc(100% / 2 - 80px / 2);
+            left: calc(50% - 80px / 2);
         }
     }
 }
