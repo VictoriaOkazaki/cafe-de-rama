@@ -3,7 +3,7 @@
         <button v-show="isShowPlayBtn" class="gallery__video-btn" @click="playVideo">
             <img loading="lazy" src="../assets/images/play.svg" alt="play">
         </button>
-        <video ref="video" class="gallery__video" @pause="onPause" :src="src" :controls="!isShowPlayBtn" :poster="poster"
+        <video ref="video" class="gallery__video" @pause="onPause" controls :src="src" :poster="poster"
             preload="metadata"></video>
     </div>
 </template>
