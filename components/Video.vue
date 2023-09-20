@@ -1,7 +1,6 @@
 <template>
     <div class="gallery__video-cont">
-        <video ref="video" class="gallery__video" @pause="onPause" controls :src="src" :poster="poster"
-            preload="metadata"></video>
+        <video ref="video" class="gallery__video" controls :src="src" :poster="poster" preload="metadata"></video>
     </div>
 </template>
 
@@ -10,19 +9,6 @@ defineProps<{
     src: string,
     poster: string
 }>()
-
-const isShowPlayBtn = ref(true)
-const video = ref<HTMLVideoElement | null>(null)
-
-const playVideo = () => {
-    console.log('Press play btn')
-    isShowPlayBtn.value = false
-    video.value?.play()
-}
-
-const onPause = () => {
-    isShowPlayBtn.value = true
-}
 </script>
 
 <style lang="scss" scoped>

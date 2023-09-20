@@ -35,7 +35,7 @@
 <script setup lang="ts">
 const videos = [
     {
-        "src": "https://api-test-vision.cubicservice.ru/storage/temp/20221027_1041_5832.mp4",
+        "src": "",
         "poster": "images/gallery/p-1.webp"
     },
     {
