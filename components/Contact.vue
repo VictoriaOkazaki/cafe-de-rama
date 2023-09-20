@@ -184,6 +184,10 @@
             margin: 20px 0;
         }
 
+        &__mail a {
+            margin-left: 12px;
+        }
+
         &__map-frame {
             height: 391px;
         }
@@ -201,7 +205,7 @@
         }
 
         &__mail a {
-            margin-left: 8px;
+            margin-left: 0;
         }
 
         &__map-frame {
