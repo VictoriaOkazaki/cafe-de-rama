@@ -34,6 +34,10 @@ button {
     flex: 0 0 auto;
 }
 
+video::-webkit-media-controls-play-button {
+    display: none;
+}
+
 .h1,
 .title {
     font-family: Caveat, cursive;
