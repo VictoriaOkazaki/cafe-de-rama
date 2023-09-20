@@ -34,7 +34,7 @@
 
     &__logo {
         animation: rotate 5s ease-in infinite;
-        // animation-iteration-count: 3;
+        z-index: 1;
     }
 
     &__copyright {

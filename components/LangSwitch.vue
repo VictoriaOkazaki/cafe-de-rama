@@ -23,20 +23,15 @@ const changeLang = (value) => {
 .lang-switch {
     display: flex;
     z-index: 10;
+    background-color: $bg-2;
+    overflow: hidden;
+    border-radius: 20px;
+    width: fit-content;
 
     &__item {
         padding: 10px 16px;
-        background-color: $bg-2;
         color: $text-2;
         cursor: pointer;
-
-        &:first-child {
-            border-radius: 20px 0 0px 20px
-        }
-
-        &:last-child {
-            border-radius: 0px 20px 20px 2px;
-        }
     }
 }
 

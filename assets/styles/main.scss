@@ -154,6 +154,11 @@ button {
     color: $text-1;
 }
 
+.pages-langs-switch {
+    display: flex;
+    background-color: $bg-1 !important;
+}
+
 @media (max-width: 1600px) {
     .h1 {
         font-size: 36px;
@@ -197,6 +202,12 @@ button {
         padding: 18px 36px;
     }
 
+}
+
+@media (max-width: 1300px) {
+    .pages-langs-switch {
+        display: none !important;
+    }
 }
 
 @media (max-width: 800px) {

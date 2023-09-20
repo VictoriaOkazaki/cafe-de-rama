@@ -1,5 +1,7 @@
 <template>
     <div class="wrapper" :class="{ 'unvisible': loading, 'latin': ['az', 'en'].includes(locale) }">
+        <audio ref="audio" class="audio" src="music/music.mp3" loop></audio>
+
         <slot />
         <Footer />
     </div>
@@ -7,6 +9,20 @@
 </template>
 
 <script setup lang="ts">
+const audio = ref()
+onMounted(() => {
+    if (!audio) return
+    audio.value.volume = 0.2;
+    let interval = setInterval(async () => {
+        try {
+            await audio.value.play()
+            clearInterval(interval)
+        } catch (err) {
+            // console.error('Error start audio', err)
+        }
+    }, 1000)
+
+})
 import { useI18n } from 'vue-i18n'
 const { locale } = useI18n()
 

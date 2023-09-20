@@ -1,8 +1,12 @@
 <template>
-    <Header />
-    <div>
-        Single blog page {{ blogId }}
-    </div>
+    <BurgerWindow />
+    <section class="blog-post">
+        <Header />
+        <div class="container section">
+            <LangSwitch class="pages-langs-switch" />
+            <div class="container section"> Single blog page {{ blogId }}</div>
+        </div>
+    </section>
 </template>
 
 <script setup lang="ts">
