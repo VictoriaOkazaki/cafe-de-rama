@@ -22,7 +22,7 @@ const cards = computed(() => {
 const allCards: ShopCard[] = [
     {
         id: '1',
-        src: 'images/home.png',
+        src: '',
         price: 5,
         text: 'Описание продукции Описание продукции Описание продукции',
         title: 'Название продукции'

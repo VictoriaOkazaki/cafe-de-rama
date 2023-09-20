@@ -3,6 +3,7 @@
     "adress": "Baku, Nasimi district, Mehbali Zeynalabdiev 5",
     "time": "Daily 11:00 – 22:00",
     "menu": {
+        "0": "Home",
         "1": "About us",
         "2": "Menu",
         "3": "Action",

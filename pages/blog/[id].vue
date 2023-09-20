@@ -1,4 +1,5 @@
 <template>
+    <Header />
     <div>
         Single blog page {{ blogId }}
     </div>

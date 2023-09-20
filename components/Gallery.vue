@@ -179,7 +179,7 @@ const videos = [
         }
 
         &__img-2 {
-            width: calc(100% / 2 - 10px);
+            width: 100%;
             margin-top: 30px;
             border-radius: 20%;
         }

@@ -13,15 +13,16 @@ const { isBurgerOpen } = useBurger()
 
 const { t, locale } = useI18n()
 
-const links = ref(createLinks())
+
 watch(locale, () => {
     links.value = createLinks()
 })
 
 const route = useRoute()
+const links = ref(createLinks())
 
 function createLinks() {
-    return [
+    let links = [
         {
             title: t('menu.1'),
             href: '#about'
@@ -55,6 +56,49 @@ function createLinks() {
             href: '#contact'
         }
     ];
+    if (route.name === 'shop') {
+        links =
+            [
+                {
+                    title: t('menu.0'),
+                    href: '/'
+                },
+                {
+                    title: t('menu.7'),
+                    href: '/blog'
+                },
+            ];
+    }
+    else if (route.name === 'blog') {
+        links =
+            [
+                {
+                    title: t('menu.0'),
+                    href: '/'
+                },
+                {
+                    title: t('menu.5'),
+                    href: '/shop'
+                },
+            ];
+    } else if (route.name === 'blog-id') {
+        links =
+            [
+                {
+                    title: t('menu.0'),
+                    href: '/'
+                },
+                {
+                    title: t('menu.5'),
+                    href: '/shop'
+                },
+                {
+                    title: t('menu.7'),
+                    href: '/blog'
+                },
+            ];
+    }
+    return links
 }
 </script>
 
