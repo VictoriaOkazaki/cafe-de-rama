@@ -96,7 +96,7 @@ const videos = [
     }
 
     &__img-3 {
-        background-image: url('/de rama cafeimages/gallery/9.webp');
+        background-image: url('/images/gallery/9.webp');
         width: 100%;
         height: 500px;
         background-attachment: fixed;
@@ -189,4 +189,5 @@ const videos = [
             border-radius: 20px;
         }
     }
-}</style>
+}
+</style>
