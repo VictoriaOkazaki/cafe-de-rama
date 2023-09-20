@@ -5,8 +5,11 @@
                 <h2 class="contact__title title">{{ $t('contact.title') }}</h2>
                 <div class="contact__info">
                     <div class="contact__content">
-                        <span class="contact__adress text">{{ $t('adress') }}</span>
-                        <span class="contact__adress-desc text">{{ $t('contact.place') }}</span>
+                        <a href="https://maps.app.goo.gl/jXcKT4E8pK9ptgkA9" target="_blank" class="contact__adress text">{{
+                            $t('adress')
+                        }}</a>
+                        <span class="contact__adress-desc text">{{
+                            $t('contact.place') }}</span>
                         <span class="contact__time text">{{ $t('time') }}</span>
                         <WhatsappLink />
                         <div class="contact__mail">
@@ -57,6 +60,10 @@
     &__adress {
         color: $acsent-2;
         margin-bottom: 30px;
+        padding-bottom: 1px;
+        border-bottom: 1px $acsent-1 solid;
+        width: fit-content;
+        cursor: pointer;
     }
 
     &__adress-desc {
