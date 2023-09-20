@@ -26,6 +26,9 @@ useHead({
     meta: [
         { name: 'description', content: `${route.meta.description}` }
     ],
+    htmlAttrs: {
+        lang: locale
+    },
     link: [
         {
             href: 'https://fonts.googleapis.com',

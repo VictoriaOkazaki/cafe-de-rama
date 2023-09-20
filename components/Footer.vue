@@ -9,7 +9,7 @@
                     Reserved.</span>
                 <SocialLinks />
                 <a class="footer__to-top" @click.prevent="scrollOnTopOfPage(true)">
-                    <img loading="lazy" src="../assets/images/arrow.svg" class="footer__to-top-img">
+                    <img loading="lazy" alt="to top" src="../assets/images/arrow.svg" class="footer__to-top-img">
                 </a>
             </div>
         </div>

@@ -19,7 +19,7 @@
     </div>
     <a class="menu__to-category" @click.prevent="smoothScrollToSection('drink-nonalco')">
         <span class="helper-text">{{ $t('menu-f.to-category') }}</span>
-        <img loading="lazy" src="../assets/images/arrow.svg" class="menu__to-category-img">
+        <img loading="lazy" alt="to category" src="../assets/images/arrow.svg" class="menu__to-category-img">
     </a>
     <!-- alco-drinks -->
     <h2 class="menu__title title">{{ $t('menu-f.title3') }}</h2>

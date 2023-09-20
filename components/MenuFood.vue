@@ -20,7 +20,7 @@
     </div>
     <a href="#food" class="menu__to-category" @click.prevent="smoothScrollToSection('food')">
         <span class="helper-text">{{ $t('menu-f.to-category') }}</span>
-        <img loading="lazy" src="../assets/images/arrow.svg" class="menu__to-category-img">
+        <img loading="lazy" alt="to category" src="../assets/images/arrow.svg" class="menu__to-category-img">
     </a>
 </template>
 
