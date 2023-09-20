@@ -8,7 +8,7 @@
     <div class="menu__items" ref="menuItems1">
         <div class="menu__item" v-for="drink in drinks.filter(drink => drink.category === activeCategory.id)">
             <div class="menu__item-left">
-                <img :src="drink.src" class="menu__item-img">
+                <img loading="lazy" :src="drink.src" :alt="drink.name" class="menu__item-img">
             </div>
             <div class="menu__item-right">
                 <span class="menu__item-name text">{{ drink.name }}</span>
@@ -19,7 +19,7 @@
     </div>
     <a class="menu__to-category" @click.prevent="smoothScrollToSection('drink-nonalco')">
         <span class="helper-text">{{ $t('menu-f.to-category') }}</span>
-        <img src="../assets/images/arrow.svg" class="menu__to-category-img">
+        <img loading="lazy" src="../assets/images/arrow.svg" class="menu__to-category-img">
     </a>
     <!-- alco-drinks -->
     <h2 class="menu__title title">{{ $t('menu-f.title3') }}</h2>
@@ -32,7 +32,7 @@
         <div class="menu__item"
             v-for="alcoDrink in alcoDrinks.filter(alcoDrink => alcoDrink.category === activeAlcoCategory.id)">
             <div class="menu__item-left">
-                <img :src="alcoDrink.src" class="menu__item-img">
+                <img loading="lazy" :src="alcoDrink.src" :alt="alcoDrink.name" class="menu__item-img">
             </div>
             <div class="menu__item-right">
                 <span class="menu__item-name text">{{ alcoDrink.name }}</span>

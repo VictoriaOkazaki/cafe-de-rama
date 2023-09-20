@@ -19,7 +19,13 @@ watch(locale, () => {
     localStorage.setItem('locale', locale.value)
 })
 
+const route = useRoute()
+
 useHead({
+    title: `${route.meta.title}`,
+    meta: [
+        { name: 'description', content: `${route.meta.description}` }
+    ],
     link: [
         {
             href: 'https://fonts.googleapis.com',
@@ -48,6 +54,7 @@ nuxtApp.hook("page:finish", async () => {
     // await (new Promise(resolve => setTimeout(resolve, 5000)));
     loading.value = false;
 })
+
 </script>
 
 <style scoped>

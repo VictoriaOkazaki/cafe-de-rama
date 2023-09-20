@@ -1,6 +1,6 @@
 <template>
     <li class="section__item" ref="card">
-        <img class="section__item-img" :src="imgSrc" alt="">
+        <img loading="lazy" class="section__item-img" :src="imgSrc" alt="">
         <h3 class="section__item-title text">{{ title }}</h3>
         <span class="section__item-text helper-text">{{ text }}</span>
         <slot />

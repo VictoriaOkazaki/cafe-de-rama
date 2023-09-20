@@ -1,7 +1,7 @@
 <template>
     <div class="gallery__video-cont">
         <button v-show="isShowPlayBtn" class="gallery__video-btn" @click="playVideo">
-            <img src="../assets/images/play.svg" alt="play">
+            <img loading="lazy" src="../assets/images/play.svg" alt="play">
         </button>
         <video ref="video" class="gallery__video" @pause="onPause" :src="src" controls :poster="poster"
             preload="metadata"></video>

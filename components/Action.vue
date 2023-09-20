@@ -5,13 +5,14 @@
                 <h2 class="action__title title">{{ $t('action.title') }}</h2>
                 <div class="action__content">
                     <div class="action__info">
-                        <img src="../assets/images/action-text.svg" alt="business lunch" class="action__info-img">
+                        <img loading="lazy" src="../assets/images/action-text.svg" alt="business lunch"
+                            class="action__info-img">
                         <p class="action__info-text text">{{ $t('action.days') }}</p>
                         <p class="action__info-text text">13:00 — 15:00</p>
                         <p class="action__info-text text">20% {{ $t('action.off') }}</p>
                     </div>
-                    <img src="../assets/images/action-plate.webp" ref="actionImg" alt="plate with de rama logo"
-                        class="action__img">
+                    <img loading="lazy" src="../assets/images/action-plate.webp" ref="actionImg"
+                        alt="plate with de rama logo" class="action__img">
                 </div>
             </div>
         </div>

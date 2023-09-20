@@ -10,7 +10,8 @@
                         <span class="contact__time text">{{ $t('time') }}</span>
                         <WhatsappLink />
                         <div class="contact__mail">
-                            <img src="../assets/images/mail.svg" alt="mail" class="social-logo contact__mail-img">
+                            <img loading="lazy" src="../assets/images/mail.svg" alt="mail"
+                                class="social-logo contact__mail-img">
                             <a href="mailto:de.rama.cafe.baku@outlook.com"
                                 class="contact__mail-link">de.rama.cafe.baku@outlook.com</a>
                         </div>

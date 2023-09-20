@@ -7,16 +7,24 @@
                     <Video v-for="video in videos" :src="video.src" :poster="video.poster" />
                 </div>
                 <div class="gallery__list gallery__list-1">
-                    <img :src="'images/gallery/1.webp'" alt="de rama cafe" class="gallery__img gallery__img-1">
-                    <img :src="'images/gallery/2.webp'" alt="de rama cafe" class="gallery__img gallery__img-1">
+                    <img loading="lazy" :src="'images/gallery/1.webp'" alt="de rama cafe"
+                        class="gallery__img gallery__img-1">
+                    <img loading="lazy" :src="'images/gallery/2.webp'" alt="de rama cafe"
+                        class="gallery__img gallery__img-1">
                 </div>
                 <div class="gallery__list gallery__list-2">
-                    <img :src="'images/gallery/3.webp'" alt="de rama cafe" class="gallery__img gallery__img-2">
-                    <img :src="'images/gallery/4.webp'" alt="de rama cafe" class="gallery__img gallery__img-2">
-                    <img :src="'images/gallery/5.webp'" alt="de rama cafe" class="gallery__img gallery__img-2">
-                    <img :src="'images/gallery/6.webp'" alt="de rama cafe" class="gallery__img gallery__img-2">
-                    <img :src="'images/gallery/7.webp'" alt="de rama cafe" class="gallery__img gallery__img-2">
-                    <img :src="'images/gallery/8.webp'" alt="de rama cafe" class="gallery__img gallery__img-2">
+                    <img loading="lazy" :src="'images/gallery/3.webp'" alt="de rama cafe"
+                        class="gallery__img gallery__img-2">
+                    <img loading="lazy" :src="'images/gallery/4.webp'" alt="de rama cafe"
+                        class="gallery__img gallery__img-2">
+                    <img loading="lazy" :src="'images/gallery/5.webp'" alt="de rama cafe"
+                        class="gallery__img gallery__img-2">
+                    <img loading="lazy" :src="'images/gallery/6.webp'" alt="de rama cafe"
+                        class="gallery__img gallery__img-2">
+                    <img loading="lazy" :src="'images/gallery/7.webp'" alt="de rama cafe"
+                        class="gallery__img gallery__img-2">
+                    <img loading="lazy" :src="'images/gallery/8.webp'" alt="de rama cafe"
+                        class="gallery__img gallery__img-2">
                 </div>
                 <div class="gallery__img gallery__img-3"></div>
             </div>
@@ -181,5 +189,4 @@ const videos = [
             border-radius: 20px;
         }
     }
-}
-</style>
+}</style>

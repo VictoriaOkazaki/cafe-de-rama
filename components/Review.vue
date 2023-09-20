@@ -91,13 +91,13 @@
                 </div>
                 <div class="review__logos">
                     <div class="review__logo" ref="reviewLogo1">
-                        <img src="../assets/images/happycow.svg" alt="happycow" class="review__logo-img">
+                        <img loading="lazy" src="../assets/images/happycow.svg" alt="happycow" class="review__logo-img">
                     </div>
                     <div class="review__logo" ref="reviewLogo2">
-                        <img src="../assets/images/trip.svg" alt="tripadvisor" class="review__logo-img">
+                        <img loading="lazy" src="../assets/images/trip.svg" alt="tripadvisor" class="review__logo-img">
                     </div>
                     <div class="review__logo" ref="reviewLogo3">
-                        <img src="../assets/images/google.svg" alt="google" class="review__logo-img">
+                        <img loading="lazy" src="../assets/images/google.svg" alt="google" class="review__logo-img">
                     </div>
                 </div>
             </div>

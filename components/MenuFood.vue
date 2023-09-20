@@ -8,7 +8,7 @@
     <div class="menu__items" ref="menuItems">
         <div class="menu__item" v-for="food in  foods.filter(food => food.category === activeCategory.id) ">
             <div class="menu__item-left">
-                <img :src="food.src" class="menu__item-img">
+                <img loading="lazy" :src="food.src" :alt="food.name" class="menu__item-img">
                 <span class="menu__item-price text">{{ food.price }} AZN</span>
             </div>
             <div class="menu__item-right">
@@ -20,7 +20,7 @@
     </div>
     <a href="#food" class="menu__to-category" @click.prevent="smoothScrollToSection('food')">
         <span class="helper-text">{{ $t('menu-f.to-category') }}</span>
-        <img src="../assets/images/arrow.svg" class="menu__to-category-img">
+        <img loading="lazy" src="../assets/images/arrow.svg" class="menu__to-category-img">
     </a>
 </template>
 

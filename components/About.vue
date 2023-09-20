@@ -15,18 +15,18 @@
                         <div class="about__bottom-text text" id="text5">
                             <p class="about__bottom-text-2">{{ $t('about.text-b-3-1') }}</p><br>
                             <p class="about__bottom-text-2">{{ $t('about.text-b-3-2') }}</p>
-                            <a id="link1" target="_blank" href="https://1plus1tv.ru/19537-sita-i-rama-siya-ke-ram-vse-serii-2015-smotret-onlayn-in
+                            <a id="link1" target="_blank" rel="nofollow" href="https://1plus1tv.ru/19537-sita-i-rama-siya-ke-ram-vse-serii-2015-smotret-onlayn-in
                                 diyskiy-serial-na-russkom-yazyke.html">https:
                                 //1plus1tv.ru/19537-sita-i-rama-siya-ke-ram-vse-serii-2015-smotret-onlayn-in
                                 diyskiy-serial-na-russkom-yazyke.html</a>
                             <p class="about__bottom-text-2">{{ $t('about.text-b-3-3') }}</p>
-                            <a id="link2" target="_blank"
+                            <a id="link2" target="_blank" rel="nofollow"
                                 href="https://1plus1tv.ru/17888-mahabharata-mahabharat-vse-serii-2013-smotret-onlayn-indiyskiy-serial-na-russkom-yazyke.html">https:
                                 //1plus1tv.ru/17888-mahabharata-mahabharat-vse-serii-2013-smotret-onlayn-indiyskiy-serial-na-russkom-yazyke.html</a>
                         </div>
                     </div>
                     <div class="" ref="aboutBottomImg">
-                        <img src="../assets/images/about.webp" alt="Rama king" class="about__img">
+                        <img loading="lazy" src="../assets/images/about.webp" alt="Rama king" class="about__img">
                     </div>
                 </div>
             </div>

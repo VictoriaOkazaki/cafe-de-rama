@@ -3,13 +3,13 @@
         <div class="container section footer-container">
             <div class="footer__inner">
                 <NuxtLink to="/" class="logo-link footer__logo">
-                    <img src="../assets/images/logo.svg" alt="logo" class="logo">
+                    <img loading="lazy" src="../assets/images/logo.svg" alt="logo" class="logo">
                 </NuxtLink>
                 <span class="footer__copyright helper-text">© De Rama <br> Vegetarian & Vegan Cafe. <br> All Rights
                     Reserved.</span>
                 <SocialLinks />
                 <a class="footer__to-top" @click.prevent="scrollOnTopOfPage(true)">
-                    <img src="../assets/images/arrow.svg" class="footer__to-top-img">
+                    <img loading="lazy" src="../assets/images/arrow.svg" class="footer__to-top-img">
                 </a>
             </div>
         </div>
