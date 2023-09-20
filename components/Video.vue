@@ -1,8 +1,5 @@
 <template>
     <div class="gallery__video-cont">
-        <!-- <button v-show="isShowPlayBtn" class="gallery__video-btn" @click="playVideo">
-            <img loading="lazy" src="../assets/images/play.svg" alt="play">
-        </button> -->
         <video ref="video" class="gallery__video" @pause="onPause" controls :src="src" :poster="poster"
             preload="metadata"></video>
     </div>
@@ -52,20 +49,6 @@ const onPause = () => {
         height: 100%;
         border-radius: 60px;
     }
-
-    &__video-btn {
-        background: none;
-        border: none;
-        border-radius: 100%;
-        display: block;
-        margin: 0 auto;
-        width: 100px;
-        height: 100px;
-        position: absolute;
-        top: calc(400px / 2 - 100px / 2);
-        left: calc(770px /2 - 100px / 2);
-        z-index: 2;
-    }
 }
 
 @media (max-width: 1700px) {
@@ -79,11 +62,6 @@ const onPause = () => {
         &__video {
             border-radius: 40px;
         }
-
-        &__video-btn {
-            top: calc(307px / 2 - 100px / 2);
-            left: calc(540px /2 - 100px / 2);
-        }
     }
 }
 
@@ -94,13 +72,6 @@ const onPause = () => {
             &:nth-child(2) {
                 align-self: auto;
             }
-        }
-
-        &__video-btn {
-            width: 80px;
-            height: 80px;
-            top: calc(307px / 2 - 80px / 2);
-            left: calc(540px /2 - 80px / 2);
         }
     }
 }
@@ -117,13 +88,6 @@ const onPause = () => {
 
         &__video {
             border-radius: 20px;
-        }
-
-        &__video-btn {
-            // width: 40px;
-            // height: 40px;
-            top: calc(100% / 2 - 80px / 2);
-            left: calc(50% - 80px / 2);
         }
     }
 }

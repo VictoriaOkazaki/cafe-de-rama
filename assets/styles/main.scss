@@ -34,16 +34,6 @@ button {
     flex: 0 0 auto;
 }
 
-video::-webkit-media-controls-enclosure {
-    background-color: $acsent-1 !important;
-    color: $acsent-1 !important;
-}
-
-video::-webkit-media-controls-panel {
-    background-color: $acsent-1 !important;
-    color: $acsent-1 !important;
-}
-
 .h1,
 .title {
     font-family: Caveat, cursive;
