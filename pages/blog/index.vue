@@ -10,10 +10,6 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-    title: 'De Rama Blog',
-    description: 'Our articles related to vegetarian & vegan theme and healthy lifestyle.'
-})
 </script>
 
 <style scoped lang="scss"></style>

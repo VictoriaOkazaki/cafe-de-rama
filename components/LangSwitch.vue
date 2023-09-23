@@ -1,8 +1,14 @@
 <template>
     <ul class="lang-switch">
-        <li class="lang-switch__item helper-text" :class="{ 'active': locale === 'az' }" @click="changeLang('az')">AZ</li>
-        <li class="lang-switch__item helper-text" :class="{ 'active': locale === 'ru' }" @click="changeLang('ru')">RU</li>
-        <li class="lang-switch__item helper-text" :class="{ 'active': locale === 'en' }" @click="changeLang('en')">EN</li>
+        <li class="lang-switch__item helper-text" :class="{ 'active': locale === 'az' }" @click="changeLang('az')">
+            <a @click.prevent href="?lang=az">AZ</a>
+        </li>
+        <li class="lang-switch__item helper-text" :class="{ 'active': locale === 'ru' }" @click="changeLang('ru')">
+            <a @click.prevent href="?lang=ru">RU</a>
+        </li>
+        <li class="lang-switch__item helper-text" :class="{ 'active': locale === 'en' }" @click="changeLang('en')">
+            <a @click.prevent href="?lang=en">EN</a>
+        </li>
     </ul>
 </template>
 
@@ -16,6 +22,10 @@ const changeLang = (value) => {
 </script>
 
 <style lang="scss" scoped>
+a {
+    color: inherit;
+}
+
 .active {
     background-color: $acsent-1 !important;
 }
