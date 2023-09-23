@@ -8,9 +8,9 @@
     <Menu />
     <Action />
     <Review />
-    <Shop />
+    <!-- <Shop /> -->
     <Gallery />
-    <Blog />
+    <!-- <Blog /> -->
     <Contact />
 </template>
 

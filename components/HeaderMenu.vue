@@ -39,18 +39,18 @@ function createLinks() {
             title: t('menu.4'),
             href: '#review'
         },
-        {
-            title: t('menu.5'),
-            href: '#shop'
-        },
+        // {
+        //     title: t('menu.5'),
+        //     href: '#shop'
+        // },
         {
             title: t('menu.6'),
             href: '#gallery'
         },
-        {
-            title: t('menu.7'),
-            href: '#blog'
-        },
+        // {
+        //     title: t('menu.7'),
+        //     href: '#blog'
+        // },
         {
             title: t('menu.8'),
             href: '#contact'
