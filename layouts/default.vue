@@ -50,7 +50,8 @@ watch(locale, () => {
 useHead({
     title: pageTitle,
     meta: [
-        { name: 'description', content: pageDescription }
+        { name: 'description', content: pageDescription },
+        { name: 'google-site-verification', content: 'MItRq3_-WquKx9L3QkzQsJvUsE-xZV0fgV1p51JXTfY' }
     ],
     htmlAttrs: {
         lang: queryLang
