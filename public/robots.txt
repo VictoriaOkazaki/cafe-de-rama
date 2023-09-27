@@ -1,9 +1,13 @@
 # Block all crawlers for /accounts
 User-agent: *
+User-agent: Googlebot
+User-agent: YandexBot
 Disallow: /admin/
 
 # Allow all crawlers
 User-agent: *
+User-agent: Googlebot
+User-agent: YandexBot
 Allow: /
 
 Sitemap: https://deramacafe.az/sitemap.xml
