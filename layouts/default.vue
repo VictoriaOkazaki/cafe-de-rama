@@ -51,7 +51,8 @@ useHead({
     title: pageTitle,
     meta: [
         { name: 'description', content: pageDescription },
-        { name: 'google-site-verification', content: 'MItRq3_-WquKx9L3QkzQsJvUsE-xZV0fgV1p51JXTfY' }
+        { name: 'google-site-verification', content: 'MItRq3_-WquKx9L3QkzQsJvUsE-xZV0fgV1p51JXTfY' },
+        { name: 'yandex-verification', content: '6aa96e22b82c3017' }
     ],
     htmlAttrs: {
         lang: queryLang
