@@ -8,17 +8,13 @@
     <Menu />
     <Action />
     <Review />
-    <Shop />
+    <!-- <Shop /> -->
     <Gallery />
-    <Blog />
+    <!-- <Blog /> -->
     <Contact />
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-    title: 'De Rama Vegetarian & Vegan Cafe',
-    description: 'The first vegatarian & vegan cafe in Baku with a wide range of dishes from all over the world, excellent service and cool atmosphere.'
-})
 </script>
 
 <style scoped lang="scss">

@@ -5,8 +5,7 @@
                 <h2 class="action__title title">{{ $t('action.title') }}</h2>
                 <div class="action__content">
                     <div class="action__info">
-                        <img loading="lazy" src="../assets/images/action-text.svg" alt="business lunch"
-                            class="action__info-img">
+                        <img loading="lazy" :src="actionSrc" alt="business lunch" class="action__info-img">
                         <p class="action__info-text text">{{ $t('action.days') }}</p>
                         <p class="action__info-text text">13:00 — 15:00</p>
                         <p class="action__info-text text">20% {{ $t('action.off') }}</p>
@@ -20,6 +19,11 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n'
+import imgRu from '../assets/images/action-ru.svg'
+import imgAz from '../assets/images/action-az.svg'
+import imgEn from '../assets/images/action-en.svg'
+
 const actionImg = ref()
 useIntersection(actionImg, (entry) => {
     entry.target.style.animation = "pulse 3.5s alternate infinite ease-out"
@@ -28,6 +32,19 @@ useIntersection(actionImg, (entry) => {
     workTrueOnce: true,
     workTrueOnly: true
 })
+
+const { locale } = useI18n()
+
+const actionSrc = computed(() => {
+    let action = imgRu
+    if (locale.value === 'az') {
+        action = imgAz
+    } else if (locale.value === 'en') {
+        action = imgEn
+    }
+    return action
+})
+
 </script>
 
 <style lang="scss" scoped>
@@ -57,7 +74,7 @@ useIntersection(actionImg, (entry) => {
     }
 
     &__info-img {
-        width: 383px;
+        width: fit-content;
         height: 80px;
         margin-bottom: 40px;
     }

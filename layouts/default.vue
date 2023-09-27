@@ -9,6 +9,9 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+import { getPageMeta, Lang } from '~/composables/lang';
+
 const audio = ref()
 onMounted(() => {
     if (!audio) return
@@ -23,27 +26,35 @@ onMounted(() => {
     }, 1000)
 
 })
-import { useI18n } from 'vue-i18n'
+
 const { locale } = useI18n()
 
+const { queryLang, queryLangExists, pageTitle, pageDescription } = useQueryLang()
+locale.value = queryLang
+
 onMounted(() => {
+    if (queryLangExists) return
     const lang = localStorage.getItem('locale') || 'ru'
     locale.value = lang
 })
 
+const router = useRouter()
 watch(locale, () => {
     localStorage.setItem('locale', locale.value)
+    const { pageTitle, pageDescription } = getPageMeta(locale.value as Lang)
+    document.title = pageTitle
+    document.querySelector('meta[name="description"]')?.setAttribute('content', pageDescription)
+    router.push('?lang=' + locale.value)
 })
 
-const route = useRoute()
-
 useHead({
-    title: `${route.meta.title}`,
+    title: pageTitle,
     meta: [
-        { name: 'description', content: `${route.meta.description}` }
+        { name: 'description', content: pageDescription },
+        { name: 'google-site-verification', content: 'MItRq3_-WquKx9L3QkzQsJvUsE-xZV0fgV1p51JXTfY' }
     ],
     htmlAttrs: {
-        lang: locale
+        lang: queryLang
     },
     link: [
         {
