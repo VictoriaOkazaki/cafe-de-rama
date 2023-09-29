@@ -73,7 +73,7 @@ useHead({
         },
         {
             rel: 'icon',
-            href: 'favicon.ico'
+            href: '/favicon.ico'
         }
     ]
 })
