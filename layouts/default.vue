@@ -71,6 +71,10 @@ useHead({
             href: 'https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fira+Sans+Condensed:wght@400;700&family=Kalam:wght@400;500&display=swap" rel="stylesheet',
             rel: 'stylesheet'
         },
+        {
+            rel: 'icon',
+            href: 'favicon.ico'
+        }
     ]
 })
 
