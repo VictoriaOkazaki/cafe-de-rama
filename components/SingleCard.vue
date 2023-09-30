@@ -6,15 +6,23 @@
       <LangSwitch class="pages-langs-switch" />
       <div class="blog-post__inner">
         <div class="blog-post__img-cont">
-          <img :src="card.mainFile.src" alt="" class="blog-post__img" />
+          <img
+            :src="card.mainFile.src"
+            :alt="localeTitle"
+            class="blog-post__img"
+          />
         </div>
-        <h2 class="blog-post__title title">Post name{{ localeTitle }}</h2>
+        <h2 class="blog-post__title title">{{ localeTitle }}</h2>
         <p class="blog-post__text text">
           {{ localeText }}
         </p>
         <ul class="blog-post__files">
           <li v-for="extraFile in card.extraFiles" class="blog-post__item">
-            <img :src="extraFile.src" alt="" class="blog-post__item-img" />
+            <img
+              :src="extraFile.src"
+              :alt="localeTitle"
+              class="blog-post__item-img"
+            />
           </li>
         </ul>
       </div>

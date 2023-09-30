@@ -1,81 +1,82 @@
 {
-    "reserve-message": "Salam! Masa rezerv etmək istəyirəm",
-    "adress": "Bakı ş., Nəsimi r-nu, Mehbalı Zeynalabdiyev 5",
-    "time": "Hər gün 11:00 — 22:00",
-    "menu": {
-        "0": "Аna səhifə",
-        "1": "Haqqımızda",
-        "2": "Menyu",
-        "3": "Aksiyalar",
-        "4": "Rəylər",
-        "5": "Mağaza",
-        "6": "Qalereya",
-        "7": "Bloq",
-        "8": "Əlaqə"
-    },
-    "home": {
-        "title-1": "De Rama",
-        "title-2": "Vegetarian & Vegan Kafe",
-        "subtitle": "Yediklərinizi dəyişdirərək, daxili və xarici dünyanızı dəyişə bilərsiniz!",
-        "text": "Möhtəşəm təamlarımızı dadmaq istərdinizmi? O zaman masa bron etməyə tələsin 💚 Sizə dünyada müxtəlif ölkələrdə məşhur Vegetarian və Vegan yeməklərini təklif edirik. Bizim ailəvi kafemizdə yumurta və heç bir ət növü istifadə OLUNMUR.",
-        "btn-1": "Masa rezerv etmək",
-        "btn-2": "Menyuya baxmaq"
-    },
-    "about": {
-        "title": "Bizim haqqımızda",
-        "text-top-1": "Son elmi araşdırmalara əsasən heyvan ətindən bitki mənşəli qidaya keçməklə biz planetə, ətraf mühitə, iqlimə və hətta özümüzə müsbət təsir göstərə bilərik.",
-        "text-top-2": "Hər gün etdiyimiz hər bir müsbət qida seçimi nə qədər kiçik olsa da, daxili və xarici dünyamıza böyük müsbət təsir göstərir.",
-        "subtitle": "Niyə Rama?",
-        "text-b-1": "Rama (Sanskrit राम, SON: rāma) və ya Ramaçandra (Rama mənəvi sağlamlığın, saf xoşbəxtliyin və fədakar sevginin hər cür cəlbedici mənbəyidir) - Ayodhya'nın əfsanəvi qədim Veda kralı Vişnunun avatarı. Rama Veda mədəniyyətində dünyaya enmiş Vişnunun yeddinci avatarı kimi baxılır. Təxminən 1,2 milyon il əvvəl Treta Yuqanın son rübündə Paraşurama dünya nizamını yaratmaq və qorumaqla məşğul olduqda, bu halda Rama onun avatarı kimi “ər-arvad arasında əbədi və qırılmaz bağın ifadəsi kimi nikahın ləyaqətini qorumağa çağırılır",
-        "text-b-2": "Vedik mədəniyyətinin ardıcılları Ramanı əsl tarixi şəxsiyyət, müasir Hindistanın çox hissəsini Ayodhyadan idarə edən bir kral hesab edirlər. Krişna ilə yanaşı, Rama Tanrının ən məşhur avatarlarından biridir. Rama kultu hinduizmdə üstünlük təşkil edən cərəyan olan Vaişnavizmin ardıcılları üçün xüsusilə xarakterikdir.",
-        "text-b-3-1": "Ramanın daha müfəssəl tərcümeyi-halı:",
-        "text-b-3-2": "“Ramayana” - Bədii Film:",
-        "text-b-3-3": "Mahabharata, ən böyük qədim Veda dastanından biri - Bədii Film:"
-    },
-    "menu-f": {
-        "title1": "Menyu — yeməklər",
-        "title2": "Menyu — alkoqolsuz içkilər",
-        "title3": "Menyu — alkoqollu içkilər",
-        "to-category": "kateqoriyalara qayıtmaq",
-        "text-1": "Dadlı yeməklər və xoş təcrübələr üçün bizə gəlin!",
-        "text-2": "Evinizə çatdırılan yeməklərimizi sifariş etmək də mümkündür.",
-        "btn-1": "Masa rezerv etmək",
-        "btn-2": "Wolt-dan sifariş",
-        "btn-3": "Bolt-dan sifariş"
-    },
-    "action": {
-        "title": "Aksiyalar",
-        "days": "Bazar ertəsi — Cümə",
-        "off": "ENDİRİM"
-    },
-    "review": {
-        "title": "Qonaqlarımızın rəyləri",
-        "1": "Dünyanın hər yerindən geniş çeşiddə yeməklər. Fast fooddan tutmuş ənənəvi yerli yeməklərə qədər bir çox seçim. Onların hamısı ya vegetarian, ya da vegandır.",
-        "2": "Bakıda belə bir yerin olması çox xoşdur. Sakit küçədə kiçik kafe, sakit musiqi, çox dadlı yeməklər.",
-        "3": "Mən çox bəyəndim! Rahat atmosfer, gözəl interyer, dadlı yeməklər, əla xidmət. Evdə hazırlanmış limonad çox xoşuma gəldi.",
-        "4": "Belə gözəl mühit və dadlı yeməklər! Bütün yeməklər üçün vegan seçimləri. Bu yerdə çox zen hiss edirəm.",
-        "5": "Yaxşı xidmət və çox mehriban personal. Çizburgeri sınadım, əla, nəmli və çuğundurlu çörək əla idi.",
-        "6": "Menyudakı yeməklərin əksəriyyəti vegan və ya vegan ola bilər. BEYOND MEAT ilə hazırlanmış burgerim var idi və ondan çox razı qaldım. Həmçinin caz musiqisi ilə gözəl açıq oturma sahəsi var.",
-        "7": "Dünyanın hər yerindən vegan və vegetarian yeməkləri. İlk dəfədir ki, belə parlaq və maraqlı menyu görürəm! Rahat atmosfer. Bu ailə kafedə vegan və vegetarian mətbəxi haqqında maraqlı kitablar da var.",
-        "8": "İçkilər və yeməklər çox tez, tələb olunan qaydada gətirildi və heç bir şey qarışdırılmadı. İçkilər soyuq idi + buz gətirdilər.",
-        "9": "Biz Bakıda vegetarian kafe axtarırdıq, bunu tapdıq və sadəcə xoşbəxtik! Yeməklərin böyük seçimi, xoş xidmət, sizə kofe ilə konfet verirlər)",
-        "10": "Vegetarianlar olaraq Bakıda pəhriz tələblərimizlə bağlı çətin anlar yaşayacağımızı gözləyirdik. Ancaq Cafe DeRama'ya baş çəkdiyimiz an çox xoşbəxt olduq! Yeməyin keyfiyyəti və miqdarı əladır. Qırmızı kələm şorbası, əriştə, makaron, dolma və Snickers deserti xüsusilə dadlıdır."
-    },
-    "shop": {
-        "title": "De Rama Mağaza",
-        "text": "Bakının sakit, kölgəli küçəsində gizlənmiş kiçik vegetarian kafeni xatırladacaq məhsullarımızı və suvenirlərimizi diqqətinizə təqdim edirik. Məhsullarımız praktikdir, estetikdir və həm özünüzə, həm də yaxınlarınıza hədiyyə etmək üçün uyğundur.",
-        "btn": "Daha çox göstərmək"
-    },
-    "blog": {
-        "title": "Bloq",
-        "text": "Çobanyastığı ilə yaşıl çay dəmləyin və məqalələrimizi oxumaqdan həzz alın.",
-        "btn": "Daha çox oxumaq",
-        "btn2": "Oxumaq"
-    },
-    "gallery": "Qalereya",
-    "contact": {
-        "title": "Əlaqə",
-        "place": "28 May metro ərazisi, Səməd Vurğun parkın sonunda, Dəmir Yol Baş İdarənin arxasında, Aeroflot Aviakasanın yanında",
-        "parking": "Həftə içi parkinq yalnız 17:30-dan sonra, qeyri-iş günlərində isə istənilən vaxt mövcuddur."
-    }
+  "reserve-message": "Salam! Masa rezerv etmək istəyirəm",
+  "adress": "Bakı ş., Nəsimi r-nu, Mehbalı Zeynalabdiyev 5",
+  "time": "Hər gün 11:00 — 22:00",
+  "menu": {
+    "0": "Аna səhifə",
+    "1": "Haqqımızda",
+    "2": "Menyu",
+    "3": "Aksiyalar",
+    "4": "Rəylər",
+    "5": "Mağaza",
+    "6": "Qalereya",
+    "7": "Bloq",
+    "8": "Əlaqə"
+  },
+  "home": {
+    "title-1": "De Rama",
+    "title-2": "Vegetarian & Vegan Kafe",
+    "subtitle": "Yediklərinizi dəyişdirərək, daxili və xarici dünyanızı dəyişə bilərsiniz!",
+    "text": "Möhtəşəm təamlarımızı dadmaq istərdinizmi? O zaman masa bron etməyə tələsin 💚 Sizə dünyada müxtəlif ölkələrdə məşhur Vegetarian və Vegan yeməklərini təklif edirik. Bizim ailəvi kafemizdə yumurta və heç bir ət növü istifadə OLUNMUR.",
+    "btn-1": "Masa rezerv etmək",
+    "btn-2": "Menyuya baxmaq"
+  },
+  "about": {
+    "title": "Bizim haqqımızda",
+    "text-top-1": "Son elmi araşdırmalara əsasən heyvan ətindən bitki mənşəli qidaya keçməklə biz planetə, ətraf mühitə, iqlimə və hətta özümüzə müsbət təsir göstərə bilərik.",
+    "text-top-2": "Hər gün etdiyimiz hər bir müsbət qida seçimi nə qədər kiçik olsa da, daxili və xarici dünyamıza böyük müsbət təsir göstərir.",
+    "subtitle": "Niyə Rama?",
+    "text-b-1": "Rama (Sanskrit राम, SON: rāma) və ya Ramaçandra (Rama mənəvi sağlamlığın, saf xoşbəxtliyin və fədakar sevginin hər cür cəlbedici mənbəyidir) - Ayodhya'nın əfsanəvi qədim Veda kralı Vişnunun avatarı. Rama Veda mədəniyyətində dünyaya enmiş Vişnunun yeddinci avatarı kimi baxılır. Təxminən 1,2 milyon il əvvəl Treta Yuqanın son rübündə Paraşurama dünya nizamını yaratmaq və qorumaqla məşğul olduqda, bu halda Rama onun avatarı kimi “ər-arvad arasında əbədi və qırılmaz bağın ifadəsi kimi nikahın ləyaqətini qorumağa çağırılır",
+    "text-b-2": "Vedik mədəniyyətinin ardıcılları Ramanı əsl tarixi şəxsiyyət, müasir Hindistanın çox hissəsini Ayodhyadan idarə edən bir kral hesab edirlər. Krişna ilə yanaşı, Rama Tanrının ən məşhur avatarlarından biridir. Rama kultu hinduizmdə üstünlük təşkil edən cərəyan olan Vaişnavizmin ardıcılları üçün xüsusilə xarakterikdir.",
+    "text-b-3-1": "Ramanın daha müfəssəl tərcümeyi-halı:",
+    "text-b-3-2": "“Ramayana” - Bədii Film:",
+    "text-b-3-3": "Mahabharata, ən böyük qədim Veda dastanından biri - Bədii Film:"
+  },
+  "menu-f": {
+    "title1": "Menyu — yeməklər",
+    "title2": "Menyu — alkoqolsuz içkilər",
+    "title3": "Menyu — alkoqollu içkilər",
+    "to-category": "kateqoriyalara qayıtmaq",
+    "text-1": "Dadlı yeməklər və xoş təcrübələr üçün bizə gəlin!",
+    "text-2": "Evinizə çatdırılan yeməklərimizi sifariş etmək də mümkündür.",
+    "btn-1": "Masa rezerv etmək",
+    "btn-2": "Wolt-dan sifariş",
+    "btn-3": "Bolt-dan sifariş"
+  },
+  "action": {
+    "title": "Aksiyalar",
+    "days": "Bazar ertəsi — Cümə",
+    "off": "ENDİRİM"
+  },
+  "review": {
+    "title": "Qonaqlarımızın rəyləri",
+    "1": "Dünyanın hər yerindən geniş çeşiddə yeməklər. Fast fooddan tutmuş ənənəvi yerli yeməklərə qədər bir çox seçim. Onların hamısı ya vegetarian, ya da vegandır.",
+    "2": "Bakıda belə bir yerin olması çox xoşdur. Sakit küçədə kiçik kafe, sakit musiqi, çox dadlı yeməklər.",
+    "3": "Mən çox bəyəndim! Rahat atmosfer, gözəl interyer, dadlı yeməklər, əla xidmət. Evdə hazırlanmış limonad çox xoşuma gəldi.",
+    "4": "Belə gözəl mühit və dadlı yeməklər! Bütün yeməklər üçün vegan seçimləri. Bu yerdə çox zen hiss edirəm.",
+    "5": "Yaxşı xidmət və çox mehriban personal. Çizburgeri sınadım, əla, nəmli və çuğundurlu çörək əla idi.",
+    "6": "Menyudakı yeməklərin əksəriyyəti vegan və ya vegan ola bilər. BEYOND MEAT ilə hazırlanmış burgerim var idi və ondan çox razı qaldım. Həmçinin caz musiqisi ilə gözəl açıq oturma sahəsi var.",
+    "7": "Dünyanın hər yerindən vegan və vegetarian yeməkləri. İlk dəfədir ki, belə parlaq və maraqlı menyu görürəm! Rahat atmosfer. Bu ailə kafedə vegan və vegetarian mətbəxi haqqında maraqlı kitablar da var.",
+    "8": "İçkilər və yeməklər çox tez, tələb olunan qaydada gətirildi və heç bir şey qarışdırılmadı. İçkilər soyuq idi + buz gətirdilər.",
+    "9": "Biz Bakıda vegetarian kafe axtarırdıq, bunu tapdıq və sadəcə xoşbəxtik! Yeməklərin böyük seçimi, xoş xidmət, sizə kofe ilə konfet verirlər)",
+    "10": "Vegetarianlar olaraq Bakıda pəhriz tələblərimizlə bağlı çətin anlar yaşayacağımızı gözləyirdik. Ancaq Cafe DeRama'ya baş çəkdiyimiz an çox xoşbəxt olduq! Yeməyin keyfiyyəti və miqdarı əladır. Qırmızı kələm şorbası, əriştə, makaron, dolma və Snickers deserti xüsusilə dadlıdır."
+  },
+  "shop": {
+    "title": "De Rama Mağaza",
+    "text": "Bakının sakit, kölgəli küçəsində gizlənmiş kiçik vegetarian kafeni xatırladacaq məhsullarımızı və suvenirlərimizi diqqətinizə təqdim edirik. Məhsullarımız praktikdir, estetikdir və həm özünüzə, həm də yaxınlarınıza hədiyyə etmək üçün uyğundur.",
+    "btn": "Daha çox göstərmək",
+    "btn2": "Daha ətraflı"
+  },
+  "blog": {
+    "title": "Bloq",
+    "text": "Çobanyastığı ilə yaşıl çay dəmləyin və məqalələrimizi oxumaqdan həzz alın.",
+    "btn": "Daha çox oxumaq",
+    "btn2": "Oxumaq"
+  },
+  "gallery": "Qalereya",
+  "contact": {
+    "title": "Əlaqə",
+    "place": "28 May metro ərazisi, Səməd Vurğun parkın sonunda, Dəmir Yol Baş İdarənin arxasında, Aeroflot Aviakasanın yanında",
+    "parking": "Həftə içi parkinq yalnız 17:30-dan sonra, qeyri-iş günlərində isə istənilən vaxt mövcuddur."
+  }
 }

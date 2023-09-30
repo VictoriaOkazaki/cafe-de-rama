@@ -8,13 +8,27 @@
   <Menu />
   <Action />
   <Review />
-  <Shop />
+  <Shop v-if="!hideSections.shop" :cards="(shopCards as LocaleShopCard[])" />
   <Gallery />
-  <Blog />
+  <Blog v-if="!hideSections.blog" :cards="(blogCards as LocaleBlogCard[])" />
   <Contact />
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { hideSections } from "~/composables/menu";
+import { LocaleShopCard, LocaleBlogCard } from "~/types";
+
+const { cards: shopCards, exists: shopCardsExists } = await usePreviewCards(
+  "goods"
+);
+const { cards: blogCards, exists: blogCardsExists } = await usePreviewCards(
+  "blogs"
+);
+hideSections.value = {
+  blog: !blogCardsExists,
+  shop: !shopCardsExists,
+};
+</script>
 
 <style scoped lang="scss">
 .home-bottom {

@@ -18,6 +18,10 @@ export type ShopCard = BaseCard & {
   price: number;
 };
 
+type LocaleTexts = "titleEn" | "textEn" | "titleAz" | "textAz";
+export type LocaleBlogCard = Omit<BlogCard, LocaleTexts>;
+export type LocaleShopCard = Omit<ShopCard, LocaleTexts>;
+
 export type CardEntity = BlogCard | ShopCard;
 
 export const ZodFileDataAdd = z.object({
