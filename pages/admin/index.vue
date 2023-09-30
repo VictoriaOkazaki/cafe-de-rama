@@ -1,5 +1,5 @@
 <template>
-  <div v-if="loading">Loading...</div>
+  <div v-if="loading"></div>
   <Admin v-else-if="authed" :do-logout="doLogout" />
   <div v-else class="login-wrapper">
     <v-card class="pa-12 pb-8 w-100" elevation="8" max-width="448" rounded="lg">
@@ -39,11 +39,27 @@
       </v-btn>
     </v-card>
   </div>
+  <v-dialog
+    persistent
+    v-model="isAdminLoader"
+    max-width="290"
+    lazy
+    content-class="my-custom-dialog"
+  >
+    <v-layout align-center justify-space-around wrap>
+      <v-card>
+        <v-card-text class="text-xs-center">
+          <v-progress-circular :size="70" indeterminate class="primary--text" />
+        </v-card-text>
+      </v-card>
+    </v-layout>
+  </v-dialog>
 </template>
 
 <script setup lang="ts">
 import { initializeApp } from "firebase/app";
 import { signInWithEmailAndPassword, signOut, getAuth } from "firebase/auth";
+import { isAdminLoader } from "~/composables/admin";
 
 const visiblePassword = ref(false);
 
@@ -86,6 +102,8 @@ const doLogout = async () => {
 };
 
 const loading = ref(true);
+isAdminLoader.value = true;
+
 function getAuthed(): Promise<boolean> {
   return new Promise((resolve) => {
     try {
@@ -111,10 +129,11 @@ function getAuthed(): Promise<boolean> {
 (async () => {
   authed.value = await getAuthed();
   loading.value = false;
+  isAdminLoader.value = false;
 })();
 </script>
 
-<style scoped>
+<style>
 .login-wrapper {
   width: 100vw;
   height: 100vh;
@@ -122,5 +141,9 @@ function getAuthed(): Promise<boolean> {
   justify-content: center;
   align-items: center;
   padding: 0 20px;
+}
+
+.my-custom-dialog {
+  align-items: center;
 }
 </style>

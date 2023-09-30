@@ -1,46 +1,55 @@
 <template>
   <v-container>
     <v-row>
-      <v-col md="12">
+      <v-col sm="12">
         <div class="text-subtitle-1 text-medium-emphasis">Текст на русском</div>
 
-        <v-text-field v-model="editingBlog.title" label="Title" required>
+        <v-text-field v-model="editingCard.title" label="Title" required>
         </v-text-field>
 
-        <v-textarea v-model="editingBlog.text" label="Text" required>
+        <v-textarea v-model="editingCard.text" label="Text" required>
         </v-textarea>
       </v-col>
 
-      <v-col md="12">
+      <v-col sm="12">
         <div class="text-subtitle-1 text-medium-emphasis">
           Текст на английском
         </div>
 
-        <v-text-field v-model="editingBlog.titleEn" label="Title" required>
+        <v-text-field v-model="editingCard.titleEn" label="Title" required>
         </v-text-field>
 
-        <v-textarea v-model="editingBlog.textEn" label="Text" required>
+        <v-textarea v-model="editingCard.textEn" label="Text" required>
         </v-textarea>
       </v-col>
 
-      <v-col md="12">
+      <v-col sm="12">
         <div class="text-subtitle-1 text-medium-emphasis">
           Текст на азербайджанском
         </div>
 
-        <v-text-field v-model="editingBlog.titleAz" label="Title" required>
+        <v-text-field v-model="editingCard.titleAz" label="Title" required>
         </v-text-field>
 
-        <v-textarea v-model="editingBlog.textAz" label="Text" required>
+        <v-textarea v-model="editingCard.textAz" label="Text" required>
         </v-textarea>
       </v-col>
 
-      <v-col md="12">
+      <v-col sm="12" v-if="entityName === 'goods'">
+        <div class="text-subtitle-1 text-medium-emphasis">Цена</div>
+        <v-text-field
+          v-model.number="(editingCard as ShopCard).price"
+          label="Введите цену"
+          type="number"
+        ></v-text-field>
+      </v-col>
+
+      <v-col sm="12">
         <div class="text-subtitle-1 text-medium-emphasis">Обложка</div>
         <img
           class="blog-img"
-          v-if="editingBlog.mainFile.src"
-          :src="editingBlog.mainFile.src"
+          v-if="editingCard.mainFile.src"
+          :src="editingCard.mainFile.src"
           alt="blog-img"
         />
         <input
@@ -52,12 +61,12 @@
         />
       </v-col>
 
-      <v-col md="12">
+      <v-col sm="12">
         <div class="text-subtitle-1 text-medium-emphasis">
           Дополнительные фото
         </div>
         <img
-          v-for="extraFile in editingBlog.extraFiles"
+          v-for="extraFile in editingCard.extraFiles"
           class="blog-img"
           :src="extraFile.src"
           alt="blog-img"
@@ -122,12 +131,14 @@
 
 <script setup lang="ts">
 import { getUtcDate } from "~/server/modules/date";
-import { BlogCard, NewFiles } from "~/types";
+import { EntityName } from "~/server/modules/entity";
+import { CardEntity, NewFiles, ShopCard } from "~/types";
 
 const props = defineProps<{
-  startBlog?: BlogCard;
+  entityName: EntityName;
+  startCard?: CardEntity;
   saveChanges: (
-    blog: BlogCard,
+    card: CardEntity,
     newFiles: NewFiles
   ) => Promise<{
     errorMessage: string;
@@ -135,15 +146,15 @@ const props = defineProps<{
   cancel: () => void;
 }>();
 
-const isEditing = !!props.startBlog;
+const isEditing = !!props.startCard;
 const isUpdateDate = ref(false);
 
 const fileInputKey = ref(1);
 let newPosterFile: File | null = null;
 let newExtraFiles: File[] = [];
 
-const getEmptyBlogData = (): BlogCard => {
-  return {
+const getEmptyCardData = (): CardEntity => {
+  const card: CardEntity = {
     id: "",
     date: "",
     text: "",
@@ -155,15 +166,19 @@ const getEmptyBlogData = (): BlogCard => {
     mainFile: { fileName: "", src: "" },
     extraFiles: [],
   };
+  if (props.entityName === "goods") {
+    (card as ShopCard).price = 0;
+  }
+  return card;
 };
 
 const clearData = () => {
-  editingBlog.value = getEmptyBlogData();
+  editingCard.value = getEmptyCardData();
   newPosterFile = null;
   fileInputKey.value += 1;
 };
 
-const editingBlog = ref<BlogCard>(props.startBlog || getEmptyBlogData());
+const editingCard = ref<CardEntity>(props.startCard || getEmptyCardData());
 
 const toBase64 = (file: File): Promise<string> =>
   new Promise((resolve, reject) => {
@@ -177,8 +192,8 @@ const detectFiles = async (e: any, type: "poster" | "extra") => {
   const input: HTMLInputElement = e.target;
   if (type === "poster" && input && input.files) {
     newPosterFile = input.files[0];
-    if (editingBlog.value) {
-      editingBlog.value.mainFile = {
+    if (editingCard.value) {
+      editingCard.value.mainFile = {
         fileName: newPosterFile.name,
         src: await toBase64(newPosterFile),
       };
@@ -187,14 +202,14 @@ const detectFiles = async (e: any, type: "poster" | "extra") => {
 
   if (type === "extra" && input && input.files) {
     newExtraFiles = [...input.files];
-    if (editingBlog.value) {
-      editingBlog.value.extraFiles = [];
+    if (editingCard.value) {
+      editingCard.value.extraFiles = [];
       for (const newExtraFile of newExtraFiles) {
         const extraFile = {
           fileName: newExtraFile.name,
           src: await toBase64(newExtraFile),
         };
-        editingBlog.value.extraFiles.push(extraFile);
+        editingCard.value.extraFiles.push(extraFile);
       }
     }
   }
@@ -212,11 +227,11 @@ const saveBlog = async () => {
   errorText.value = "";
 
   if (!isEditing || isUpdateDate.value) {
-    editingBlog.value.date = getUtcDate();
+    editingCard.value.date = getUtcDate();
   }
 
   try {
-    const data = await props.saveChanges(editingBlog.value, {
+    const data = await props.saveChanges(editingCard.value, {
       posterFile: newPosterFile,
       extraFiles: newExtraFiles,
     });
@@ -224,14 +239,17 @@ const saveBlog = async () => {
     if (data?.errorMessage) {
       errorText.value = data?.errorMessage;
     } else {
-      successText.value = isEditing ? "Blog was saved" : "Blog was created";
+      const entityName = props.entityName.toUpperCase();
+      successText.value = isEditing
+        ? `${entityName} card was saved`
+        : `${entityName} card was created`;
       clearData();
       clearSuccessTm = setTimeout(() => {
         successText.value = "";
       }, 3000);
     }
   } catch {
-    errorText.value = "Error saving a blog";
+    errorText.value = `Error saving a ${props.entityName} card`;
   }
 
   controlDisabled.value = false;

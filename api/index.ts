@@ -1,5 +1,6 @@
 import { getAuth } from "firebase/auth";
-import { BlogCardAdd, BlogCard, BlogCardEdit, NewFiles } from "~/types";
+import { EntityName } from "~/server/modules/entity";
+import { NewFiles, EntityAdd, CardEntity, EntityEdit } from "~/types";
 
 const getAuthHeader = async () => {
   const auth = getAuth();
@@ -81,37 +82,37 @@ export const addFileApi = async (
   return fileName;
 };
 
-export const deleteBlogApi = async (blog: BlogCard) => {
-  const response = await fetch("/api/blog", {
+export const deleteEntityApi = async (
+  entityName: EntityName,
+  entityId: string
+) => {
+  const response = await fetch(`/api/entity/${entityName}`, {
     method: "DELETE",
     headers: await getHeaders(),
-    body: JSON.stringify({ id: String(blog.id) }),
+    body: JSON.stringify({ id: entityId }),
   });
   if (!response.ok) {
     throw new Error(
-      `Error delete blog request (status: ${response.status}) ${response.statusText}`
+      `Error delete ${entityName} entity request (status: ${response.status}) ${response.statusText}`
     );
   }
-  console.log("Blog deleted", await response.text());
+  console.log(`Entity ${entityName} deleted`, await response.text());
 };
 
-export const editBlogApi = async (blog: BlogCard, newFiles: NewFiles) => {
-  const updatedBlog: BlogCardEdit = {
-    id: String(blog.id),
-    date: blog.date,
-    text: blog.text,
-    title: blog.title,
-    textEn: blog.textEn,
-    titleEn: blog.titleEn,
-    textAz: blog.textAz,
-    titleAz: blog.titleAz,
+export const editEntityApi = async (
+  entityName: EntityName,
+  entity: CardEntity,
+  newFiles: NewFiles
+) => {
+  const updatedEntity: EntityEdit = {
+    ...entity,
   };
   if (newFiles.posterFile) {
     const apiFileName = await addFileApi(newFiles.posterFile);
 
     console.log("Poster file uploaded", newFiles.posterFile.name);
 
-    updatedBlog.mainFile = {
+    updatedEntity.mainFile = {
       fileName: apiFileName,
     };
   }
@@ -125,26 +126,33 @@ export const editBlogApi = async (blog: BlogCard, newFiles: NewFiles) => {
       console.log("Extra file uploaded", extraFile.name);
     }
 
-    updatedBlog.extraFiles = extraFiles;
+    updatedEntity.extraFiles = extraFiles;
   }
 
-  const response = await fetch("/api/blog", {
+  console.log("Will updatedEntity", updatedEntity);
+  const response = await fetch(`/api/entity/${entityName}`, {
     method: "PUT",
     headers: await getHeaders(),
-    body: JSON.stringify(updatedBlog),
+    body: JSON.stringify(updatedEntity),
   });
   if (!response.ok) {
     throw new Error(
-      `Error edit blog request (status: ${response.status}) ${response.statusText}`
+      `Error edit ${entityName} entity request (status: ${response.status}) ${response.statusText}`
     );
   }
-  console.log("Blog edited", await response.text());
+  console.log(`Entity ${entityName} edited`, await response.text());
 };
 
-export const createBlogApi = async (blog: BlogCard, newFiles: NewFiles) => {
+export const createEntityApi = async (
+  entityName: EntityName,
+  entity: EntityAdd,
+  newFiles: NewFiles
+) => {
   const posterFile = newFiles.posterFile;
   if (!posterFile) {
-    throw new Error("Error create new blog api. Empty poster file");
+    throw new Error(
+      `Error create new ${entityName} entity api. Empty poster file`
+    );
   }
   const posterFileName = await addFileApi(posterFile);
   console.log("Poster file uploaded", posterFile.name);
@@ -157,25 +165,20 @@ export const createBlogApi = async (blog: BlogCard, newFiles: NewFiles) => {
     console.log("Extra file uploaded", extraFile.name);
   }
 
-  const newBlog: BlogCardAdd = {
-    text: blog.text,
-    title: blog.title,
-    textEn: blog.textEn,
-    titleEn: blog.titleEn,
-    textAz: blog.textAz,
-    titleAz: blog.titleAz,
+  const newEntity: EntityAdd = {
+    ...entity,
     mainFile: { fileName: posterFileName },
     extraFiles,
   };
-  const response = await fetch("/api/blog", {
+  const response = await fetch(`/api/entity/${entityName}`, {
     method: "POST",
     headers: await getHeaders(),
-    body: JSON.stringify(newBlog),
+    body: JSON.stringify(newEntity),
   });
   if (!response.ok) {
     throw new Error(
-      `Error create blog request (status: ${response.status}) ${response.statusText}`
+      `Error create ${entityName} entity request (status: ${response.status}) ${response.statusText}`
     );
   }
-  console.log("Blog created", await response.text());
+  console.log(`Entity ${entityName} created`, await response.text());
 };
