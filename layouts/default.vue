@@ -51,7 +51,8 @@ useHead({
     title: pageTitle,
     meta: [
         { name: 'description', content: pageDescription },
-        { name: 'google-site-verification', content: 'MItRq3_-WquKx9L3QkzQsJvUsE-xZV0fgV1p51JXTfY' }
+        { name: 'google-site-verification', content: 'MItRq3_-WquKx9L3QkzQsJvUsE-xZV0fgV1p51JXTfY' },
+        { name: 'yandex-verification', content: '6aa96e22b82c3017' }
     ],
     htmlAttrs: {
         lang: queryLang
@@ -70,6 +71,10 @@ useHead({
             href: 'https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fira+Sans+Condensed:wght@400;700&family=Kalam:wght@400;500&display=swap" rel="stylesheet',
             rel: 'stylesheet'
         },
+        {
+            rel: 'icon',
+            href: '/favicon.ico'
+        }
     ]
 })
 

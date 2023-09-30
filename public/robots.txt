@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /admin
+
+User-agent: Googlebot
+Disallow: /admin
+
+User-agent: YandexBot
+Disallow: /admin
+
+Sitemap: https://deramacafe.az/sitemap.xml
