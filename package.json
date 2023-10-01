@@ -1,5 +1,5 @@
 {
-  "version": "1.0.4",
+  "version": "1.0.5",
   "name": "nuxt-app",
   "private": true,
   "scripts": {
@@ -14,7 +14,7 @@
     "@nuxt/devtools": "latest",
     "@types/formidable": "^2.0.5",
     "@types/uuid": "^9.0.4",
-    "nuxt": "^3.2.3",
+    "nuxt": "^3.7.4",
     "sass": "^1.66.1",
     "vue-i18n": "^9.4.0"
   },
