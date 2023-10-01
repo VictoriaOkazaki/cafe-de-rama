@@ -3,8 +3,10 @@ import admin from "firebase-admin";
 import { checkUserRole } from "../modules/user";
 import { v4 as uuidv4 } from "uuid";
 import { getFirebaseFileUrl } from "../modules/bucket";
+import { initFirebaseApp } from "../modules/firebase";
 
 export default defineEventHandler(async (event) => {
+  initFirebaseApp()
   await checkUserRole(event, ["admin", "manager"]);
   const { files, fields } = await form(event.node.req);
   const file = files[0];
