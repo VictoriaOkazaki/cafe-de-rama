@@ -1,9 +1,7 @@
 import admin from "firebase-admin";
 import { createEntity, getEntityNameFromRoute } from "~/server/modules/entity";
-// import { initFirebaseApp } from "~/server/modules/firebase";
 
 export default defineEventHandler(async (event) => {
-  // initFirebaseApp()
   const entityName = getEntityNameFromRoute(event);
   const entityId = getRouterParam(event, "id") || "";
 

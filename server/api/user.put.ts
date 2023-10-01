@@ -2,10 +2,8 @@ import admin from "firebase-admin";
 import { UserUpdate, ZodUserUpdate, transformUser } from "../modules/user";
 import { validateZod } from "~/composables/validate";
 import { checkUserRole } from "../modules/user";
-// import { initFirebaseApp } from "../modules/firebase";
 
 export default defineEventHandler(async (event) => {
-  // initFirebaseApp()
   await checkUserRole(event, ["admin"]);
   const updateUser: UserUpdate = await readBody(event);
 
