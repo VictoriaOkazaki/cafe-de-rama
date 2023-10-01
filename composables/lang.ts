@@ -95,11 +95,9 @@ export const useLangPageData = () => {
         document
             .querySelector('meta[name="description"]')
             ?.setAttribute("content", description);
-        const queryString = changeQueryString("lang", locale.value);
-        router.push("?" + queryString);
     }
 
-    watch(locale, (lang) => {
+    watch(locale, () => {
         // console.log('On locale changed', lang)
         updatePageData(route.path)
     });
@@ -110,22 +108,4 @@ export const useLangPageData = () => {
     })
 
     return { pageLang, pageTitle, pageDescription }
-}
-
-function getAllQueryParams() {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const params: any = {};
-
-    for (const [key, value] of urlParams.entries()) {
-        params[key] = value;
-    }
-
-    return params;
-}
-
-function changeQueryString(paramName: string, newValue: string) {
-    const queryParams = getAllQueryParams();
-    queryParams[paramName] = newValue;
-    return new URLSearchParams(queryParams).toString();
 }
