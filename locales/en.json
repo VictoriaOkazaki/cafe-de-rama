@@ -1,81 +1,82 @@
 {
-    "reserve-message": "Hello! I want to reserve a table for",
-    "adress": "Baku, Nasimi district, Mehbali Zeynalabdiev 5",
-    "time": "Daily 11:00 – 22:00",
-    "menu": {
-        "0": "Home",
-        "1": "About us",
-        "2": "Menu",
-        "3": "Action",
-        "4": "Reviews",
-        "5": "Shop",
-        "6": "Gallery",
-        "7": "Blog",
-        "8": "Contacts"
-    },
-    "home": {
-        "title-1": "De Rama",
-        "title-2": "Vegetarian & Vegan Cafe",
-        "subtitle": "By changing what you eat, you can change your inner and outer world.",
-        "text": "Would you like to try our delicious dishes? Then hurry up to book your table 💚 We offer a varied choice of Vegetarian & Vegan dishes from around the world. NO egg, NO meat of any type used in our cozy family style café.",
-        "btn-1": "Book a table",
-        "btn-2": "View menu"
-    },
-    "about": {
-        "title": "About us",
-        "text-top-1": "According to recent scientific research by shifting from animal to plant-based diet, we can positively affect the planet, the environment, the climate and even ourselves.",
-        "text-top-2": "Every positive food choice that we make every day, no matter how small it is, will have a great positive impact on our inner and outer world.",
-        "subtitle": "Why Rama?",
-        "text-b-1": "Rama (Sanskrit राम, IAST: rāma) or Ramachandra (Rama is the all-attractive source of spiritual health, pure happiness and selfless love) - an avatar of Vishnu, the legendary ancient Vedic king of Ayodhya. Rama is considered in Vedic culture as the seventh avatar of Vishnu, who descended into the world in the last quarter of Treta Yuga around 1 ,2 million years ago. When Parashurama is busy creating and preserving the world order, then in this case Rama as his avatar “is called upon to defend the dignity of marriage, as an expression of the eternal and inextricable bond between husband and wife.”",
-        "text-b-2": "Followers of Vedic Culture consider Rama to be a real historical figure, a king who ruled most of modern India from his capital Ayodhya. Along with Krishna, Rama is one of the most popular avatars of God. The cult of Rama is especially characteristic of followers of Vaishnavism, the predominant trend in Hinduism.",
-        "text-b-3-1": "A more detailed biography of Rama is contained in:",
-        "text-b-3-2": "“Ramayana” - Feature Film:",
-        "text-b-3-3": "one of the two greatest ancient Vedic epics Mahabharata - Feature Film:"
-    },
-    "menu-f": {
-        "title1": "Menu — dishes",
-        "title2": "Menu — non-alcoholic drinks",
-        "title3": "Menu — alcoholic drinks",
-        "to-category": "back to categories",
-        "text-1": "Come visit us for delicious food and pleasant experiences!",
-        "text-2": "It is also possible to order our food delivered to your home.",
-        "btn-1": "Book a table",
-        "btn-2": "Order from Wolt",
-        "btn-3": "Order from Bolt"
-    },
-    "action": {
-        "title": "Actions",
-        "days": "Monday — Friday",
-        "off": "DISCOUNT"
-    },
-    "review": {
-        "title": "Reviews from our guests",
-        "1": "A wide range of dishes from all over the world. Lots of options, from fast food to traditional local dishes. All of them are either vegetarian or vegan.",
-        "2": "It's very nice to have such a place in Baku. A small cafe on a quiet street, calm music, very tasty food.",
-        "3": "I really liked it! Relaxing atmosphere, nice interior, delicious food, excellent service. I really liked the homemade lemonade.",
-        "4": "Such a cool environment and delicious food! Vegan options for all dishes. Very zen feeling to the whole experience.",
-        "5": "Good service and very friendly staff. I tried the cheeseburger, great, moist, and the beetroot bun was great.",
-        "6": "Most items on the menu are vegan or can be vegan. I had a burger made with BEYOND MEAT and was very pleased with it. Also nice outdoor seating area with jazz music.",
-        "7": "Vegan and vegetarian dishes from around the world. This is the first time I’ve seen such a bright and interesting menu! Cozy atmosphere. This family cafe also has interesting books on vegan and vegetarian cuisine.",
-        "8": "Drinks and food were brought very quickly, in the right order requested and nothing was mixed up. The drinks were cold + they brought ice.",
-        "9": "We were looking for a vegetarian cafe in Baku, found this and are simply happy! Large selection of dishes, pleasant service, they give you candy with coffee)",
-        "10": "As vegetarians, we expected to have a difficult time with our dietary requirements in Baku. But the moment we visited Cafe DeRama, we were so happy! The quality and quantity of food is excellent. Red cabbage soup, noodles, pasta, dolma and Snickers dessert are especially tasty."
-    },
-    "shop": {
-        "title": "De Rama Shop",
-        "text": "We present to your attention our products and souvenirs that will remind you of a small vegetarian cafe hidden on a quiet, shady street in Baku. Our products are practical, aesthetic, and suitable as a gift for both yourself and loved ones.",
-        "btn": "View more"
-    },
-    "blog": {
-        "title": "Blog",
-        "text": "Brew some green tea with chamomile and enjoy reading our articles.",
-        "btn": "Read more",
-        "btn2": "Read"
-    },
-    "gallery": "Gallery",
-    "contact": {
-        "title": "Contacts",
-        "place": "28 May Metro Station Area, end of Samed Vurgun Park, behind Railway Head Administration Office, next to Aeroflot Aerokassa",
-        "parking": "Parking on weekdays is only after 17:30, on non-working days it is available at any time."
-    }
+  "reserve-message": "Hello! I want to reserve a table for",
+  "adress": "Baku, Nasimi district, Mehbali Zeynalabdiev 5",
+  "time": "Daily 11:00 – 22:00",
+  "menu": {
+    "0": "Home",
+    "1": "About us",
+    "2": "Menu",
+    "3": "Action",
+    "4": "Reviews",
+    "5": "Shop",
+    "6": "Gallery",
+    "7": "Blog",
+    "8": "Contacts"
+  },
+  "home": {
+    "title-1": "De Rama",
+    "title-2": "Vegetarian & Vegan Cafe",
+    "subtitle": "By changing what you eat, you can change your inner and outer world.",
+    "text": "Would you like to try our delicious dishes? Then hurry up to book your table 💚 We offer a varied choice of Vegetarian & Vegan dishes from around the world. NO egg, NO meat of any type used in our cozy family style café.",
+    "btn-1": "Book a table",
+    "btn-2": "View menu"
+  },
+  "about": {
+    "title": "About us",
+    "text-top-1": "According to recent scientific research by shifting from animal to plant-based diet, we can positively affect the planet, the environment, the climate and even ourselves.",
+    "text-top-2": "Every positive food choice that we make every day, no matter how small it is, will have a great positive impact on our inner and outer world.",
+    "subtitle": "Why Rama?",
+    "text-b-1": "Rama (Sanskrit राम, IAST: rāma) or Ramachandra (Rama is the all-attractive source of spiritual health, pure happiness and selfless love) - an avatar of Vishnu, the legendary ancient Vedic king of Ayodhya. Rama is considered in Vedic culture as the seventh avatar of Vishnu, who descended into the world in the last quarter of Treta Yuga around 1 ,2 million years ago. When Parashurama is busy creating and preserving the world order, then in this case Rama as his avatar “is called upon to defend the dignity of marriage, as an expression of the eternal and inextricable bond between husband and wife.”",
+    "text-b-2": "Followers of Vedic Culture consider Rama to be a real historical figure, a king who ruled most of modern India from his capital Ayodhya. Along with Krishna, Rama is one of the most popular avatars of God. The cult of Rama is especially characteristic of followers of Vaishnavism, the predominant trend in Hinduism.",
+    "text-b-3-1": "A more detailed biography of Rama is contained in:",
+    "text-b-3-2": "“Ramayana” - Feature Film:",
+    "text-b-3-3": "one of the two greatest ancient Vedic epics Mahabharata - Feature Film:"
+  },
+  "menu-f": {
+    "title1": "Menu — dishes",
+    "title2": "Menu — non-alcoholic drinks",
+    "title3": "Menu — alcoholic drinks",
+    "to-category": "back to categories",
+    "text-1": "Come visit us for delicious food and pleasant experiences!",
+    "text-2": "It is also possible to order our food delivered to your home.",
+    "btn-1": "Book a table",
+    "btn-2": "Order from Wolt",
+    "btn-3": "Order from Bolt"
+  },
+  "action": {
+    "title": "Actions",
+    "days": "Monday — Friday",
+    "off": "DISCOUNT"
+  },
+  "review": {
+    "title": "Reviews from our guests",
+    "1": "A wide range of dishes from all over the world. Lots of options, from fast food to traditional local dishes. All of them are either vegetarian or vegan.",
+    "2": "It's very nice to have such a place in Baku. A small cafe on a quiet street, calm music, very tasty food.",
+    "3": "I really liked it! Relaxing atmosphere, nice interior, delicious food, excellent service. I really liked the homemade lemonade.",
+    "4": "Such a cool environment and delicious food! Vegan options for all dishes. Very zen feeling to the whole experience.",
+    "5": "Good service and very friendly staff. I tried the cheeseburger, great, moist, and the beetroot bun was great.",
+    "6": "Most items on the menu are vegan or can be vegan. I had a burger made with BEYOND MEAT and was very pleased with it. Also nice outdoor seating area with jazz music.",
+    "7": "Vegan and vegetarian dishes from around the world. This is the first time I’ve seen such a bright and interesting menu! Cozy atmosphere. This family cafe also has interesting books on vegan and vegetarian cuisine.",
+    "8": "Drinks and food were brought very quickly, in the right order requested and nothing was mixed up. The drinks were cold + they brought ice.",
+    "9": "We were looking for a vegetarian cafe in Baku, found this and are simply happy! Large selection of dishes, pleasant service, they give you candy with coffee)",
+    "10": "As vegetarians, we expected to have a difficult time with our dietary requirements in Baku. But the moment we visited Cafe DeRama, we were so happy! The quality and quantity of food is excellent. Red cabbage soup, noodles, pasta, dolma and Snickers dessert are especially tasty."
+  },
+  "shop": {
+    "title": "De Rama Shop",
+    "text": "We present to your attention our products and souvenirs that will remind you of a small vegetarian cafe hidden on a quiet, shady street in Baku. Our products are practical, aesthetic, and suitable as a gift for both yourself and loved ones.",
+    "btn": "View more",
+    "btn2": "Details"
+  },
+  "blog": {
+    "title": "Blog",
+    "text": "Brew some green tea with chamomile and enjoy reading our articles.",
+    "btn": "Read more",
+    "btn2": "Read"
+  },
+  "gallery": "Gallery",
+  "contact": {
+    "title": "Contacts",
+    "place": "28 May Metro Station Area, end of Samed Vurgun Park, behind Railway Head Administration Office, next to Aeroflot Aerokassa",
+    "parking": "Parking on weekdays is only after 17:30, on non-working days it is available at any time."
+  }
 }

@@ -1,5 +1,5 @@
 <template>
-  <SingleCard entity-name="blogs" />
+  <SingleCard entity-name="goods" />
 </template>
 
 <script setup lang="ts"></script>

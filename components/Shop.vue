@@ -1,51 +1,39 @@
 <template>
-    <CardsSection anchor="shop" :title="$t('shop.title')" :text="$t('shop.text')" :btn="{
-        text: $t('shop.btn'),
-        href: 'shop'
-    }">
-        <Card v-for="(card, i) in cards" :imgSrc="card.src" :title="card.title" :text="card.text" :data-index="i">
-            <span class="section__price text">{{ card.price }} AZN</span>
-        </Card>
-    </CardsSection>
+  <CardsSection anchor="shop" :title="$t('shop.title')" :text="$t('shop.text')" :btn="{
+    text: $t('shop.btn'),
+    href: 'shop',
+  }">
+    <Card v-for="(card, i) in cards" :imgSrc="card.mainFile.src" :title="card.title" :text="card.text" :data-index="i">
+      <span class="section__price text">{{ card.price }} AZN</span>
+      <NuxtLink class="blog__btn text" :to="`/shop/${card.id}`">{{
+        $t("shop.btn2")
+      }}</NuxtLink>
+    </Card>
+  </CardsSection>
 </template>
 
 <script setup lang="ts">
-import { ShopCard } from '~/types'
-import { useWindowSizes } from '~/composables/useWindowSizes'
+import { LocaleShopCard } from "~/types";
 
-const { width } = useWindowSizes()
-const cards = computed(() => {
-    const index = width.value >= 1200 ? 3 : 2
-    return allCards.slice(0, index)
-})
-
-const allCards: ShopCard[] = [
-    {
-        id: '1',
-        src: '',
-        price: 5,
-        text: 'Описание продукции Описание продукции Описание продукции',
-        title: 'Название продукции'
-    },
-    {
-        id: '1',
-        src: '',
-        price: 5,
-        text: 'Описание продукции Описание продукции Описание продукции',
-        title: 'Название продукции'
-    },
-    {
-        id: '1',
-        src: '',
-        price: 5,
-        text: 'Описание продукции Описание продукции Описание продукции',
-        title: 'Название продукции'
-    }
-]
+defineProps<{
+  cards: LocaleShopCard[];
+}>();
 </script>
 
 <style lang="scss" scoped>
+.blog__btn {
+  color: $text-1;
+  margin-top: 20px;
+  transition: color 0.5s ease-in;
+  text-decoration: underline;
+  padding-bottom: 10px;
+
+  &:hover {
+    color: $acsent-1;
+  }
+}
+
 .section__price {
-    color: $acsent-2;
+  color: $acsent-2;
 }
 </style>

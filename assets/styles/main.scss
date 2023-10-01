@@ -1,303 +1,304 @@
-@import 'reset';
-@import 'vars';
-@import 'animations';
+@import "reset";
+@import "vars";
+@import "animations";
+
+html {
+  overflow: hidden;
+}
 
 html,
 body {
-    height: 100%;
-    overflow-x: hidden;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 body.disable-scroll {
-    overflow-y: hidden;
+  overflow-y: hidden;
 }
 
 a,
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .wrapper {
-    // visibility: hidden; // for loader
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    position: relative;
-    background-color: $bg-2;
+  // visibility: hidden; // for loader
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  position: relative;
+  background-color: $bg-2;
 }
 
 .main {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 .footer {
-    flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.text a {
+  color: $text-1 !important;
+  text-decoration: underline;
 }
 
 .h1,
 .title {
-    font-family: Caveat, cursive;
-    line-height: normal;
+  font-family: Caveat, cursive;
+  line-height: normal;
 }
 
 .latin .h1,
 .latin .title {
-    font-family: Kalam, cursive;
-    font-weight: 400;
-    line-height: normal;
+  font-family: Kalam, cursive;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .subtitle,
 .text,
 .helper-text {
-    font-family: Fira Sans Condensed, sans-serif;
-    font-weight: 400;
-    line-height: normal;
+  font-family: Fira Sans Condensed, sans-serif;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .h1 {
-    font-size: 48px;
-    font-weight: 700;
-
+  font-size: 48px;
+  font-weight: 700;
 }
 
 .title {
-    font-size: 36px;
-    font-weight: 400;
+  font-size: 36px;
+  font-weight: 400;
 }
 
 .subtitle {
-    font-size: 28px;
+  font-size: 28px;
 }
 
 .text {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .helper-text {
-    font-size: 20px;
-
+  font-size: 20px;
 }
 
 .container {
-    padding-right: 120px;
-    padding-left: 120px;
+  padding-right: 120px;
+  padding-left: 120px;
 }
 
 .section {
-    padding-top: 60px;
-    padding-bottom: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .social-logo {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }
 
 .logo-link {
-    z-index: 10;
+  z-index: 10;
 }
 
 .logo {
-    width: 150px;
-    height: 150px;
+  width: 150px;
+  height: 150px;
 }
 
 .btn-1 {
-    background-image: $grad;
-    color: $bg-2;
-    position: relative;
-    z-index: 1;
+  background-image: $grad;
+  color: $bg-2;
+  position: relative;
+  z-index: 1;
 
-    &::before {
-        position: absolute;
-        content: '';
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-image: linear-gradient(90deg, #E83100 0%, #E83100 60.21%, #FE885E 100%);
-        z-index: -1;
-        transition: opacity 0.5s linear;
-        opacity: 0;
-        border-radius: 60px;
-    }
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(90deg,
+        #e83100 0%,
+        #e83100 60.21%,
+        #fe885e 100%);
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+    border-radius: 60px;
+  }
 
-
-    &:hover::before {
-        opacity: 1;
-    }
+  &:hover::before {
+    opacity: 1;
+  }
 }
 
 .btn-2 {
-    background: linear-gradient($bg-1, $bg-1) padding-box,
-        $grad border-box;
-    border-radius: 60px;
-    border: 2px solid transparent;
-    color: $text-2;
-    transition: background-color .5s ease-in;
+  background: linear-gradient($bg-1, $bg-1) padding-box, $grad border-box;
+  border-radius: 60px;
+  border: 2px solid transparent;
+  color: $text-2;
+  transition: background-color 0.5s ease-in;
 
-    &:hover {
-        background: $bg-2;
-    }
+  &:hover {
+    background: $acsent-1;
+  }
 }
 
 .btn-1,
 .btn-2 {
-    padding: 24px 42px;
-    border-radius: 60px;
-    display: flex;
-    width: fit-content;
+  padding: 24px 42px;
+  border-radius: 60px;
+  display: flex;
+  width: fit-content;
 }
 
 .menu__title {
-    color: $text-1;
+  color: $text-1;
 }
 
 .pages-langs-switch {
-    display: flex;
-    background-color: $bg-1 !important;
+  display: flex;
+  background-color: $bg-1 !important;
 }
 
 @media (max-width: 1600px) {
-    .h1 {
-        font-size: 36px;
+  .h1 {
+    font-size: 36px;
+  }
 
-    }
+  .title {
+    font-size: 32px;
+  }
 
-    .title {
-        font-size: 32px;
-    }
+  .subtitle {
+    font-size: 24px;
+  }
 
-    .subtitle {
-        font-size: 24px;
-    }
+  .text {
+    font-size: 20px;
+  }
 
-    .text {
-        font-size: 20px;
-    }
+  .helper-text {
+    font-size: 18px;
+  }
 
-    .helper-text {
-        font-size: 18px;
+  .social-logo {
+    width: 42px;
+    height: 42px;
+  }
 
-    }
+  .logo {
+    width: 120px;
+    height: 120px;
+  }
 
-    .social-logo {
-        width: 42px;
-        height: 42px;
-    }
+  .container {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 
-    .logo {
-        width: 120px;
-        height: 120px;
-    }
-
-    .container {
-        padding-left: 80px;
-        padding-right: 80px;
-    }
-
-    .btn-1,
-    .btn-2 {
-        padding: 18px 36px;
-    }
-
+  .btn-1,
+  .btn-2 {
+    padding: 18px 36px;
+  }
 }
 
 @media (max-width: 1300px) {
-    .pages-langs-switch {
-        display: none !important;
-    }
+  .pages-langs-switch {
+    display: none !important;
+  }
 }
 
 @media (max-width: 800px) {
-    .h1 {
-        font-size: 32px;
+  .h1 {
+    font-size: 32px;
+  }
 
-    }
+  .subtitle {
+    font-size: 22px;
+  }
 
-    .subtitle {
-        font-size: 22px;
-    }
+  .text {
+    font-size: 18px;
+  }
 
-    .text {
-        font-size: 18px;
-    }
+  .helper-text {
+    font-size: 16px;
+  }
 
-    .helper-text {
-        font-size: 16px;
+  .social-logo {
+    width: 36px;
+    height: 36px;
+  }
 
-    }
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
 
-    .social-logo {
-        width: 36px;
-        height: 36px;
-    }
+  .container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 
-    .logo {
-        width: 80px;
-        height: 80px;
-    }
-
-    .container {
-        padding-left: 60px;
-        padding-right: 60px;
-    }
-
-    .section {
-        padding-bottom: 40px;
-        padding-top: 40px;
-    }
+  .section {
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
 }
 
 @media (max-width: 600px) {
-    .h1 {
-        font-size: 28px;
+  .h1 {
+    font-size: 28px;
+  }
 
-    }
+  .title {
+    font-size: 24px;
+  }
 
-    .title {
-        font-size: 24px;
-    }
+  .subtitle {
+    font-size: 18px;
+  }
 
-    .subtitle {
-        font-size: 18px;
-    }
+  .text {
+    font-size: 16px;
+  }
 
-    .text {
-        font-size: 16px;
-    }
+  .helper-text {
+    font-size: 14px;
+  }
 
-    .helper-text {
-        font-size: 14px;
+  .social-logo {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+  }
 
-    }
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 
-    .social-logo {
-        width: 28px;
-        height: 28px;
-        margin-right: 8px;
-    }
+  .section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 
-    .container {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    .section {
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-
-    .logo {
-        width: 60px;
-        height: 60px;
-    }
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 @media (max-width: 340px) {
-    .logo {
-        width: 40px;
-        height: 40px;
-    }
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
 }
