@@ -17,7 +17,8 @@ const { locale } = useI18n();
 const { isBurgerOpen } = useBurger();
 const route = useRoute();
 watch(() => route.path, () => {
-    isBurgerOpen.value = false
+    isBurgerOpen.value = false;
+    scrollOnTopOfPage();
 })
 
 const audio = ref();
@@ -44,7 +45,6 @@ nuxtApp.hook("page:finish", async () => {
     // Test delay
     // await (new Promise(resolve => setTimeout(resolve, 5000)));
     loading.value = false;
-    scrollOnTopOfPage();
 });
 
 const { pageTitle, pageDescription, pageLang } = useLangPageData()
