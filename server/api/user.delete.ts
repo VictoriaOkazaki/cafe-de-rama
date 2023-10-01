@@ -1,9 +1,9 @@
 import admin from "firebase-admin";
 import { checkUserRole } from "../modules/user";
-import { initFirebaseApp } from "../modules/firebase";
+// import { initFirebaseApp } from "../modules/firebase";
 
 export default defineEventHandler(async (event) => {
-  initFirebaseApp()
+  // initFirebaseApp()
   await checkUserRole(event, ["admin"]);
   const { id }: { id: string } = await readBody(event);
 

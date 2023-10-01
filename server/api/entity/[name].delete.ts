@@ -2,10 +2,10 @@ import admin from "firebase-admin";
 import { deleteFirebaseFiles } from "~/server/modules/bucket";
 import { checkUserRole } from "~/server/modules/user";
 import { getEntityNameFromRoute } from "~/server/modules/entity";
-import { initFirebaseApp } from "~/server/modules/firebase";
+// import { initFirebaseApp } from "~/server/modules/firebase";
 
 export default defineEventHandler(async (event) => {
-  initFirebaseApp()
+  // initFirebaseApp()
   await checkUserRole(event, ["admin", "manager"]);
   const entityName = getEntityNameFromRoute(event);
   const body: { id: string } = await readBody(event);

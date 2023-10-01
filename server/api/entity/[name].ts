@@ -1,12 +1,10 @@
 import admin from "firebase-admin";
 import { createEntity, getEntityNameFromRoute } from "~/server/modules/entity";
-import { initFirebaseApp } from "~/server/modules/firebase";
+// import { initFirebaseApp } from "~/server/modules/firebase";
 
 export default defineEventHandler(async (event) => {
-  initFirebaseApp()
+  // initFirebaseApp()
   const entityName = getEntityNameFromRoute(event);
-
-  console.log(`/api/entity/${entityName}`)
 
   const query = getQuery(event);
   const offset: number = query.offset ? Number(query.offset) : 0;
@@ -23,7 +21,6 @@ export default defineEventHandler(async (event) => {
       statusMessage: `limit ${limit} should be an integer and > 0`,
     });
   }
-  console.log(`/api/entity/${entityName} after validation`)
   const db = admin.firestore();
   const ref = db.collection(entityName).orderBy("date", "desc");
 
@@ -41,6 +38,5 @@ export default defineEventHandler(async (event) => {
     items.push(entity);
   });
 
-  console.log(`/api/entity/${entityName} result items len`, items.length);
   return { items, next };
 });

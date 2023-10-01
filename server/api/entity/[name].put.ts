@@ -6,10 +6,10 @@ import {
   getEntityNameFromRoute,
   validateEditedEntity,
 } from "~/server/modules/entity";
-import { initFirebaseApp } from "~/server/modules/firebase";
+// import { initFirebaseApp } from "~/server/modules/firebase";
 
 export default defineEventHandler(async (event) => {
-  initFirebaseApp()
+  // initFirebaseApp()
   await checkUserRole(event, ["admin", "manager"]);
   const entityName = getEntityNameFromRoute(event);
   const editedEntity = await readBody(event);

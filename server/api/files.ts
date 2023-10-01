@@ -1,9 +1,9 @@
 import admin from "firebase-admin";
 import { getFirebaseFileUrl } from "../modules/bucket";
-import { initFirebaseApp } from "../modules/firebase";
+// import { initFirebaseApp } from "../modules/firebase";
 
 export default defineEventHandler(async (event) => {
-  initFirebaseApp()
+  // initFirebaseApp()
   const query = getQuery(event);
   const page: string | undefined = query.page ? String(query.page) : undefined;
   const limit: number = query.limit ? Number(query.limit) : 100;
