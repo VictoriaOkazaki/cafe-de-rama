@@ -38,6 +38,11 @@ button {
   flex: 0 0 auto;
 }
 
+.text a {
+  color: $text-1 !important;
+  text-decoration: underline;
+}
+
 .h1,
 .title {
   font-family: Caveat, cursive;
@@ -118,12 +123,10 @@ button {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(
-      90deg,
-      #e83100 0%,
-      #e83100 60.21%,
-      #fe885e 100%
-    );
+    background-image: linear-gradient(90deg,
+        #e83100 0%,
+        #e83100 60.21%,
+        #fe885e 100%);
     z-index: -1;
     transition: opacity 0.5s linear;
     opacity: 0;

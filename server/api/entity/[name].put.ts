@@ -2,6 +2,7 @@ import admin from "firebase-admin";
 import { deleteFirebaseFiles } from "~/server/modules/bucket";
 import { checkUserRole } from "~/server/modules/user";
 import {
+  createEntity,
   getEntityNameFromRoute,
   validateEditedEntity,
 } from "~/server/modules/entity";
@@ -42,5 +43,9 @@ export default defineEventHandler(async (event) => {
   delete editedEntity.id;
   await firebaseBlog.update(editedEntity);
 
-  return `Success. Updated ${entityName} entity`;
+  const savedData = (await firebaseBlog.get()).data();
+
+  const savedEntity = createEntity(firebaseBlog.id, savedData);
+
+  return savedEntity;
 });

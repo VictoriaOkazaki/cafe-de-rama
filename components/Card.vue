@@ -1,8 +1,10 @@
 <template>
     <li class="section__item" ref="card">
-        <img loading="lazy" class="section__item-img" :src="imgSrc" alt="">
+        <div class="section__item-img-cont">
+            <img loading="lazy" class="section__item-img" :src="imgSrc" alt="">
+        </div>
         <h3 class="section__item-title text">{{ title }}</h3>
-        <span class="section__item-text helper-text">{{ text }}</span>
+        <span class="section__item-text helper-text">{{ previewText(text) }}</span>
         <slot />
     </li>
 </template>
@@ -13,6 +15,13 @@ defineProps<{
     title: string,
     text: string
 }>()
+
+const previewText = (text: string) => {
+    const maxWords = 20
+    const words = text.split(' ')
+    if (words.length < maxWords) return text
+    return words.slice(0, maxWords).join(' ') + '...'
+}
 
 const card = ref()
 useIntersection(card, (entry) => {
@@ -36,12 +45,16 @@ useIntersection(card, (entry) => {
     border: 1px solid $acsent-1;
     box-shadow: 6px 6px 20px 0px #697e53;
 
-    &-img {
+    &-img-cont {
         width: 344px;
         height: 196px;
         border-radius: 20px;
-        background-color: #fff;
         margin-bottom: 20px;
+        overflow: hidden;
+    }
+
+    &-img {
+        object-fit: cover;
     }
 
     &-title {
@@ -52,6 +65,7 @@ useIntersection(card, (entry) => {
     &-text {
         color: $text-2;
         margin-bottom: 20px;
+        white-space: pre-wrap;
     }
 }
 
@@ -59,7 +73,7 @@ useIntersection(card, (entry) => {
     .section__item {
         width: 340px;
 
-        &-img {
+        &-img-cont {
             width: 279px;
             height: 159px;
         }
@@ -71,7 +85,7 @@ useIntersection(card, (entry) => {
         width: 268px;
         padding: 30px 20px;
 
-        &-img {
+        &-img-cont {
             width: 228px;
             height: 130px;
             margin-bottom: 16px;
@@ -92,11 +106,6 @@ useIntersection(card, (entry) => {
 
         &:last-child {
             margin-bottom: 0;
-        }
-
-        &-img {
-            width: 228px;
-            height: 130px;
         }
     }
 }

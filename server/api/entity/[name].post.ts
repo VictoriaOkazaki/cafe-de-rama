@@ -2,6 +2,7 @@ import admin from "firebase-admin";
 import { checkUserRole } from "~/server/modules/user";
 import { getUtcDate } from "~/server/modules/date";
 import {
+  createEntity,
   getEntityNameFromRoute,
   validateNewEntity,
 } from "~/server/modules/entity";
@@ -21,7 +22,11 @@ export default defineEventHandler(async (event) => {
     ...newEntity,
     date: getUtcDate(),
   };
-  await ref.add(newFirebaseBlog);
+  const docRef = await ref.add(newFirebaseBlog);
 
-  return `Success. Added new ${entityName} entity`;
+  const createdData = (await docRef.get()).data();
+
+  const createdEntity = createEntity(docRef.id, createdData);
+
+  return createdEntity;
 });

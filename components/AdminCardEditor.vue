@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row>
-      <v-col sm="12">
+      <v-col md="12">
         <div class="text-subtitle-1 text-medium-emphasis">Текст на русском</div>
 
         <v-text-field v-model="editingCard.title" label="Title" required>
@@ -10,8 +10,10 @@
         <v-textarea v-model="editingCard.text" label="Text" required>
         </v-textarea>
       </v-col>
+    </v-row>
 
-      <v-col sm="12">
+    <v-row>
+      <v-col md="12">
         <div class="text-subtitle-1 text-medium-emphasis">
           Текст на английском
         </div>
@@ -22,8 +24,10 @@
         <v-textarea v-model="editingCard.textEn" label="Text" required>
         </v-textarea>
       </v-col>
+    </v-row>
 
-      <v-col sm="12">
+    <v-row>
+      <v-col md="12">
         <div class="text-subtitle-1 text-medium-emphasis">
           Текст на азербайджанском
         </div>
@@ -34,96 +38,50 @@
         <v-textarea v-model="editingCard.textAz" label="Text" required>
         </v-textarea>
       </v-col>
+    </v-row>
 
-      <v-col sm="12" v-if="entityName === 'goods'">
+    <v-row v-if="entityName === 'goods'">
+      <v-col md="12">
         <div class="text-subtitle-1 text-medium-emphasis">Цена</div>
-        <v-text-field
-          v-model.number="(editingCard as ShopCard).price"
-          label="Введите цену"
-          type="number"
-        ></v-text-field>
+        <v-text-field v-model.number="(editingCard as ShopCard).price" label="Введите цену" type="number"></v-text-field>
       </v-col>
+    </v-row>
 
-      <v-col sm="12">
+    <v-alert class="mt-4" color="warning" icon="$warning" title="Предупреждение"
+      text="Необходимо загружать картинки с соотношением сторон в диапазоне от 2:1 до 3:2"></v-alert>
+
+    <v-row>
+      <v-col md="12">
         <div class="text-subtitle-1 text-medium-emphasis">Обложка</div>
-        <img
-          class="blog-img"
-          v-if="editingCard.mainFile.src"
-          :src="editingCard.mainFile.src"
-          alt="blog-img"
-        />
-        <input
-          :key="fileInputKey"
-          type="file"
-          accept="image/*"
-          :multiple="false"
-          @change="detectFiles($event, 'poster')"
-        />
+        <img class="blog-img" v-if="editingCard.mainFile.src" :src="editingCard.mainFile.src" alt="blog-img" />
+        <input :key="fileInputKey" type="file" accept="image/*" :multiple="false"
+          @change="detectFiles($event, 'poster')" />
       </v-col>
+    </v-row>
 
-      <v-col sm="12">
+    <v-row>
+      <v-col md="12">
         <div class="text-subtitle-1 text-medium-emphasis">
           Дополнительные фото
         </div>
-        <img
-          v-for="extraFile in editingCard.extraFiles"
-          class="blog-img"
-          :src="extraFile.src"
-          alt="blog-img"
-        />
-        <input
-          :key="fileInputKey"
-          type="file"
-          accept="image/*"
-          :multiple="true"
-          @change="detectFiles($event, 'extra')"
-        />
+        <img v-for="extraFile in editingCard.extraFiles" class="blog-img" :src="extraFile.src" alt="blog-img" />
+        <input :key="fileInputKey" type="file" accept="image/*" :multiple="true" @change="detectFiles($event, 'extra')" />
       </v-col>
-
-      <v-checkbox
-        v-if="isEditing"
-        v-model="isUpdateDate"
-        label="Update publication date"
-        color="primary"
-      ></v-checkbox>
     </v-row>
 
-    <v-alert
-      v-if="errorText"
-      class="mt-4"
-      color="error"
-      icon="$error"
-      title="Error"
-      :text="errorText"
-    ></v-alert>
+    <v-row>
+      <v-checkbox v-if="isEditing" v-model="isUpdateDate" label="Обновить дату публикации" color="primary"></v-checkbox>
+    </v-row>
 
-    <v-alert
-      v-if="successText"
-      class="mt-4"
-      color="success"
-      icon="$success"
-      title="Success"
-      :text="successText"
-    ></v-alert>
+    <v-alert v-if="errorText" class="mt-4" color="error" icon="$error" title="Error" :text="errorText"></v-alert>
 
-    <v-btn
-      :disabled="controlDisabled"
-      block
-      @click="saveBlog"
-      color="blue"
-      variant="elevated"
-      class="mt-8"
-    >
+    <v-alert v-if="successText" class="mt-4" color="success" icon="$success" title="Success"
+      :text="successText"></v-alert>
+
+    <v-btn :disabled="controlDisabled" block @click="saveBlog" color="blue" variant="elevated" class="mt-8">
       Save
     </v-btn>
-    <v-btn
-      :disabled="controlDisabled"
-      block
-      @click="cancel"
-      color="blue"
-      variant="outlined"
-      class="mt-4"
-    >
+    <v-btn :disabled="controlDisabled" block @click="cancel" color="blue" variant="outlined" class="mt-4">
       Cancel
     </v-btn>
   </v-container>

@@ -1,8 +1,7 @@
 <template>
   <nav class="menu" :class="{ 'menu-active': isBurgerOpen }">
     <AppLink class="menu__item helper-text" v-for="link in links" :link="link">
-      {{ title }}</AppLink
-    >
+      {{ title }}</AppLink>
   </nav>
 </template>
 
@@ -90,7 +89,7 @@ function createLinks() {
         href: "/shop",
       },
     ];
-  } else if (route.name === "blog-id") {
+  } else if (['blog-id', 'shop-id'].includes(route.name)) {
     links = [
       {
         title: t("menu.0"),

@@ -3,27 +3,16 @@
     <h2 class="section__title title">{{ $t(`${pageType}.title`) }}</h2>
     <p class="section__text text">{{ $t(`${pageType}.text`) }}</p>
     <ul class="section__list">
-      <Card
-        v-for="(card, i) in localeCards"
-        :imgSrc="card.mainFile.src"
-        :title="card.title"
-        :text="card.text"
-        :data-index="i"
-      >
-        <span v-if="entityName === 'goods'" class="section__price text"
-          >{{ (card as LocaleShopCard).price }} AZN</span
-        >
+      <Card v-for="(card, i) in localeCards" :imgSrc="card.mainFile.src" :title="card.title" :text="card.text"
+        :data-index="i">
+        <span v-if="entityName === 'goods'" class="section__price text">{{ (card as LocaleShopCard).price }} AZN</span>
 
         <NuxtLink class="blog__btn text" :to="`/${pageType}/${card.id}`">{{
           $t(`${pageType}.btn2`)
         }}</NuxtLink>
       </Card>
     </ul>
-    <button
-      v-show="canIncreaseShowCount"
-      class="section__btn btn-2 subtitle"
-      ref="cardsBtn"
-    >
+    <button v-show="canIncreaseShowCount" class="section__btn btn-2 subtitle" ref="cardsBtn">
       <a @click.prevent="increaseCurShowCount" :href="nextPageSrc">{{
         $t(`${pageType}.btn`)
       }}</a>
@@ -71,6 +60,7 @@ const nextPageSrc = canIncreaseShowCount.value
   color: $acsent-2;
   margin-bottom: 20px;
 }
+
 .blog__btn {
   color: $text-1;
   transition: color 0.5s ease-in;
@@ -81,6 +71,7 @@ const nextPageSrc = canIncreaseShowCount.value
     color: $acsent-1;
   }
 }
+
 .section {
   background-color: $bg-1;
 
@@ -102,14 +93,19 @@ const nextPageSrc = canIncreaseShowCount.value
     margin-bottom: 60px;
     display: flex;
     justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
   }
+
   &__btn {
     background: linear-gradient($bg-2, $bg-2) padding-box, $grad border-box;
+
     &:hover {
       background: $acsent-1;
     }
   }
-  &__btn > a {
+
+  &__btn>a {
     color: $text-1;
   }
 }
@@ -132,6 +128,7 @@ const nextPageSrc = canIncreaseShowCount.value
     &__list {
       margin-bottom: 40px;
       justify-content: space-evenly;
+      gap: 40px;
     }
   }
 }
@@ -153,6 +150,7 @@ const nextPageSrc = canIncreaseShowCount.value
     &__list {
       margin-bottom: 30px;
       flex-direction: column;
+      gap: 30px;
     }
   }
 }

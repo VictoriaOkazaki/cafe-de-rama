@@ -5,47 +5,20 @@
     <v-card class="pa-12 pb-8 w-100" elevation="8" max-width="448" rounded="lg">
       <div class="text-subtitle-1 text-medium-emphasis">Account</div>
 
-      <v-text-field
-        density="compact"
-        placeholder="Email address"
-        prepend-inner-icon="mdi-email-outline"
-        variant="outlined"
-        v-model="email"
-        hide-details="auto"
-      ></v-text-field>
+      <v-text-field density="compact" placeholder="Email address" prepend-inner-icon="mdi-email-outline"
+        variant="outlined" v-model="email" hide-details="auto"></v-text-field>
 
-      <v-text-field
-        :append-inner-icon="visiblePassword ? 'mdi-eye-off' : 'mdi-eye'"
-        :type="visiblePassword ? 'text' : 'password'"
-        density="compact"
-        placeholder="Enter your password"
-        prepend-inner-icon="mdi-lock-outline"
-        variant="outlined"
-        @click:append-inner="visiblePassword = !visiblePassword"
-        v-model="password"
-        hide-details="auto"
-      ></v-text-field>
+      <v-text-field class="mt-2" :append-inner-icon="visiblePassword ? 'mdi-eye-off' : 'mdi-eye'"
+        :type="visiblePassword ? 'text' : 'password'" density="compact" placeholder="Enter your password"
+        prepend-inner-icon="mdi-lock-outline" variant="outlined" @click:append-inner="visiblePassword = !visiblePassword"
+        v-model="password" hide-details="auto"></v-text-field>
 
-      <v-btn
-        block
-        class="mb-8 mt-8"
-        color="blue"
-        size="large"
-        variant="tonal"
-        @click="doLogin"
-        :disabled="btnDisabled"
-      >
+      <v-btn block class="mb-8 mt-8" color="blue" size="large" variant="tonal" @click="doLogin" :disabled="btnDisabled">
         Log In
       </v-btn>
     </v-card>
   </div>
-  <v-dialog
-    persistent
-    v-model="isAdminLoader"
-    max-width="290"
-    lazy
-    content-class="my-custom-dialog"
-  >
+  <v-dialog persistent v-model="isAdminLoader" max-width="290" lazy content-class="my-custom-dialog">
     <v-layout align-center justify-space-around wrap>
       <v-card>
         <v-card-text class="text-xs-center">

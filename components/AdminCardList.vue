@@ -23,25 +23,13 @@
       </v-col>
     </v-row>
 
-    <v-btn
-      v-show="canIncreaseShowCount"
-      block
-      @click="increaseCurShowCount"
-      color="blue"
-      variant="outlined"
-      class="mt-8"
-    >
+    <v-btn v-show="canIncreaseShowCount" block @click="increaseCurShowCount" color="blue" variant="outlined" class="mt-8">
       Load more
     </v-btn>
   </div>
 
-  <AdminCardEditor
-    v-if="editingCard"
-    :entityName="entityName"
-    :cancel="() => (editingCard = null)"
-    :start-card="editingCard"
-    :save-changes="saveEditingCard"
-  />
+  <AdminCardEditor v-if="editingCard" :entityName="entityName" :cancel="() => (editingCard = null)"
+    :start-card="editingCard" :save-changes="saveEditingCard" />
 </template>
 
 <script setup lang="ts">
@@ -89,15 +77,17 @@ const saveEditingCard = async (card: CardEntity, newFiles: NewFiles) => {
     return { errorMessage: validateErrors };
   }
   try {
+    let savedEntity: any
     await wrapInAdminLoading(async () => {
-      await editEntityApi(props.entityName, card, newFiles);
+      savedEntity = await editEntityApi(props.entityName, card, newFiles);
     });
+    if (!savedEntity) throw new Error('Not recived updated data from server')
     const index = currentItems.value.findIndex(
       (c) => c.id === editingCard.value?.id
     );
     if (index !== -1) {
       currentItems.value[index] = {
-        ...card,
+        ...savedEntity,
       };
       currentItems.value = currentItems.value.sort((a, b) =>
         a.date < b.date ? 1 : -1

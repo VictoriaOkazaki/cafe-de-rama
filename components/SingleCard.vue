@@ -6,23 +6,13 @@
       <LangSwitch class="pages-langs-switch" />
       <div class="blog-post__inner">
         <div class="blog-post__img-cont">
-          <img
-            :src="card.mainFile.src"
-            :alt="localeTitle"
-            class="blog-post__img"
-          />
+          <img :src="card.mainFile.src" :alt="localeTitle" class="blog-post__img" />
         </div>
         <h2 class="blog-post__title title">{{ localeTitle }}</h2>
-        <p class="blog-post__text text">
-          {{ localeText }}
-        </p>
+        <p class="blog-post__text text" v-html="localeText"></p>
         <ul class="blog-post__files">
           <li v-for="extraFile in card.extraFiles" class="blog-post__item">
-            <img
-              :src="extraFile.src"
-              :alt="localeTitle"
-              class="blog-post__item-img"
-            />
+            <img :src="extraFile.src" :alt="localeTitle" class="blog-post__item-img" />
           </li>
         </ul>
       </div>
@@ -60,7 +50,7 @@ const { localeTitle, localeText } = useLocaleTitleAndText(card);
   &__img-cont {
     margin-bottom: 100px;
     width: 100%;
-    height: 500px;
+    height: 700px;
     background-color: #fff;
     border-radius: 0 0 40px 40px;
     overflow: hidden;
@@ -85,25 +75,27 @@ const { localeTitle, localeText } = useLocaleTitleAndText(card);
 
   &__text {
     color: $text-1;
+    white-space: pre-wrap;
   }
 
   &__files {
     margin-top: 180px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
     width: 100%;
   }
 
   &__item {
     background-color: #fff;
-    width: calc(100% / 3 - 45px);
+    width: 500px;
     height: 300px;
     border-radius: 40px;
     overflow: hidden;
   }
 
   &__item-img {
-    object-fit: contain;
+    object-fit: cover;
     width: 100%;
     height: 100%;
   }
@@ -113,7 +105,7 @@ const { localeTitle, localeText } = useLocaleTitleAndText(card);
   .blog-post {
     &__img-cont {
       margin-bottom: 80px;
-      height: 400px;
+      height: 600px;
     }
 
     &__title,
@@ -128,10 +120,6 @@ const { localeTitle, localeText } = useLocaleTitleAndText(card);
     &__files {
       margin-top: 150px;
     }
-
-    &__item {
-      width: calc(100% / 3 - 25px);
-    }
   }
 }
 
@@ -139,7 +127,7 @@ const { localeTitle, localeText } = useLocaleTitleAndText(card);
   .blog-post {
     &__img-cont {
       margin-bottom: 60px;
-      height: 300px;
+      height: 500px;
     }
 
     &__title,
@@ -155,22 +143,18 @@ const { localeTitle, localeText } = useLocaleTitleAndText(card);
     }
 
     &__item {
-      width: auto;
+      width: 400px;
       height: 200px;
     }
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .blog-post {
     &__files {
       margin-top: 80px;
       grid-template-columns: repeat(1, 1fr);
-      grid-gap: 40px;
-    }
-
-    &__item {
-      height: 300px;
+      grid-gap: 30px;
     }
   }
 }
@@ -182,7 +166,7 @@ const { localeTitle, localeText } = useLocaleTitleAndText(card);
     }
 
     &__img-cont {
-      height: 200px;
+      height: 300px;
       margin-bottom: 40px;
     }
 
@@ -192,10 +176,10 @@ const { localeTitle, localeText } = useLocaleTitleAndText(card);
 
     &__files {
       margin-top: 60px;
-      grid-gap: 30px;
     }
 
     &__item {
+      width: 100%;
       height: 230px;
     }
   }

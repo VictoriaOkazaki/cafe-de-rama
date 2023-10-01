@@ -103,7 +103,7 @@ export const editEntityApi = async (
   entityName: EntityName,
   entity: CardEntity,
   newFiles: NewFiles
-) => {
+): Promise<CardEntity> => {
   const updatedEntity: EntityEdit = {
     ...entity,
   };
@@ -140,7 +140,9 @@ export const editEntityApi = async (
       `Error edit ${entityName} entity request (status: ${response.status}) ${response.statusText}`
     );
   }
-  console.log(`Entity ${entityName} edited`, await response.text());
+  const savedEntity = await response.json();
+  console.log(`Entity ${entityName} edited`, savedEntity);
+  return savedEntity;
 };
 
 export const createEntityApi = async (
@@ -180,5 +182,5 @@ export const createEntityApi = async (
       `Error create ${entityName} entity request (status: ${response.status}) ${response.statusText}`
     );
   }
-  console.log(`Entity ${entityName} created`, await response.text());
+  console.log(`Entity ${entityName} created`, await response.json());
 };
