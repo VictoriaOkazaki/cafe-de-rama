@@ -76,6 +76,7 @@
         height: 440px;
         border-radius: 60px;
         animation: appearFromRightAndScale 1.5s ease-in;
+        overflow: hidden;
     }
 
     &__img {
