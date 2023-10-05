@@ -68,7 +68,8 @@ defineProps<{
             border-radius: 20px;
             width: 100%;
             aspect-ratio: 3 / 2;
-            height: auto;
+            // height: auto;
+            height: 200px;
             margin-bottom: 30px;
         }
 

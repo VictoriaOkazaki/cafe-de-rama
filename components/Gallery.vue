@@ -81,6 +81,7 @@ const videos = [
 
     &__img {
         border-radius: 60px;
+        object-fit: cover;
     }
 
     &__img-1 {
