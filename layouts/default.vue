@@ -81,6 +81,12 @@ useHead({
             href: "/favicon.ico",
         },
     ],
+    script: [
+        {
+            src: '/yandex-counter.js',
+            tagPosition: 'head'
+        }
+    ]
 });
 </script>
 
