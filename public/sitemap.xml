@@ -27,6 +27,46 @@
   <lastmod>2023-09-25T12:25:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
+<url>
+  <loc>https://www.deramacafe.az/shop</loc>
+  <lastmod>2023-10-06T12:49:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.deramacafe.az/blog</loc>
+  <lastmod>2023-10-06T12:49:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.deramacafe.az/shop?lang=az</loc>
+  <lastmod>2023-10-06T12:49:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.deramacafe.az/shop?lang=ru</loc>
+  <lastmod>2023-10-06T12:49:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.deramacafe.az/shop?lang=en</loc>
+  <lastmod>2023-10-06T12:49:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.deramacafe.az/blog?lang=az</loc>
+  <lastmod>2023-10-06T12:49:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.deramacafe.az/blog?lang=ru</loc>
+  <lastmod>2023-10-06T12:49:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.deramacafe.az/blog?lang=en</loc>
+  <lastmod>2023-10-06T12:49:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
 
 
 </urlset>
