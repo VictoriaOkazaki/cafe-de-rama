@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import utc from "dayjs/plugin/utc";
+import utc from "dayjs/plugin/utc.js";
 
 // https://day.js.org/docs/en/plugin/utc
 
