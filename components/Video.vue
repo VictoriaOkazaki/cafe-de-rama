@@ -1,14 +1,17 @@
 <template>
     <div class="gallery__video-cont">
-        <video ref="video" class="gallery__video" controls :src="src" :poster="poster" preload="metadata"></video>
+        <iframe v-if="isYoutube" :src="src" allowfullscreen class="gallery__video"></iframe>
+        <video v-else ref="video" class="gallery__video" controls :src="src" :poster="poster" preload="metadata"></video>
     </div>
 </template>
 
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
     src: string,
     poster: string
 }>()
+
+const isYoutube = props.src.includes('https://www.youtube.com/embed')
 </script>
 
 <style lang="scss" scoped>

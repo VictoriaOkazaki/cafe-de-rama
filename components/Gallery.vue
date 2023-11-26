@@ -35,16 +35,16 @@
 <script setup lang="ts">
 const videos = [
     {
-        "src": "",
-        "poster": "images/gallery/p-1.webp"
+        "src": "https://www.youtube.com/embed/lHdLRrUocOA?si=yEPW4sxoZQhD-abK",
+        "poster": ""
+    },
+    {
+        "src": "https://www.youtube.com/embed/c1DcFmUrxUQ?si=n6QxPGR-wla3dH5E",
+        "poster": ""
     },
     {
         "src": "",
         "poster": "images/gallery/p-2.webp"
-    },
-    {
-        "src": "",
-        "poster": "images/gallery/p-3.webp"
     }
 ]
 </script>
