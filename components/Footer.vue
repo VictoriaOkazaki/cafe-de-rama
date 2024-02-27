@@ -12,6 +12,8 @@
                     <img loading="lazy" alt="to top" src="../assets/images/arrow.svg" class="footer__to-top-img">
                 </a>
             </div>
+            <div class="footer__develop"><a href="https://victoria-kazakova-portfolio.vercel.app" target="_blank"
+                    class="footer__develop-link helper-text">Разработка сайта</a></div>
         </div>
     </footer>
 </template>
@@ -45,6 +47,22 @@
         position: absolute;
         right: 30px;
         top: 30px;
+    }
+
+    &__develop {
+        margin-top: 20px;
+        display: flex;
+        padding-bottom: 2px;
+        width: fit-content;
+    }
+
+    &__develop-link {
+        color: $text-1;
+
+        &:hover,
+        &:active {
+            color: $acsent-2;
+        }
     }
 }
 
