@@ -13,7 +13,7 @@
                 </a>
             </div>
             <div class="footer__develop"><a href="https://victoria-kazakova-portfolio.vercel.app" target="_blank"
-                    class="footer__develop-link helper-text">Разработка сайта</a></div>
+                    class="footer__develop-link helper-text">{{ $t('develop') }}</a></div>
         </div>
     </footer>
 </template>
