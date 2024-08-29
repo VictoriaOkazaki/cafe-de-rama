@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <div class="contact__map">
-                        <img class="contact__map-img" src="images/collage.png" alt="">
+                        <img class="contact__map-img" src="/images/collage.png" alt="">
                         <div class="contact__map-bg"></div>
                     </div>
                 </div>
