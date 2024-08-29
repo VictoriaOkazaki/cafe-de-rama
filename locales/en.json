@@ -11,7 +11,11 @@
     "5": "Shop",
     "6": "Gallery",
     "7": "Blog",
-    "8": "Contacts"
+    "8": "Contacts",
+    "9": "28 May",
+    "10": "Elmler Akademiyasi",
+    "11": "Sea Breeze",
+    "12": "Icherisheher"
   },
   "home": {
     "title-1": "De Rama",
@@ -79,5 +83,29 @@
     "place": "28 May Metro Station Area, end of Samed Vurgun Park, behind Railway Head Administration Office, next to Aeroflot Aerokassa",
     "parking": "Parking on weekdays is only after 17:30, on non-working days it is available at any time."
   },
-  "develop": "Site develop"
+  "develop": "Site develop Kazakova Victoria",
+  "filials": "Here you can find all information about our filials",
+  "filial28": {
+    "name": "28 May",
+    "adress": "Baku, Nasimi district, Mehbali Zeynalabdiev 5",
+    "place": "28 May Metro Station Area, end of Samed Vurgun Park, behind Railway Head Administration Office, next to Aeroflot Aerokassa",
+    "time": "Daily 11:00 – 22:00",
+    "parking": "Parking on weekdays is only after 17:30, on non-working days it is available at any time."
+  },
+  "filialElmler": {
+    "name": "Elmler Akademiyasi",
+    "adress": "Huseyn Javid Prospekt, Baku",
+    "time": "Daily 10:00 – 23:00"
+  },
+  "filialSeaBreeze": {
+    "name": "Sea Breeze",
+    "adress": "Nardaran Village, Sea Breeze Resort",
+    "time": "Daily 10:00 – 23:00"
+  },
+  "filialIcheri": {
+    "name": "Icherisheher",
+    "adress": "",
+    "time": "Daily 10:00 – 23:00"
+  },
+  "temporary": "Coming soon, follow us on Instagram"
 }

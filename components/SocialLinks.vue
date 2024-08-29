@@ -6,7 +6,7 @@
             </a>
         </div>
         <div class="gravityButton">
-            <a href="https://www.instagram.com/de.rama.cafe.baku/" target="_blank" class="social__link">
+            <a href="https://www.instagram.com/deramacafebaku/" target="_blank" class="social__link">
                 <img src="../assets/images/insta.svg" alt="instagram" class="social-logo">
             </a>
         </div>

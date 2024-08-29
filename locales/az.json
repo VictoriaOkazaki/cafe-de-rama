@@ -11,7 +11,11 @@
     "5": "Mağaza",
     "6": "Qalereya",
     "7": "Bloq",
-    "8": "Əlaqə"
+    "8": "Əlaqə",
+    "9": "28 May",
+    "10": "Elmlər Akademiyası",
+    "11": "Sea Breeze",
+    "12": "Içərişəhər"
   },
   "home": {
     "title-1": "De Rama",
@@ -79,5 +83,29 @@
     "place": "28 May metro ərazisi, Səməd Vurğun parkın sonunda, Dəmir Yol Baş İdarənin arxasında, Aeroflot Aviakasanın yanında",
     "parking": "Həftə içi parkinq yalnız 17:30-dan sonra, qeyri-iş günlərində isə istənilən vaxt mövcuddur."
   },
-  "develop": "Saytın hazırlanması"
+  "develop": "Saytın hazırlanması Kazakova Viktoriya",
+  "filials": "Burada filiallarımızın ünvanlarını tapa bilərsiniz",
+  "filial28": {
+    "name": "28 May",
+    "adress": "Bakı ş., Nəsimi r-nu, Mehbalı Zeynalabdiyev 5",
+    "place": "28 May metro ərazisi, Səməd Vurğun parkın sonunda, Dəmir Yol Baş İdarənin arxasında, Aeroflot Aviakasanın yanında",
+    "time": "Hər gün 11:00 — 22:00",
+    "parking": "Həftə içi parkinq yalnız 17:30-dan sonra, qeyri-iş günlərində isə istənilən vaxt mövcuddur."
+  },
+  "filialSeaBreeze": {
+    "name": "Sea Breeze",
+    "adress": "Nardaran kəndi, Sea Breeze Resort",
+    "time": "Hər gün 10:00 – 23:00"
+  },
+  "filialElmler": {
+    "name": "Elmlər Akademiyası",
+    "adress": "Hüseyn Cavid prospekti, Bakı",
+    "time": "Hər gün 10:00 – 23:00"
+  },
+  "filialIcheri": {
+    "name": "Içərişəhər",
+    "adress": "",
+    "time": "Hər gün 10:00 – 23:00"
+  },
+  "temporary": "Tezliklə, İnstaqramda bizi izləyin"
 }

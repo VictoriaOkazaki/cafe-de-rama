@@ -46,10 +46,6 @@ function createLinks() {
       href: "#shop",
     },
     {
-      title: t("menu.6"),
-      href: "#gallery",
-    },
-    {
       title: t("menu.7"),
       href: "#blog",
     },
@@ -102,6 +98,29 @@ function createLinks() {
       {
         title: t("menu.7"),
         href: "/blog",
+      },
+    ];
+  } else if (route.name.includes("filials")) {
+    links = [
+      {
+        title: t("menu.0"),
+        href: "/",
+      },
+      {
+        title: t("menu.9"),
+        href: "/filials/28may",
+      },
+      {
+        title: t("menu.10"),
+        href: "/filials/elmler",
+      },
+      {
+        title: t("menu.11"),
+        href: "/filials/seabreeze",
+      },
+      {
+        title: t("menu.12"),
+        href: "/filials/icherisheher",
       },
     ];
   }
