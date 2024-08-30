@@ -95,6 +95,8 @@
         border-radius: 60px 60px 0px 60px;
         width: 951px;
         height: 573px;
+        display: flex;
+        justify-content: center;
     }
     &__map img {
         border-radius: inherit;
