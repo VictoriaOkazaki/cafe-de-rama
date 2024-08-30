@@ -15,7 +15,7 @@
                             <NuxtLink to="/filials/seabreeze" class="contact__filial-btn btn-2 subtitle">{{ $t('filialSeaBreeze.name') }}</NuxtLink>
                             <NuxtLink to="/filials/icherisheher" class="contact__filial-btn btn-2 subtitle">{{ $t('filialIcheri.name') }}</NuxtLink>
                         </div>
-                        <WhatsappLink />
+                        <WhatsappLink class="wp" />
                         <div class="contact__mail">
                             <img loading="lazy" src="../assets/images/mail.svg" alt="mail"
                                 class="social-logo contact__mail-img">
@@ -166,6 +166,9 @@
 }
 
 @media (max-width: 600px) {
+    .wp {
+        margin-top: 20px;
+    }
     .contact {
         &__info {
             margin-top: 30px;
@@ -174,9 +177,14 @@
         &__mail a {
             margin-left: 0;
         }
+&__filials {
+    flex-wrap: wrap;
+    margin-bottom: 0;
+}
         &__filial-btn {
             font-size: 16px;
             padding: 12px 24px;
+            margin-top: 20px;
         }
     }
 }
