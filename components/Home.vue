@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="home__img-cont">
-                    <img :src="'images/home.webp'" alt="de rama cafe" class="home__img">
+                    <img :src="'images/home.jpg'" alt="de rama cafe" class="home__img">
                 </div>
             </div>
         </div>
